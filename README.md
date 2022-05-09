@@ -2,8 +2,8 @@
 
 ## Objectif #1
 Intégrer et dynamiser votre premier site web et son interface d'administration.
-### Itération # B.1 : Extraire les éléments nécessaires à l'intégration
-À partir du fichier Photoshop fourni, extraire les ressources nécessaires à l'intégration
+### Itération #B.1 : Extraire les éléments nécessaires à l'intégration
+À partir du fichier Figma fourni, extraire les ressources nécessaires à l'intégration
 - Extraire les images et les logos
 - Récupérer la liste des polices et les couleurs et les différentes tailles de caractères
 ### Itération #B.2 : Mettre en place la structure de la page
