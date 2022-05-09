@@ -121,3 +121,12 @@ p {
 .button a:hover {
     background-color: #7595BD;
 }
+
+#home_section_2 {
+    margin: 0 -11rem;
+}
+
+.home_panorama {
+    width: 100%;
+    height: fit-content;
+}
