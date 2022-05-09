@@ -10,9 +10,6 @@ header {
     background-position: center;
     background-size: cover;
     color: #FFFFFF;
-    font-family: 'Domine';
-    font-style: normal;
-    font-weight: 700;
     display: flex;
     flex-direction: column;
 }
@@ -56,10 +53,14 @@ header {
 
 header p {
     margin: 0;
+    font-family: 'Domine';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 7.125rem;
 }
 
 .header_title {
-    font-size: 85px;
+    font-size: 5.3125rem;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
     padding: 3.25rem;
 }
@@ -69,8 +70,54 @@ header p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 60px;
+    font-size: 3.75rem;
     text-align: center;
     text-shadow: 5px 5px 25px #000000;
     bottom: 0px;
+}
+
+main {
+    margin: 0 11rem;
+}
+
+h2 {
+    font-family: 'Domine';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 2.25rem 0;
+}
+
+p {
+    font-family: 'Akshar';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+    text-align: justify;
+    margin: 2.25rem;
+}
+
+#home_section_1_content {
+    display: flex;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.button a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    background-color: #1B4F91;
+    width: 12.5rem;
+    height: 2.25rem;
+    text-align: center;
+}
+
+.button a:hover {
+    background-color: #7595BD;
 }
