@@ -136,9 +136,12 @@ h3 {
     font-style: normal;
     font-weight: 700;
     font-size: 1.75rem;
+    margin: 36px 0;
+}
+
+.bottomline {
     border-bottom: 5px solid #000000;
     padding-bottom: .6875rem;
-    margin: 36px 0;
 }
 
 #home_section_3_content {
