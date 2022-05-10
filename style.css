@@ -62,7 +62,7 @@ header p {
 .header_title {
     font-size: 85px;
     text-shadow: .3125rem .3125rem .625rem rgba(0, 0, 0, 0.75);
-    padding: 52px;
+    padding: 3.25rem 0 0 3.25rem;
 }
 
 .header_hook {
