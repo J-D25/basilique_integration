@@ -15,7 +15,7 @@ header {
 }
 
 #menu {
-    height: 6rem;
+    height: 96px;
     background-color: rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-around;
@@ -30,7 +30,7 @@ header {
     font-family: 'Domine';
     font-style: normal;
     font-weight: 700;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: .0625rem .0625rem .0625rem rgba(0, 0, 0, 0.5);
 }
 
 #menu ul {
@@ -42,9 +42,9 @@ header {
 }
 
 #menu ul li a {
-    font-size: 1.5rem;
+    font-size: 24px;
     text-decoration: none;
-    padding: 2.1rem 4.5rem;
+    padding: 33.6px 72px;
 }
 
 #menu ul li a:hover {
@@ -56,13 +56,13 @@ header p {
     font-family: 'Domine';
     font-style: normal;
     font-weight: 700;
-    line-height: 7.125rem;
+    line-height: 114px;
 }
 
 .header_title {
-    font-size: 5.3125rem;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-    padding: 3.25rem;
+    font-size: 85px;
+    text-shadow: .3125rem .3125rem .625rem rgba(0, 0, 0, 0.75);
+    padding: 52px;
 }
 
 .header_hook {
@@ -70,32 +70,32 @@ header p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3.75rem;
+    font-size: 60px;
     text-align: center;
-    text-shadow: 5px 5px 25px #000000;
-    bottom: 0px;
+    text-shadow: .3125rem .3125rem 1.5625rem #000000;
+    bottom: 0rem;
 }
 
 main {
-    margin: 0 11rem;
+    margin: 0 176px;
 }
 
 h2 {
     font-family: 'Domine';
     font-style: normal;
     font-weight: 700;
-    font-size: 2rem;
-    margin: 2.25rem 0;
+    font-size: 32px;
+    margin: 36px 0;
 }
 
 p {
     font-family: 'Akshar';
     font-style: normal;
     font-weight: 300;
-    font-size: 1.125rem;
-    line-height: 2.25rem;
+    font-size: 18px;
+    line-height: 36px;
     text-align: justify;
-    margin: 2.25rem;
+    margin: 36px;
 }
 
 #home_section_1_content {
@@ -111,10 +111,10 @@ p {
     display: inline-block;
     color: white;
     text-decoration: none;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0rem 0rem .125rem rgba(0, 0, 0, 0.5);
     background-color: #1B4F91;
-    width: 12.5rem;
-    height: 2.25rem;
+    width: 200px;
+    height: 36px;
     text-align: center;
 }
 
@@ -123,7 +123,7 @@ p {
 }
 
 #home_section_2 {
-    margin: 0 -11rem;
+    margin: 0 -176px;
 }
 
 .home_panorama {
@@ -135,25 +135,25 @@ h3 {
     font-family: 'Domine';
     font-style: normal;
     font-weight: 700;
-    font-size: 1.75rem;
-    margin: 36px 0;
+    font-size: 28px;
+    margin: 2.25rem 0;
 }
 
 .bottomline {
-    border-bottom: 5px solid #000000;
-    padding-bottom: .6875rem;
+    border-bottom: .3125rem solid #000000;
+    padding-bottom: 11px;
 }
 
 #home_section_3_content {
     display: flex;
-    gap: 2.125rem;
+    gap: 34px;
 }
 
 .home_section_3_content_actu {
     width: 33%;
     background-color: #F2F5F8;
-    border: 2px solid #1B4F91;
-    border-radius: 5px;
+    border: .125rem solid #1B4F91;
+    border-radius: .3125rem;
 }
 
 .home_section_3_content_actu img {
@@ -165,18 +165,18 @@ h4 {
     font-family: 'Akshar';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.375rem;
-    margin: 1.5rem 3rem 1rem 3rem;
+    font-size: 22px;
+    margin: 24px 48px 16px 48px;
 }
 
 .home_section_3_content_actu_text p {
-    margin: 0 3rem 1.5rem 3rem;
+    margin: 0 48px 24px 48px;
 }
 
 #home_section_4 {
     display: flex;
-    gap: 2.25rem;
-    margin: 2.25rem 0;
+    gap: 36px;
+    margin: 36px 0;
 }
 
 #home_section_4_1 {
@@ -190,4 +190,99 @@ h4 {
 #home_section_4 img {
     width: 100%;
     height: auto;
+}
+
+footer {
+    background-color: #A6ACB8;
+    display: flex;
+    gap: 73px;
+    padding: 26px;
+}
+
+.footer_contents {
+    width: 33%;
+}
+
+footer h3,
+footer p {
+    margin: 0 0 26px 0;
+    font-weight: 400;
+}
+
+footer p:last-child {
+    margin: 0
+}
+
+#newsletter {
+    margin: 0 0 1.625rem 0;
+    align-items: center;
+}
+
+#newsletter_email_label {
+    font-family: 'Akshar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+#newsletter_inputs {
+    display: flex;
+}
+
+#newsletter_email::placeholder {
+    font-family: 'Akshar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #CCCCCC;
+}
+
+#newsletter_email {
+    padding: 0;
+    padding-left: 1.625rem;
+    background: #FFFFFF;
+    color: #CCCCCC;
+    font-family: 'Akshar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    border: none;
+}
+
+#newsletter_email:invalid {
+    border: 1.5px solid #FF0000;
+}
+
+#newsletter_email:invalid:not(:focus) {
+    color: #FF0000;
+}
+
+#newsletter_button {
+    width: 7.5rem;
+    height: 2.8125rem;
+    background: #6C7689;
+    border: none;
+    font-family: 'Akshar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+#newsletter_button:hover {
+    background-color: #82BE7E;
+}
+
+a {
+    color: #000000;
+}
+
+a:hover {
+    color: #364826;
+    text-decoration: none;
+}
+
+#footer_content_3_maps {
+    overflow: hidden;
 }
