@@ -169,3 +169,22 @@ h4 {
 .home_section_3_content_actu_text p {
     margin: 0 3rem 1.5rem 3rem;
 }
+
+#home_section_4 {
+    display: flex;
+    gap: 2.25rem;
+    margin: 2.25rem 0;
+}
+
+#home_section_4_1 {
+    width: calc(38.213%);
+}
+
+#home_section_4_2 {
+    width: calc(61.787%);
+}
+
+#home_section_4 img {
+    width: 100%;
+    height: auto;
+}
