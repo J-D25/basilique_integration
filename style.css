@@ -1,3 +1,8 @@
+:root {
+    --font-title: 'Domine', serif;
+    --font-content: 'Akshar', sans-serif;
+}
+
 body {
     margin: 0;
 }
@@ -15,7 +20,7 @@ header {
 }
 
 #menu {
-    height: 96px;
+    height: 6rem;
     background-color: rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-around;
@@ -27,7 +32,7 @@ header {
 #menu h1,
 #menu ul li a {
     color: #FFFFFF;
-    font-family: 'Domine';
+    font-family: var(--font-title);
     font-style: normal;
     font-weight: 700;
     text-shadow: .0625rem .0625rem .0625rem rgba(0, 0, 0, 0.5);
@@ -42,9 +47,9 @@ header {
 }
 
 #menu ul li a {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-decoration: none;
-    padding: 33.6px 72px;
+    padding: 2.1rem 4.5rem;
 }
 
 #menu ul li a:hover {
@@ -53,14 +58,14 @@ header {
 
 header p {
     margin: 0;
-    font-family: 'Domine';
+    font-family: var(--font-title);
     font-style: normal;
     font-weight: 700;
     line-height: 114px;
 }
 
 .header_title {
-    font-size: 85px;
+    font-size: 5.375rem;
     text-shadow: .3125rem .3125rem .625rem rgba(0, 0, 0, 0.75);
     padding: 3.25rem 0 0 3.25rem;
 }
@@ -70,32 +75,32 @@ header p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 60px;
+    font-size: 3.75rem;
     text-align: center;
     text-shadow: .3125rem .3125rem 1.5625rem #000000;
     bottom: 0rem;
 }
 
 main {
-    margin: 0 176px;
+    margin: 0 11rem;
 }
 
 h2 {
-    font-family: 'Domine';
+    font-family: var(--font-title);
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    margin: 36px 0;
+    font-size: 2rem;
+    margin: 2.25rem 0;
 }
 
 p {
-    font-family: 'Akshar';
+    font-family: var(--font-content);
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 36px;
     text-align: justify;
-    margin: 36px;
+    margin: 2.25rem;
 }
 
 #home_section_1_content {
@@ -113,8 +118,8 @@ p {
     text-decoration: none;
     text-shadow: 0rem 0rem .125rem rgba(0, 0, 0, 0.5);
     background-color: #1B4F91;
-    width: 200px;
-    height: 36px;
+    width: 12.5rem;
+    height: 2.25rem;
     text-align: center;
 }
 
@@ -124,7 +129,7 @@ p {
 }
 
 #home_section_2 {
-    margin: 0 -176px;
+    margin: 0 -11rem;
 }
 
 .home_panorama {
@@ -133,10 +138,10 @@ p {
 }
 
 h3 {
-    font-family: 'Domine';
+    font-family: var(--font-title);
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 1.75rem;
     margin: 2.25rem 0;
 }
 
@@ -147,7 +152,7 @@ h3 {
 
 #home_section_3_content {
     display: flex;
-    gap: 34px;
+    gap: 2.125rem;
 }
 
 .home_section_3_content_actu {
@@ -163,21 +168,21 @@ h3 {
 }
 
 h4 {
-    font-family: 'Akshar';
+    font-family: var(--font-content);
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
-    margin: 24px 48px 16px 48px;
+    font-size: 1.375rem;
+    margin: 1.5rem 3rem 1rem 3rem;
 }
 
 .home_section_3_content_actu_text p {
-    margin: 0 48px 24px 48px;
+    margin: 0 3rem 1.5rem 3rem;
 }
 
 #home_section_4 {
     display: flex;
-    gap: 36px;
-    margin: 36px 0;
+    gap: 2.25rem;
+    margin: 2.25rem 0;
 }
 
 #home_section_4_1 {
@@ -196,8 +201,8 @@ h4 {
 footer {
     background-color: #A6ACB8;
     display: flex;
-    gap: 73px;
-    padding: 26px;
+    gap: 4.5625rem;
+    padding: 1.625rem;
 }
 
 .footer_contents {
@@ -206,7 +211,7 @@ footer {
 
 footer h3,
 footer p {
-    margin: 0 0 26px 0;
+    margin: 0 0 1.625rem 0;
     font-weight: 400;
 }
 
@@ -220,7 +225,7 @@ footer p:last-child {
 }
 
 #newsletter_email_label {
-    font-family: 'Akshar';
+    font-family: var(--font-content);
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -231,7 +236,7 @@ footer p:last-child {
 }
 
 #newsletter_email::placeholder {
-    font-family: 'Akshar';
+    font-family: var(--font-content);
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -243,7 +248,7 @@ footer p:last-child {
     padding-left: 1.625rem;
     background: #FFFFFF;
     color: #CCCCCC;
-    font-family: 'Akshar';
+    font-family: var(--font-content);
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -263,12 +268,12 @@ footer p:last-child {
     height: 2.8125rem;
     background: #6C7689;
     border: none;
-    font-family: 'Akshar';
+    font-family: var(--font-content);
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
     color: #FFFFFF;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0rem 0rem .125rem rgba(0, 0, 0, 0.5);
 }
 
 #newsletter_button:hover {
