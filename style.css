@@ -334,5 +334,16 @@ a:hover {
     border: 15px solid #FFFFFF;
 }
 
-#esp_section_2 p, #esp_section_6 p {margin-bottom:0}
-#esp_section_3 p, #esp_section_7 p {margin-top:0}
+#esp_section_2 p,
+#esp_section_6 p {
+    margin-bottom: 0
+}
+
+#esp_section_3 p,
+#esp_section_7 p {
+    margin-top: 0
+}
+
+#esp_section_8 {
+    margin-bottom: 2.25rem;
+}
