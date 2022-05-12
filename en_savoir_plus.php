@@ -39,10 +39,10 @@
                 c'est le projet d'Alfred Ducat qui sera finalement retenu.</p>
         </div>
         <div id="esp_section_4">
-            <img src="images/esp_02.png" width="734" height="425">
+            <img src="images/esp_02.png" width="734" height="425" class="panorama">
         </div>
         <div id="esp_section_5">
-            <img src="images/esp_03.png" width="319" height="425">
+            <img src="images/esp_03.png" width="319" height="425" class="panorama">
         </div>
         <div id="esp_section_6">
             <p>Celui-ci reste dans l'esprit des constructions de l'époque : Notre-Dame-de-Fourvière à Lyon, le Sacré-Cœur de Montmartre à Paris ou encore la cathédrale de Marseille. Les premiers travaux commencent cette même année, et une première messe
@@ -53,7 +53,7 @@
                 Le 21 juin 1925, elle est enfin consacrée, soit cinquante-quatre années après le vœu du Cardinal Mathieu.</p>
         </div>
         <div id="esp_section_8">
-            <img src="images/esp_04.png" width="1088" height="320">
+            <img src="images/esp_04.png" width="1088" height="320" class="panorama">
         </div>
     </main>
     <footer>
