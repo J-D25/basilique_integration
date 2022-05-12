@@ -386,3 +386,54 @@ a:hover {
 #esp_section_8 {
     margin-bottom: 2.25rem;
 }
+
+#contact_form label, #contact_form input, #contact_form textarea{
+    display:block;
+    width:100%;
+}
+
+#contact_form label{
+    font-family: var(--font-title);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom:0.5rem;
+}
+
+#contact_form input, #contact_form textarea{
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    font-family: var(--font-content);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    padding:0.875rem;
+    margin-bottom:2rem;
+}
+
+#contact_form_flexname{
+    display:flex;
+    gap:5rem;
+}
+
+#contact_form_flexname_name, #contact_form_flexname_firstname{
+    width:100%;
+}
+
+input#contact_form_button {
+    border: 0;
+    border-radius: 0;
+    padding: 0.875rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    color: white;
+    text-shadow: 0rem 0rem 0.125rem rgb(0 0 0 / 50%);
+    background-color: #1B4F91;
+    width: 12.5rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+input#contact_form_button:hover{
+    background-color: #7595BD;
+}
