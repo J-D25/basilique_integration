@@ -19,6 +19,27 @@
     <main>
         <h2>Contactez-nous</h2>
         <p>Vivamus sit amet pretium odio. Vestibulum nec hendrerit ligula, id lacinia libero. Nullam vulputate viverra sem nec consectetur. In pharetra laoreet leo et iaculis. Suspendisse aliquet eleifend erat, quis auctor velit aliquam eget.</p>
+        <form id="contact_form">
+            <div id="contact_form_flexname">
+                <div id="contact_form_flexname_name">
+                    <label for="contact_form_name">Nom</label>
+                    <input type="text" id="contact_form_name" aria-required="true"/>
+                </div>
+                <div id="contact_form_flexname_firstname">
+                    <label for="contact_form_firstname">Prénom</label>
+                    <input type="text" id="contact_form_firstname" aria-required="true"/>
+                </div>
+            </div>
+            <label for="contact_form_email" aria-required="true">Email</label>
+            <input type="email" id="contact_form_email"/>
+            <label for="contact_form_object" aria-required="true">Objet</label>
+            <input type="text" id="contact_form_object"/>
+            <label for="contact_form_message" aria-required="true">Message</label>
+            <textarea type="text" id="contact_form_message" rows="8"></textarea>
+            <div class="button">
+                <input type="submit" value="Valider" id="contact_form_button">
+            </div>
+        </form>
     </main>
 
     <footer>
