@@ -30,12 +30,12 @@
                     <input type="text" id="contact_form_firstname" aria-required="true"/>
                 </div>
             </div>
-            <label for="contact_form_email" aria-required="true">Email</label>
-            <input type="email" id="contact_form_email"/>
-            <label for="contact_form_object" aria-required="true">Objet</label>
-            <input type="text" id="contact_form_object"/>
-            <label for="contact_form_message" aria-required="true">Message</label>
-            <textarea type="text" id="contact_form_message" rows="8"></textarea>
+            <label for="contact_form_email">Email</label>
+            <input type="email" id="contact_form_email" aria-required="true"/>
+            <label for="contact_form_object" >Objet</label>
+            <input type="text" id="contact_form_object" aria-required="true"/>
+            <label for="contact_form_message">Message</label>
+            <textarea id="contact_form_message" rows="8" aria-required="true"></textarea>
             <div class="button">
                 <input type="submit" value="Valider" id="contact_form_button">
             </div>
