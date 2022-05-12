@@ -323,6 +323,45 @@ a:hover {
     height: auto;
 }
 
+#esp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 0rem;
+}
+
+#esp_section_1 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+#esp_section_2 {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+#esp_section_3 {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+#esp_section_4 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+#esp_section_5 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+#esp_section_6 {
+    grid-area: 5 / 1 / 6 / 3;
+}
+
+#esp_section_7 {
+    grid-area: 6 / 1 / 7 / 3;
+}
+
+#esp_section_8 {
+    grid-area: 7 / 1 / 8 / 3;
+}
+
 #esp_section_1_gallery_thumbnails {
     display: flex;
     justify-content: space-around;

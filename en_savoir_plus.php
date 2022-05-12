@@ -16,7 +16,7 @@
     <header id="header_short">
         <?php include("header.html")?>
     </header>
-    <main>
+    <main id="esp">
         <div id="esp_section_1">
             <h2>Historique de la basilique</h2>
             <div id="esp_section_1_gallery">
