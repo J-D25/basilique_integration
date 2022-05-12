@@ -14,16 +14,7 @@
 
 <body>
     <header id="header_short">
-        <nav id="menu">
-            <h1 id="logo">Basilique<br>Saint-Ferjeux</h1>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="en_savoir_plus.html">En savoir plus</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <p class="header_title">Basilique<br>Saint-Ferjeux</p>
-        <p class="header_hook">138 ans d'histoire...</p>
+        <?php include("header.html")?>
     </header>
     <main>
         <div id="esp_section_1">
@@ -66,31 +57,7 @@
         </div>
     </main>
     <footer>
-        <div id="footer_content_1" class="footer_contents">
-            <h3>Basilique Saint-Ferjeux</h3>
-            <p>19 Rue de la Basilique<br>25000 Besançon</p>
-            <p><u>Horaires d'ouverture :</u><br>Lundi-Samedi : 08 h 00 - 18 h 00<br>Dimanche : 09 h 00 - 12 h 00</p>
-        </div>
-        <div id="footer_content_2" class="footer_contents">
-            <h3>Newsletter</h3>
-            <form id="newsletter">
-                <label for="newsletter_email" id="newsletter_email_label">Email</label>
-                <div id="newsletter_inputs">
-                    <input type="email" id="newsletter_email" placeholder="john@doe.fr">
-                    <button id="newsletter_button">Valider</button>
-                </div>
-            </form>
-            <p>
-                <a href="contact.html">Nous contacter</a>
-            </p>
-        </div>
-        <div id="footer_content_3" class="footer_contents">
-            <h3>Localisez-nous</h3>
-            <div id="footer_content_3_maps">
-                <iframe src="https://maps.google.com/maps?q=Basilique+de+Saint-Ferjeux&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%;" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-            </div>
-        </div>
-
+        <?php include("footer.html")?>
     </footer>
 </body>
 
