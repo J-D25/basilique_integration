@@ -26,7 +26,7 @@
                         Vivamus fringilla sapien pretium, fringilla erat at, venenatis mauris. Mauris pulvinar nisi a leo consequat pellentesque. Sed sem dolor, convallis quis enim ut, tincidunt dictum arcu. Mauris ultrices nec ligula commodo aliquet.
                         Morbi convallis, dui quis eleifend cursus, risus turpis feugiat sem, vel ornare mauris sem qui.</p>
                     <p class="button">
-                        <a href="en_savoir_plus.html">En savoir plus</a>
+                        <a href="en_savoir_plus.php">En savoir plus</a>
                     </p>
                 </div>
             </div>
