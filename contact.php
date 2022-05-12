@@ -17,6 +17,8 @@
         <?php include("header.html")?>
     </header>
     <main>
+        <h2>Contactez-nous</h2>
+        <p>Vivamus sit amet pretium odio. Vestibulum nec hendrerit ligula, id lacinia libero. Nullam vulputate viverra sem nec consectetur. In pharetra laoreet leo et iaculis. Suspendisse aliquet eleifend erat, quis auctor velit aliquam eget.</p>
     </main>
 
     <footer>
