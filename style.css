@@ -432,7 +432,7 @@ input#contact_form_button {
     width: 12.5rem;
     text-align: center;
     font-weight: 400;
-    font-size:1rem;
+    font-size:1.125rem;
 }
 
 input#contact_form_button:hover{
