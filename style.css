@@ -108,9 +108,19 @@ p {
     margin-bottom: 2.25rem;
 }
 
+#home_section_1_content_img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
 .button {
     display: flex;
     justify-content: center;
+}
+
+.left {
+    justify-content: start;
 }
 
 .button a {
