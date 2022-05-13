@@ -20,12 +20,11 @@
         <div id="home_section_1">
             <h2>La meilleure basilique du monde</h2>
             <div id="home_section_1_content">
-                <img src="images/main_01.png" width="372" height="290" alt="Vue aérienne de la basilique Saint-Ferjeux en noir et blanc du vingtième siècle.">
+                <img id="home_section_1_content_img" src="images/main_01.png" width="372" height="290" alt="Vue aérienne de la basilique Saint-Ferjeux en noir et blanc du vingtième siècle.">
                 <div>
                     <p>Vivamus sit amet pretium odio. Vestibulum nec hendrerit ligula, id lacinia libero. Nullam vulputate viverra sem nec consectetur. In pharetra laoreet leo et iaculis. Suspendisse aliquet eleifend erat, quis auctor velit aliquam eget.
-                        Vivamus fringilla sapien pretium, fringilla erat at, venenatis mauris. Mauris pulvinar nisi a leo consequat pellentesque. Sed sem dolor, convallis quis enim ut, tincidunt dictum arcu. Mauris ultrices nec ligula commodo aliquet.
-                        Morbi convallis, dui quis eleifend cursus, risus turpis feugiat sem, vel ornare mauris sem qui.</p>
-                    <p class="button">
+                        Vivamus fringilla sapien pretium, fringilla erat at, venenatis mauris. Mauris pulvinar nisi a leo consequat pellentesque. Sed sem dolor, convallis quis enim ut, tincidunt dictum arcu.</p>
+                    <p class="button left">
                         <a href="en_savoir_plus.php">En savoir plus</a>
                     </p>
                 </div>
