@@ -452,3 +452,12 @@ input#contact_form_button {
 input#contact_form_button:hover {
     background-color: #7595BD;
 }
+
+@media (min-width:765px) and (max-width:1000px) {
+    main {
+        margin: 0 5vw;
+    }
+    #home_section_2 {
+        margin: 0 -5vw;
+    }
+}
