@@ -20,12 +20,12 @@
         <div id="esp_section_1">
             <h2>Historique de la basilique</h2>
             <div id="esp_section_1_gallery">
-                <img src="images/esp_01.png" width="1088" height="378" class="panorama">
+                <img src="images/esp_01.png" width="1088" height="378" class="panorama" alt="Photo de la basilique vue de côté datant de la fin du vingtième siècle, en couleur. On distingue très bien la salle rectangulaire surmontée de sa coupole, ainsi que de l'abside. On devine les deux tours situées à l'avant du monument.">
                 <div id="esp_section_1_gallery_thumbnails">
-                    <img src="images/esp_v_01.png" width="205" height="157">
-                    <img src="images/esp_v_02.png" width="205" height="157">
-                    <img src="images/esp_v_03.png" width="205" height="157">
-                    <img src="images/esp_v_04.png" width="205" height="157">
+                    <img src="images/esp_v_01.png" width="205" height="157" alt="Photo de la basilique datant du vingtième siècle en noir et blanc. On peut voir la coupole et la salle rectangulaire. ">
+                    <img src="images/esp_v_02.png" width="205" height="157" alt="Photo de la basilique vue de loin datant du vingtième siècle en noir et blanc.">
+                    <img src="images/esp_v_03.png" width="205" height="157" alt="Photo de la basilique datant du vingtième siècle en noir et blanc. On peut lire en haut : 'Basilique de Saint-Ferjeux construite sur les plans de l'architecte Ducat, de 1884 à 1886'">
+                    <img src="images/esp_v_04.png" width="205" height="157" alt="Photo de la basilique datant du vingtième siècle en noir et blanc, vue de derrière. On distingue très bien l'abside avec sa petite tour qui sert de chapelle.">
                 </div>
             </div>
         </div>
@@ -39,10 +39,10 @@
                 c'est le projet d'Alfred Ducat qui sera finalement retenu.</p>
         </div>
         <div id="esp_section_4">
-            <img src="images/esp_02.png" width="734" height="425" class="panorama">
+            <img src="images/esp_02.png" width="734" height="425" class="panorama" alt="Photo de la basilique datant du vingtième siècle en noir et blanc. Il est écrit un résumé de l'historique de la basilique. Elle a été créée par l'architecte M. Ducat à la fin du dix-neuvième siècle dédié aux Saints Ferreol et Ferjeux, décapités en 212 à Besançon où ils étaient venus prêcher le christianisme.">
         </div>
         <div id="esp_section_5">
-            <img src="images/esp_03.png" width="319" height="425" class="panorama">
+            <img src="images/esp_03.png" width="319" height="425" class="panorama" alt="Photo de la façade principale de la basilique datant du vingtième siècle en noir et blanc. On peut voir les deux tours qui ont respectivement à gauche un baromètre et à droite une horloge.">
         </div>
         <div id="esp_section_6">
             <p>Celui-ci reste dans l'esprit des constructions de l'époque : Notre-Dame-de-Fourvière à Lyon, le Sacré-Cœur de Montmartre à Paris ou encore la cathédrale de Marseille. Les premiers travaux commencent cette même année, et une première messe
@@ -53,7 +53,7 @@
                 Le 21 juin 1925, elle est enfin consacrée, soit cinquante-quatre années après le vœu du Cardinal Mathieu.</p>
         </div>
         <div id="esp_section_8">
-            <img src="images/esp_04.png" width="1088" height="320" class="panorama">
+            <img src="images/esp_04.png" width="1088" height="320" class="panorama" alt="Photo de la basilique moderne vue de loin. On distingue l'intégralité du monument mais aussi le grand cimetière de Saint-Ferjeux situé juste devant.">
         </div>
     </main>
     <footer>
