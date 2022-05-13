@@ -130,7 +130,7 @@ p {
 }
 
 #home_section_2 {
-    margin: 0 -11rem;
+    margin: 0 -12vw;
 }
 
 .home_panorama {
@@ -173,11 +173,11 @@ h4 {
     font-style: normal;
     font-weight: 500;
     font-size: 1.375rem;
-    margin: 1.5rem 3rem 1rem 3rem;
+    margin: 1.5vw 3vw 1vw 3vw;
 }
 
 .home_section_3_content_actu_text p {
-    margin: 0 3rem 1.5rem 3rem;
+    margin: 0 3vw 1.5vw 3vw;
 }
 
 #home_section_4 {
