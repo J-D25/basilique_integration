@@ -82,7 +82,7 @@ header p {
 }
 
 main {
-    margin: 0 11rem;
+    margin: 0 12vw;
 }
 
 h2 {
@@ -323,7 +323,7 @@ a:hover {
     height: auto;
 }
 
-#esp{
+#esp {
     display: grid;
     grid-template-columns: 2.3fr 1fr;
     grid-column-gap: 2rem;
@@ -387,37 +387,41 @@ a:hover {
     margin-bottom: 2.25rem;
 }
 
-#contact_form label, #contact_form input, #contact_form textarea{
-    display:block;
-    width:100%;
+#contact_form label,
+#contact_form input,
+#contact_form textarea {
+    display: block;
+    width: 100%;
 }
 
-#contact_form label{
+#contact_form label {
     font-family: var(--font-title);
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
-    margin-bottom:0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-#contact_form input, #contact_form textarea{
+#contact_form input,
+#contact_form textarea {
     border: 1px solid #AAAAAA;
     border-radius: 5px;
     font-family: var(--font-content);
     font-style: normal;
     font-weight: 300;
     font-size: 1rem;
-    padding:0.875rem;
-    margin-bottom:2rem;
+    padding: 0.875rem;
+    margin-bottom: 2rem;
 }
 
-#contact_form_flexname{
-    display:flex;
-    gap:5rem;
+#contact_form_flexname {
+    display: flex;
+    gap: 5rem;
 }
 
-#contact_form_flexname_name, #contact_form_flexname_firstname{
-    width:100%;
+#contact_form_flexname_name,
+#contact_form_flexname_firstname {
+    width: 100%;
 }
 
 input#contact_form_button {
@@ -432,9 +436,9 @@ input#contact_form_button {
     width: 12.5rem;
     text-align: center;
     font-weight: 400;
-    font-size:1.125rem;
+    font-size: 1.125rem;
 }
 
-input#contact_form_button:hover{
+input#contact_form_button:hover {
     background-color: #7595BD;
 }
