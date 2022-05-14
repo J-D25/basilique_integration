@@ -251,14 +251,14 @@ footer p:last-child {
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
-    color: #CCCCCC;
+    color: #6E6E6E;
 }
 
 #newsletter_email {
     padding: 0;
     padding-left: 1.625rem;
     background: #FFFFFF;
-    color: #CCCCCC;
+    color: #6E6E6E;
     font-family: var(--font-content);
     font-style: normal;
     font-weight: 400;
