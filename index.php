@@ -40,14 +40,14 @@
                     <img src="images/actu_01.png" width="340" height="226" alt="Quatre personnes debout prient dans un lieu de culte chrétien. Un prêtre les regarde. Une lumière blanche les illumine par un vitrail en forme de rosace.">
                     <div class="home_section_3_content_actu_text">
                         <h4>Concert du 26 juin 2022</h4>
-                        <p>L’Association Musique Sacrée, sa maîtrise et ses solistes, proposent des pièces musicales de Mozart, Bach, Mendelson, Monteverdi…</p>
+                        <p>L'Association Musique Sacrée, sa maîtrise et ses solistes, proposent des pièces musicales de Mozart, Bach, Mendelson, Monteverdi…</p>
                     </div>
                 </div>
                 <div class="home_section_3_content_actu">
                     <img src="images/actu_02.png" width="340" height="226" alt="Gros plan sur les mains d'une personne de foi. Elle prie. Ses doigts sont croisés.">
                     <div class="home_section_3_content_actu_text">
-                        <h4>Messe de l’Ascension</h4>
-                        <p>La messe de l’Ascension se tiendra le jeudi 26 mai à partir de 10 h 30. L'archevêque de Besançon, Monseigneur Jean-Luc Bouilleret, présidera la messe.</p>
+                        <h4>Messe de l'Ascension</h4>
+                        <p>La messe de l'Ascension se tiendra le jeudi 26 mai à partir de 10 h 30. L'archevêque de Besançon, Monseigneur Jean-Luc Bouilleret, présidera la messe.</p>
                     </div>
                 </div>
                 <div class="home_section_3_content_actu">
