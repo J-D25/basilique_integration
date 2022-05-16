@@ -625,4 +625,11 @@ input#contact_form_button:hover {
         gap: 0;
         flex-direction: column;
     }
+    p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .bottomline {
+        text-align: left;
+    }
 }
