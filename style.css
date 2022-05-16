@@ -98,7 +98,7 @@ p {
     font-style: normal;
     font-weight: 300;
     font-size: 1.125rem;
-    line-height: 36px;
+    line-height: 2.25rem;
     text-align: justify;
     margin: 2.25rem;
 }
@@ -211,13 +211,23 @@ h4 {
 
 footer {
     background-color: #A6ACB8;
-    display: flex;
-    gap: 4.5625rem;
     padding: 1.625rem;
+    display: grid;
+    grid-template-columns: 1fr 0.75fr 0.85fr;
+    grid-template-rows: 1fr;
+    gap: 5vw;
 }
 
-.footer_contents {
-    width: 33%;
+#footer_content_1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#footer_content_2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#footer_content_3 {
+    grid-area: 1 / 3 / 2 / 4;
 }
 
 footer h3,
@@ -240,6 +250,7 @@ footer p:last-child {
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
+    line-height: 2.25rem;
 }
 
 #newsletter_inputs {
@@ -457,7 +468,14 @@ input#contact_form_button:hover {
     background-color: #7595BD;
 }
 
-@media (min-width:765px) and (max-width:1000px) {
+#footer_content_1_content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.625rem;
+    justify-content: space-between;
+}
+
+@media (min-width: 765px) and (max-width: 1000px) {
     main {
         margin: 0 5vw;
     }
@@ -470,5 +488,25 @@ input#contact_form_button:hover {
     }
     .home_section_3_content_actu {
         width: 41vw;
+    }
+    footer {
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 5vw;
+    }
+    #footer_content_1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    #footer_content_2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    #newsletter_email_label {
+        display: none;
+    }
+    #footer_content_3 {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+    #footer_content_3 h3 {
+        display: none;
     }
 }
