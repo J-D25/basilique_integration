@@ -288,11 +288,9 @@ footer p:last-child {
     color: #FF0000;
 }
 
-#newsletter_button {
-    width: 7.5rem;
-    height: 2.8125rem;
+#newsletter_button,
+#newsletter_link {
     background: #6C7689;
-    border: none;
     font-family: var(--font-content);
     font-style: normal;
     font-weight: 400;
@@ -301,8 +299,20 @@ footer p:last-child {
     text-shadow: 0rem 0rem .125rem rgba(0, 0, 0, 0.5);
 }
 
-#newsletter_button:hover {
+#newsletter_button {
+    width: 7.5rem;
+    height: 2.8125rem;
+    border: none;
+}
+
+#newsletter_button:hover,
+#newsletter_link:hover {
     background-color: #82BE7E;
+}
+
+#newsletter_link {
+    text-decoration: none;
+    padding: 0.5rem;
 }
 
 a {
