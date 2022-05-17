@@ -38,6 +38,9 @@ header {
     text-shadow: .0625rem .0625rem .0625rem rgba(0, 0, 0, 0.5);
 }
 
+#menu_check {
+    display: none;
+}
 #menu ul {
     display: flex;
     justify-content: space-evenly;
@@ -631,5 +634,56 @@ input#contact_form_button:hover {
     }
     .bottomline {
         text-align: left;
+    }
+    .hamburger {
+        display: unset;
+    }
+    #menu_check:checked~ul {
+        display: block;
+        position: absolute;
+        top: 6rem;
+        width: 100%;
+        background-color:rgba(0, 0, 0, 0.5);
+    }
+    #menu ul {
+        margin:0;
+    }
+    #menu ul li{
+        padding: 2.15rem ;
+    }
+    .hamburger {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    .lines {
+        width: 2rem;
+        height: .25rem;
+        background: white;
+    }
+    #menu_check:checked~label .line1 {
+        transform: rotate(45deg) translate(8.5px, 8.5px);
+    }
+    #menu_check:checked~label .line2 {
+        visibility: hidden;
+    }
+    #menu_check:checked~label .line3 {
+        transform: rotate(-45deg) translate(8.5px, -8.5px);
+    }
+    #menu ul li a {
+        width: 100%;
+        display: inline-block;
+        padding: 2.15rem 0;
+    }
+    #menu ul li {
+        padding: unset;
+    }
+    #header_short .header_hook {
+        display: flex;
     }
 }
