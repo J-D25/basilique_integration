@@ -595,6 +595,9 @@ input#contact_form_button:hover {
     #footer_content_1 {
         grid-area: 1 / 1 / 2 / 2;
     }
+    #footer_content_1_content {
+        justify-content: center;
+    }
     footer p {
         text-align: center;
     }
