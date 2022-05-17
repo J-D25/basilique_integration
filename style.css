@@ -67,13 +67,13 @@ header p {
     line-height: 114px;
 }
 
-.header_title {
+#header_title {
     font-size: 5.375rem;
     text-shadow: .3125rem .3125rem .625rem rgba(0, 0, 0, 0.75);
     padding: 3.25rem 0 0 3.25rem;
 }
 
-.header_hook {
+#header_hook {
     height: 100%;
     display: flex;
     align-items: center;
@@ -351,11 +351,11 @@ a:hover {
     height: 35.5rem;
 }
 
-#header_short .header_title {
+#header_short #header_title {
     text-shadow: 5px 5px 25px #000000;
 }
 
-#header_short .header_hook {
+#header_short #header_hook {
     display: none;
 }
 
@@ -535,7 +535,7 @@ input#contact_form_button:hover {
     #menu ul {
         display: none;
     }
-    .header_title {
+    #header_title {
         display: none;
     }
     h2,
@@ -683,13 +683,7 @@ input#contact_form_button:hover {
     #menu ul li {
         padding: unset;
     }
-    #header_short .header_title {
+    #header_short #header_hook {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding:0;
-        height: 100%;
-        font-size: 3.75rem;
     }
 }
