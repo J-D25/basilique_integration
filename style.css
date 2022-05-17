@@ -683,7 +683,13 @@ input#contact_form_button:hover {
     #menu ul li {
         padding: unset;
     }
-    #header_short .header_hook {
+    #header_short .header_title {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding:0;
+        height: 100%;
+        font-size: 3.75rem;
     }
 }
