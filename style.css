@@ -68,10 +68,30 @@ header p {
     line-height: 114px;
 }
 
+@keyframes slidein {
+    from {
+        margin-left: -500px;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
 #header_title {
     font-size: 5.375rem;
     text-shadow: .3125rem .3125rem .625rem rgba(0, 0, 0, 0.75);
     padding: 3.25rem 0 0 3.25rem;
+    animation-duration: 2s;
+    animation-name: slidein;
 }
 
 #header_hook {
@@ -83,6 +103,8 @@ header p {
     text-align: center;
     text-shadow: .3125rem .3125rem 1.5625rem #000000;
     bottom: 0rem;
+    animation-duration: 2s;
+    animation-name: zoom;
 }
 
 main {
