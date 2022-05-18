@@ -773,4 +773,7 @@ input#contact_form_button:hover {
     #header_hook {
         font-size: 3.65rem;
     }
+    header {
+        background-image: url(images/header2.jpg);
+    }
 }
