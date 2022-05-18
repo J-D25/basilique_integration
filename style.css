@@ -3,6 +3,18 @@
     --font-content: 'Akshar', sans-serif;
 }
 
+div {
+    overflow: hidden;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+img {
+    transition: transform .3s
+}
+
 body {
     margin: 0;
 }
