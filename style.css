@@ -322,6 +322,8 @@ footer p:last-child {
     display: flex;
     box-sizing: border-box;
     width: 100%;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 #newsletter_email:invalid {
@@ -535,6 +537,7 @@ a:hover {
 
 input#contact_form_button {
     border: 0;
+    -webkit-appearance: none;
     border-radius: 0;
     padding: 0.875rem;
     margin-bottom: 2rem;
