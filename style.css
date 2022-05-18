@@ -385,7 +385,8 @@ a:hover {
 
 .panorama {
     width: 100%;
-    height: auto;
+    height: 40vh;
+    object-fit: cover;
 }
 
 #esp {
@@ -397,6 +398,39 @@ a:hover {
 
 #esp_section_1 {
     grid-area: 1 / 1 / 2 / 3;
+}
+
+#esp_section_1_gallery {
+    background-color: #EDEDED;
+    background-image: url("images/esp_01.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: fondu 25s cubic-bezier(0.75, 0, 0.75, 0) infinite both;
+}
+
+#esp_section_1_gallery:hover {
+    animation-play-state: paused;
+}
+
+@keyframes fondu {
+    0% {
+        background-image: url("images/esp_01.jpg");
+    }
+    20% {
+        background-image: url("images/esp_s_01.jpg");
+    }
+    40% {
+        background-image: url("images/esp_s_02.jpg");
+    }
+    60% {
+        background-image: url("images/esp_s_03.jpg");
+    }
+    80% {
+        background-image: url("images/esp_s_04.jpg");
+    }
+    100% {
+        background-image: url("images/esp_01.jpg");
+    }
 }
 
 #esp_section_2 {
@@ -427,17 +461,6 @@ a:hover {
     grid-area: 7 / 1 / 8 / 3;
 }
 
-#esp_section_1_gallery_thumbnails {
-    display: flex;
-    justify-content: space-around;
-}
-
-#esp_section_1_gallery_thumbnails img {
-    width: calc(20%);
-    height: auto;
-    border: 15px solid #FFFFFF;
-}
-
 #esp_section_2 p,
 #esp_section_6 p {
     margin-bottom: 0
@@ -446,6 +469,13 @@ a:hover {
 #esp_section_3 p,
 #esp_section_7 p {
     margin-top: 0
+}
+
+#esp_section_4 img,
+#esp_section_5 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 #esp_section_8 {
@@ -550,6 +580,9 @@ input#contact_form_button:hover {
     #footer_content_3 h3 {
         display: none;
     }
+    .panorama {
+        height: 20vh;
+    }
 }
 
 @media (max-width: 765px) {
@@ -613,6 +646,13 @@ input#contact_form_button:hover {
     #esp {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    .panorama {
+        height: 25vh;
+    }
+    #esp_section_1_gallery {
+        margin: 0 -7vw;
+        width: calc(100% + 14vw);
     }
     #esp_section_1,
     #esp_section_2,
