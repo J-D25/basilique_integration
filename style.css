@@ -770,4 +770,7 @@ input#contact_form_button:hover {
     #header_short #header_hook {
         display: flex;
     }
+    #header_hook {
+        font-size: 3.65rem;
+    }
 }
