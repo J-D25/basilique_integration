@@ -20,12 +20,11 @@
     </header>
     <main>
         <div id="home_section_1">
-            <h2>La meilleure basilique du monde</h2>
+            <h2>D'église à basilique...</h2>
             <div id="home_section_1_content">
                 <img id="home_section_1_content_img" src="images/main_01.png" width="372" height="290" alt="Vue aérienne de la basilique Saint-Ferjeux en noir et blanc du vingtième siècle.">
                 <div>
-                    <p>Vivamus sit amet pretium odio. Vestibulum nec hendrerit ligula, id lacinia libero. Nullam vulputate viverra sem nec consectetur. In pharetra laoreet leo et iaculis. Suspendisse aliquet eleifend erat, quis auctor velit aliquam eget.
-                        Vivamus fringilla sapien pretium, fringilla erat at, venenatis mauris. Mauris pulvinar nisi a leo consequat pellentesque. Sed sem dolor, convallis quis enim ut, tincidunt dictum arcu.</p>
+                    <p>L'église qui a précédé la basilique actuelle a été maintes fois remaniée et reconstruite (1520-1526, 1636, 1730). L'édifice fut démoli au XIX<sup>e</sup> siècle pour permettre la construction d'une vaste basilique. Les plans de cette dernière veillèrent néanmoins à préserver l'emplacement de la « grotte » initiale, aujourd'hui comprise dans la crypte de l'édifice de style romano-byzantin.</p>
                     <p class="button left">
                         <a href="en_savoir_plus.php">En savoir plus</a>
                     </p>
