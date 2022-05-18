@@ -21,15 +21,7 @@
     <main id="esp">
         <div id="esp_section_1">
             <h2>Historique de la basilique</h2>
-            <div id="esp_section_1_gallery">
-                <img src="images/esp_01.png" width="1088" height="378" class="panorama" alt="Photo de la basilique vue de côté datant de la fin du vingtième siècle, en couleur. On distingue très bien la salle rectangulaire surmontée de sa coupole, ainsi que de l'abside. On devine les deux tours situées à l'avant du monument.">
-                <div id="esp_section_1_gallery_thumbnails">
-                    <img src="images/esp_v_01.png" width="205" height="157" alt="Photo de la basilique datant du vingtième siècle en noir et blanc. On peut voir la coupole et la salle rectangulaire. ">
-                    <img src="images/esp_v_02.png" width="205" height="157" alt="Photo de la basilique vue de loin datant du vingtième siècle en noir et blanc.">
-                    <img src="images/esp_v_03.png" width="205" height="157" alt="Photo de la basilique datant du vingtième siècle en noir et blanc. On peut lire en haut : 'Basilique de Saint-Ferjeux construite sur les plans de l'architecte Ducat, de 1884 à 1886'">
-                    <img src="images/esp_v_04.png" width="205" height="157" alt="Photo de la basilique datant du vingtième siècle en noir et blanc, vue de derrière. On distingue très bien l'abside avec sa petite tour qui sert de chapelle.">
-                </div>
-            </div>
+            <div id="esp_section_1_gallery" class="panorama"></div>
         </div>
         <div id="esp_section_2">
             <p>Sur le lieu même de la future basilique, une première église existait, probablement bâtie vers 1657. Durant la Révolution, elle fut transformée en hôpital. En octobre 1870, les saints patrons de la ville de Besançon furent invoqués par le
@@ -41,10 +33,10 @@
                 c'est le projet d'Alfred Ducat qui sera finalement retenu.</p>
         </div>
         <div id="esp_section_4">
-            <img src="images/esp_02.png" width="734" height="425" class="panorama" alt="Photo de la basilique datant du vingtième siècle en noir et blanc. Il est écrit un résumé de l'historique de la basilique. Elle a été créée par l'architecte M. Ducat à la fin du dix-neuvième siècle dédié aux Saints Ferreol et Ferjeux, décapités en 212 à Besançon où ils étaient venus prêcher le christianisme.">
+            <img src="images/esp_02.png" width="734" height="425" alt="Photo de la basilique datant du vingtième siècle en noir et blanc. Il est écrit un résumé de l'historique de la basilique. Elle a été créée par l'architecte M. Ducat à la fin du dix-neuvième siècle dédié aux Saints Ferreol et Ferjeux, décapités en 212 à Besançon où ils étaient venus prêcher le christianisme.">
         </div>
         <div id="esp_section_5">
-            <img src="images/esp_03.png" width="319" height="425" class="panorama" alt="Photo de la façade principale de la basilique datant du vingtième siècle en noir et blanc. On peut voir les deux tours qui ont respectivement à gauche un baromètre et à droite une horloge.">
+            <img src="images/esp_03.png" width="319" height="425" alt="Photo de la façade principale de la basilique datant du vingtième siècle en noir et blanc. On peut voir les deux tours qui ont respectivement à gauche un baromètre et à droite une horloge.">
         </div>
         <div id="esp_section_6">
             <p>Celui-ci reste dans l'esprit des constructions de l'époque : Notre-Dame-de-Fourvière à Lyon, le Sacré-Cœur de Montmartre à Paris ou encore la cathédrale de Marseille. Les premiers travaux commencent cette même année, et une première messe
