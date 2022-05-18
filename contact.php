@@ -20,7 +20,7 @@
     </header>
     <main>
         <h2>Contactez-nous</h2>
-        <p>Vivamus sit amet pretium odio. Vestibulum nec hendrerit ligula, id lacinia libero. Nullam vulputate viverra sem nec consectetur. In pharetra laoreet leo et iaculis. Suspendisse aliquet eleifend erat, quis auctor velit aliquam eget.</p>
+        <p>Vous avez une question concernant notre basilique ? Vous pouvez nous joindre à tout moment via le formulaire de contact ci-dessous. N'hésitez pas à nous contacter, nous serons très heureux de vous répondre !</p>
         <form id="contact_form">
             <div id="contact_form_flexname">
                 <div id="contact_form_flexname_name">
