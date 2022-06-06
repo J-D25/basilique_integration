@@ -39,6 +39,7 @@ header {
     align-items: center;
     text-align: center;
     box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(62, 82, 142, 0.95) 0%, rgba(49, 72, 133, 0.95) 25%, rgba(52, 81, 143, 0.95) 50%, rgba(49, 72, 133, 0.95) 75%, rgba(62, 82, 142, 0.95) 100%);
 }
 
 #menu h1,
@@ -722,12 +723,18 @@ input#contact_form_button:hover {
     .hamburger {
         display: unset;
     }
+    #menu {
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+    }
     #menu_check:checked~ul {
         display: block;
         position: absolute;
         top: 6rem;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        background: linear-gradient(90deg, rgba(50, 66, 114, 0.95) 0%, rgba(38, 56, 104, 0.95) 25%, rgba(42, 65, 114, 0.95) 50%, rgba(38, 56, 104, 0.95) 75%, rgba(50, 66, 114, 0.95) 100%);
     }
     #menu ul {
         margin: 0;
@@ -771,6 +778,7 @@ input#contact_form_button:hover {
         display: flex;
     }
     #header_hook {
+        margin-top: 6rem;
         font-size: 3.65rem;
     }
     header {
