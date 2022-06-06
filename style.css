@@ -670,6 +670,28 @@ input#contact_form_button:hover {
     #esp_section_1_gallery {
         margin: 0 -7vw;
         width: calc(100% + 14vw);
+        background-image: url("images/esp_01_mobile.jpg");
+        animation: fondu_mobile 25s cubic-bezier(0.75, 0, 0.75, 0) infinite both;
+    }
+    @keyframes fondu {
+        0% {
+            background-image: url("images/esp_01_mobile.jpg");
+        }
+        20% {
+            background-image: url("images/esp_s_01_mobile.jpg");
+        }
+        40% {
+            background-image: url("images/esp_s_02_mobile.jpg");
+        }
+        60% {
+            background-image: url("images/esp_s_03_mobile.jpg");
+        }
+        80% {
+            background-image: url("images/esp_s_04_mobile.jpg");
+        }
+        100% {
+            background-image: url("images/esp_01_mobile.jpg");
+        }
     }
     #esp_section_1,
     #esp_section_2,
