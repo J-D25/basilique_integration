@@ -51,7 +51,10 @@
                 Le 21 juin 1925, elle est enfin consacrée, soit cinquante-quatre années après le vœu du Cardinal Mathieu.</p>
         </div>
         <div id="esp_section_8">
-            <img src="images/esp_04.png" width="1088" height="320" class="panorama" alt="Photo de la basilique moderne vue de loin. On distingue l'intégralité du monument mais aussi le grand cimetière de Saint-Ferjeux situé juste devant.">
+            <picture>
+                <source srcset="images/esp_04_mobile.jpg" media="(max-width: 765px)">
+                <img class="panorama" src="images/esp_04.jpg" width="2048" height="873" alt="Photo de la basilique moderne vue de loin. On distingue l'intégralité du monument mais aussi le grand cimetière de Saint-Ferjeux situé juste devant.">
+            </picture>
         </div>
     </main>
     <footer>
