@@ -32,7 +32,10 @@
             </div>
         </div>
         <div id="home_section_2">
-            <img class="home_panorama" src="images/main_02.png" width="1440" height="536" alt="Basilique Saint-Ferjeux vue de côté du style romano-byzantin. Elle est composée de deux immenses tours situé à l'avant, suivie de la grande salle rectangulaire surplombée d'une coupole. Fini ensuite par une abside. On peut voir au premier plan le cimetière de Saint-Ferjeux.">
+        <picture>
+            <source srcset="images/main_02_mobile.jpg" media="(max-width: 765px)">
+            <img class="home_panorama" src="images/main_02.jpg" width="2048" height="873" alt="Basilique Saint-Ferjeux vue de côté du style romano-byzantin. Elle est composée de deux immenses tours situé à l'avant, suivie de la grande salle rectangulaire surplombée d'une coupole. Fini ensuite par une abside. On peut voir au premier plan le cimetière de Saint-Ferjeux.">
+        </picture>
         </div>
         <div id="home_section_3">
             <h3 class="bottomline">Agenda</h3>
