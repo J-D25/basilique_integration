@@ -43,37 +43,27 @@
             </div>
         </form>
     </main>
-    <?php
-$nom = isset($_POST['nom']) ? $_POST['nom'] : NULL;
-$prénom = isset($_POST['prénom']) ? $_POST['prénom'] : NULL;
-$mail = isset($_POST['mail']) ? $_POST['mail'] : NULL;
-$objet = isset($_POST['objet']) ? $_POST['objet'] : NULL;
-$message = isset($_POST['message']) ? $_POST['message'] : NULL;
-
-// $nom=$_POST['nom']; 
-// $mail=$_POST['mail']; 
-// $objet=$_POST['objet']; 
-// $message=$_POST['message']; 
-
-/////voici la version Mine 
-$headers = "MIME-Version: 1.0\r\n"; 
-
-//////ici on détermine le mail en format text 
-$headers .= "Content-type: text/plain; charset=iso-8859-1\r\n"; 
-
-////ici on détermine l'expediteur et l'adresse de réponse 3
-$expéditeur='j.auzanneau@codeur.online';
-$headers .= "From: $nom $prénom <$mail>\r\nReply-to : Basilique Saint-Ferjeux <$expéditeur>\nX-Mailer:PHP"; 
-
-$subject="$objet"; 
-$destinataire=$mail.','.$expéditeur;
-$body="$message"; 
-if (mail($destinataire,$subject,$body,$headers)) { 
-echo "Votre mail a été envoyé<br>"; 
-} else { 
-echo "Une erreur s'est produite"; 
-} 
-?>
+<?php
+    if (isset($_POST['message'])) {
+        $expéditeur=$_POST['nom'] . ' ' . $_POST['prénom'] . ' <' . $_POST['mail'].'>';
+        $entete  = 'MIME-Version: 1.0' . "\r\n";
+        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete .= 'From: Basilique Saint-Ferjeux <basilique@promo-159.codeur.online>' . "\r\n";
+        $entete .= 'Reply-to: ' . $expéditeur ;
+        $objet = 'Contact - Basilique Saint-Ferjeux';
+        $message = '<p>Message envoyé depuis la page Contact de la Basilique Saint-Ferjeux</p>
+        <p><b>Nom et prénom : </b>' . $_POST['nom'] . ' ' . $_POST['prénom'] . '<br>
+        <p><b>Email : </b>' . $_POST['mail'] . '<br>
+        <p><b>Objet : </b>' . $_POST['objet'] . '<br>
+        <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
+        $destinataire = 'Basilique Saint-Ferjeux <j.auzanneau@codeur.online>, ' . $expéditeur;
+        $retour = mail($destinataire, $objet, $message, $entete);
+        if($retour)
+        echo '<p>Votre message a bien été envoyé.</p>';
+            header('Location: contact.php'); 
+            exit();
+    }
+    ?>
     <footer>
         <?php include("footer.html")?>
     </footer>
