@@ -11,10 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500&family=Domine:wght@700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
-    <link rel="preload" as="image" href="images/esp_s_01.jpg" />
-    <link rel="preload" as="image" href="images/esp_s_02.jpg" />
-    <link rel="preload" as="image" href="images/esp_s_03.jpg" />
-    <link rel="preload" as="image" href="images/esp_s_04.jpg" />
+    <link rel="preload" as="image" href="images/esp_s_01.jpg" media="(min-width: 766px)" />
+    <link rel="preload" as="image" href="images/esp_s_02.jpg" media="(min-width: 766px)" />
+    <link rel="preload" as="image" href="images/esp_s_03.jpg" media="(min-width: 766px)" />
+    <link rel="preload" as="image" href="images/esp_s_04.jpg" media="(min-width: 766px)" />
+    <link rel="preload" as="image" href="images/esp_s_01_mobile.jpg" media="(max-width: 765px)" />
+    <link rel="preload" as="image" href="images/esp_s_02_mobile.jpg" media="(max-width: 765px)" />
+    <link rel="preload" as="image" href="images/esp_s_03_mobile.jpg" media="(max-width: 765px)" />
+    <link rel="preload" as="image" href="images/esp_s_04_mobile.jpg" media="(max-width: 765px)" />
     <title>Basilique Saint-Ferjeux - En savoir plus</title>
 </head>
 
