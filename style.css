@@ -407,7 +407,7 @@ a:hover {
 
 #esp {
     display: grid;
-    grid-template-columns: 2.3fr 1fr;
+    grid-template-columns: 2.25fr 1fr;
     grid-column-gap: 2rem;
     grid-row-gap: 0rem;
 }
