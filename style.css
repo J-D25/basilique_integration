@@ -671,7 +671,6 @@ input#contact_form_button:hover {
         margin: 0 -7vw;
         width: calc(100% + 14vw);
         background-image: url("images/esp_01_mobile.jpg");
-        animation: fondu_mobile 25s cubic-bezier(0.75, 0, 0.75, 0) infinite both;
     }
     @keyframes fondu {
         0% {
