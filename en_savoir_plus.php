@@ -40,7 +40,7 @@
             <img src="images/esp_02.png" width="734" height="425" alt="Photo de la basilique datant du vingtième siècle en noir et blanc. Il est écrit un résumé de l'historique de la basilique. Elle a été créée par l'architecte M. Ducat à la fin du dix-neuvième siècle dédié aux Saints Ferreol et Ferjeux, décapités en 212 à Besançon où ils étaient venus prêcher le christianisme.">
         </div>
         <div id="esp_section_5">
-            <img src="images/esp_03.png" width="319" height="425" alt="Photo de la façade principale de la basilique datant du vingtième siècle en noir et blanc. On peut voir les deux tours qui ont respectivement à gauche un baromètre et à droite une horloge.">
+            <img src="images/esp_03.jpg" width="328" height="425" alt="Photo de la façade principale de la basilique datant du vingtième siècle en noir et blanc. On peut voir les deux tours qui ont respectivement à gauche un baromètre et à droite une horloge.">
         </div>
         <div id="esp_section_6">
             <p>Celui-ci reste dans l'esprit des constructions de l'époque : Notre-Dame-de-Fourvière à Lyon, le Sacré-Cœur de Montmartre à Paris ou encore la cathédrale de Marseille. Les premiers travaux commencent cette même année, et une première messe
