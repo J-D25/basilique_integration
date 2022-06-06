@@ -65,7 +65,7 @@
         </div>
         <div id="home_section_4">
             <div id="home_section_4_1"><img src="images/main_03.jpg" width="375" height="500" alt="Photo de la basilique vue de face. On voit les deux immenses tours, ainsi que sa façade antérieure. Il y a cinq statues d'apôtres incrustées dans celle-ci."></div>
-            <div id="home_section_4_2"><img src="images/main_04.png" width="650" height="446" alt="Photo de la basilique en noir et blanc datant du vingtième siècle."></div>
+            <div id="home_section_4_2"><img src="images/main_04.jpg" width="800" height="518" alt="Photo de la basilique en noir et blanc datant du vingtième siècle."></div>
         </div>
     </main>
     <footer>
