@@ -749,6 +749,12 @@ input#contact_form_button:hover {
         padding: 0.675rem;
         margin-bottom: 1.5rem;
     }
+    .contact_form_invalid {
+        margin-bottom: 0.5rem;
+    }
+    .contact_form_span_invalid {
+        margin-bottom: 1.5rem;
+    }
     #contact_form_flexname {
         gap: 0;
         flex-direction: column;
