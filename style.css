@@ -514,8 +514,7 @@ a:hover {
     margin-bottom: 0.5rem;
 }
 
-#contact_form input,
-#contact_form textarea {
+.contact_form_input {
     border: 1px solid #AAAAAA;
     border-radius: 5px;
     font-family: var(--font-content);
@@ -534,6 +533,10 @@ a:hover {
 #contact_form_flexname_name,
 #contact_form_flexname_firstname {
     width: 100%;
+}
+
+.contact_form_invalid {
+    border: 1px solid red;
 }
 
 input#contact_form_button {
