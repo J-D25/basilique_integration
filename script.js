@@ -16,13 +16,46 @@ form.addEventListener('submit', function(e) {
     if (!form.checkValidity()) {
         e.preventDefault()
     }
-    const inputs = document.querySelectorAll('.contact_form_input');
 
+    const inputs = document.querySelectorAll('.contact_form_input');
     inputs.forEach((input) => {
-        if (!input.checkValidity()) {
+        const input_span = document.createElement("SPAN");
+        const cannot = "Ce champ ne peut être vide";
+        let input_span_text = document.createTextNode(cannot);
+        input_span.appendChild(input_span_text);
+        input_spanInvalid = document.getElementById(input.id + "_invalid");
+        input_span.setAttribute("class", "contact_form_span_invalid");
+        input_span.setAttribute("id", input.id + "_invalid");
+        if (input.validity.valueMissing) {
             input.classList.add("contact_form_invalid");
+            if (!input_spanInvalid) {
+                input.insertAdjacentElement('afterend', input_span);
+            } else {
+                input_spanInvalid.replaceWith(input_span);
+            }
         } else {
             input.classList.remove("contact_form_invalid");
+            if (input_spanInvalid) {
+                input_spanInvalid.remove();
+            }
         }
+
     })
+
+    let email = document.getElementById("contact_form_email");
+    if (email.validity.typeMismatch) {
+        const email_span = document.createElement("SPAN");
+        const email_span_text = document.createTextNode(email.value + " n'est pas une adresse email valide");
+        email_span.appendChild(email_span_text);
+        email.classList.add("contact_form_invalid");
+        email.insertAdjacentElement('afterend', email_span);
+        email_span.setAttribute("id", "contact_form_email_invalid");
+        email_span.setAttribute("class", "contact_form_span_invalid");
+    } else if (!email.validity.valueMissing) {
+        email_spanInvalid = document.getElementById("contact_form_span_invalid");
+        email.classList.remove("contact_form_invalid");
+        if (email_spanInvalid) {
+            email_spanInvalid.remove();
+        }
+    }
 })
