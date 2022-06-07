@@ -537,6 +537,18 @@ a:hover {
 
 .contact_form_invalid {
     border: 1px solid red;
+    margin-bottom: 0.5rem;
+}
+
+.contact_form_span_invalid {
+    display: block;
+    color: red;
+    font-family: var(--font-content);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.125rem;
+    text-align: justify;
+    margin-bottom: 2rem;
 }
 
 input#contact_form_button {
@@ -735,6 +747,7 @@ input#contact_form_button:hover {
     }
     .contact_form_input {
         padding: 0.675rem;
+        margin-bottom: 1.5rem;
     }
     #contact_form_flexname {
         gap: 0;
