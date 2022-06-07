@@ -20,7 +20,7 @@
     </header>
     <main>
         <h2>Contactez-nous</h2>
-        <p>Vous avez une question concernant notre basilique ? Vous pouvez nous joindre à tout moment via le formulaire de contact ci-dessous. N'hésitez pas à nous contacter, nous serons très heureux de vous répondre !</p>
+        <p>Vous avez une question concernant notre basilique ? Vous pouvez nous joindre à tout moment via le formulaire de contact ci-dessous. N'hésitez pas à nous contacter, nous serons très heureux de vous répondre !<br>Tous les champs de ce formulaire sont obligatoires.</p>
         <form id="contact_form" method="post" novalidate>
             <div id="contact_form_flexname">
                 <div id="contact_form_flexname_name">
