@@ -21,23 +21,23 @@
     <main>
         <h2>Contactez-nous</h2>
         <p>Vous avez une question concernant notre basilique ? Vous pouvez nous joindre à tout moment via le formulaire de contact ci-dessous. N'hésitez pas à nous contacter, nous serons très heureux de vous répondre !</p>
-        <form id="contact_form" method="post">
+        <form id="contact_form" method="post" novalidate>
             <div id="contact_form_flexname">
                 <div id="contact_form_flexname_name">
                     <label for="contact_form_name">Nom</label>
-                    <input type="text" name="nom" id="contact_form_name" aria-required="true" required/>
+                    <input type="text" name="nom" id="contact_form_name" class="contact_form_input" aria-required="true" required/>
                 </div>
                 <div id="contact_form_flexname_firstname">
                     <label for="contact_form_firstname">Prénom</label>
-                    <input type="text" name="prénom" id="contact_form_firstname" aria-required="true" required/>
+                    <input type="text" name="prénom" id="contact_form_firstname" class="contact_form_input" aria-required="true" required/>
                 </div>
             </div>
             <label for="contact_form_email">Email</label>
-            <input type="email" name="mail" id="contact_form_email" aria-required="true" required/>
+            <input type="email" name="mail" id="contact_form_email" class="contact_form_input" aria-required="true" required/>
             <label for="contact_form_object">Objet</label>
-            <input type="text"  name="objet" id="contact_form_object" aria-required="true" required/>
+            <input type="text"  name="objet" id="contact_form_object" class="contact_form_input" aria-required="true" required/>
             <label for="contact_form_message">Message</label>
-            <textarea name="message" id="contact_form_message" rows="8" aria-required="true" required></textarea>
+            <textarea name="message" id="contact_form_message" rows="8" class="contact_form_input" aria-required="true" required></textarea>
             <div class="button">
                 <input type="submit" value="Valider" id="contact_form_button">
             </div>
@@ -65,7 +65,7 @@
     }
     ?>
     <footer>
-        <?php include("footer.html")?>
+        <?php //include("footer.html")?>
     </footer>
 </body>
 
