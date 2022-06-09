@@ -59,3 +59,16 @@ form.addEventListener('submit', function(e) {
         }
     }
 })
+
+let timer = null;
+window.addEventListener('scroll', function() {
+    if(timer !== null) {
+        clearTimeout(timer);        
+        document.getElementById("menu").classList.remove("fixed");
+        document.getElementById("header_title").style.marginTop=null;
+    }
+    timer = setTimeout(function() {
+        document.getElementById("menu").classList.add("fixed");
+        document.getElementById("header_title").style.marginTop="6rem";
+    }, 1000);
+}, false);
