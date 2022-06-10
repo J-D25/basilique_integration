@@ -78,6 +78,11 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1;
+    animation: appear 0.5s ease-in-out;
+}
+
+.nofixed{
+    animation: disappear 0.5s ease-in-out;
 }
 
 header p {
@@ -836,5 +841,19 @@ input#contact_form_button:hover {
     }
     header {
         background-image: url(images/header_mobile.jpg);
+    }
+}
+@keyframes appear{
+    from {
+        opacity:0;
+    } to {
+        opacity:1;
+    }
+}
+@keyframes disappear{
+    from {
+        opacity:1;
+    } to {
+        opacity:0;
     }
 }
