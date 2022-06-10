@@ -63,12 +63,14 @@ form.addEventListener('submit', function(e) {
 let timer = null;
 window.addEventListener('scroll', function() {
     if(timer !== null) {
-        clearTimeout(timer);        
-        document.getElementById("menu").classList.remove("fixed");
+        clearTimeout(timer);
+        document.getElementById("menu").classList.add("nofixed");
+        setTimeout(function() {document.getElementById("menu").classList.remove("fixed")}, 500);
         document.getElementById("header_title").style.marginTop=null;
     }
     timer = setTimeout(function() {
         document.getElementById("menu").classList.add("fixed");
+        document.getElementById("menu").classList.remove("nofixed");
         document.getElementById("header_title").style.marginTop="6rem";
     }, 1000);
 }, false);
