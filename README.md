@@ -35,7 +35,7 @@ Intégrer et dynamiser votre premier site web et son interface d'administration.
 - Mettre en forme le texte
 - Gérer la position et l'affichage des éléments
 - Gérer les fonds les dégradés et les ombres si nécessaire
-### Itération #B.9 : Adapter le site aux différents support
+### Itération #B.9 : Adapter le site aux différents supports
 - Réaliser le responsive de votre page
 ### Itération #B.10 : Dynamiser les éléments du site
 - À partir du prototypage réaliser les effets d'animation sur les liens, les boutons, les éléments de formulaire si nécessaire via css
