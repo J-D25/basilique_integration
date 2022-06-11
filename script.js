@@ -60,6 +60,7 @@ form.addEventListener('submit', function(e) {
     }
 })
 
+if (window.matchMedia("(min-width: 765px)").matches) {
 let timer = null;
 window.addEventListener('scroll', function() {
     if (timer !== null) {
@@ -76,3 +77,4 @@ window.addEventListener('scroll', function() {
         document.getElementById("menu").classList.remove("nofixed");
     }, 1000);
 }, false);
+}
