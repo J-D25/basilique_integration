@@ -89,12 +89,9 @@ if (window.matchMedia("(max-width: 765px)").matches) {
     menu.addEventListener('click', function() {
         i = i + 1
         if (i % 2 == 1) {
-            console.log("ouvert");
             document.querySelector("ul").classList.remove("close");
             document.querySelector("ul").classList.add("open");
         } else {
-            console.log("fermé");
-
             document.querySelector("ul").classList.remove("open");
             document.querySelector("ul").classList.add("closing");
             document.querySelector("ul").classList.add("close");
