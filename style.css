@@ -838,7 +838,7 @@ input#contact_form_button:hover {
     #header_hook {
         margin-top: 6rem;
         font-size: 17vw;
-        line-height: 6.5rem;
+        line-height: 5rem;
     }
     header {
         background-image: url(images/header_mobile.jpg);
