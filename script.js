@@ -101,3 +101,16 @@ if (window.matchMedia("(max-width: 765px)").matches) {
         }
     })
 }
+
+let imgs = document.querySelectorAll("img");
+imgs.forEach((img) => {
+    let rect = img.getBoundingClientRect()
+    window.addEventListener('scroll', function() {
+        let scrollY = this.scrollY;
+        if ((scrollY + window.innerHeight) >= (rect.y + 25)) {
+            img.classList.add("imagefixed");
+        } else {
+            img.classList.remove("imagefixed");
+        }
+    });
+});
