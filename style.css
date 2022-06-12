@@ -1,6 +1,16 @@
 :root {
     --font-title: 'Domine', serif;
     --font-content: 'Akshar', sans-serif;
+    --color-white: #FFFFFF;
+    --color-actu: #F2F5F8;
+    --color-invalid: #F80000;
+    --color-img: #EDEDED;
+    --color-blue: #1B4F91;
+    --color-blue-hover: #7595BD;
+    --color-footer: #A6ACB8;
+    --color-newsletter: #6E6E6E;
+    --color-green: #364826;
+    --color-green-hover: #82BE7E;
 }
 
 div {
@@ -12,7 +22,8 @@ img:hover {
 }
 
 img {
-    transition: transform .3s
+    transition: transform .3s;
+    background-color: var(--color-img);
 }
 
 body {
@@ -21,19 +32,18 @@ body {
 
 header {
     height: 100vh;
-    background-color: #1B4F91;
+    background-color: var(--color-blue);
     background-image: url(images/header.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: #FFFFFF;
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
 }
 
 #menu {
     height: 6rem;
-    background-color: rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -44,7 +54,7 @@ header {
 
 #menu h1,
 #menu ul li a {
-    color: #FFFFFF;
+    color: var(--color-white);
     font-family: var(--font-title);
     font-style: normal;
     font-weight: 700;
@@ -175,18 +185,18 @@ p {
 
 .button a {
     display: inline-block;
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
     text-shadow: 0rem 0rem .125rem rgba(0, 0, 0, 0.5);
-    background-color: #1B4F91;
+    background-color: var(--color-blue);
     width: 12.5rem;
     height: 2.25rem;
     text-align: center;
 }
 
 .button a:hover {
-    background-color: #7595BD;
-    color: white;
+    background-color: var(--color-blue-hover);
+    color: var(--color-white);
 }
 
 #home_section_2 {
@@ -218,8 +228,8 @@ h3 {
 
 .home_section_3_content_actu {
     width: 33%;
-    background-color: #F2F5F8;
-    border: 1px solid #1B4F91;
+    background-color: var(--color-actu);
+    border: 1px solid var(--color-blue);
     border-radius: .3125rem;
 }
 
@@ -266,7 +276,7 @@ h4 {
 }
 
 footer {
-    background-color: #A6ACB8;
+    background-color: var(--color-footer);
     padding: 1.625rem;
     display: grid;
     grid-template-columns: 1fr 0.75fr 0.85fr;
@@ -318,14 +328,14 @@ footer p:last-child {
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
-    color: #6E6E6E;
+    color: var(--color-newsletter);
 }
 
 #newsletter_email {
     padding: 0;
     padding-left: 1.625rem;
-    background: #FFFFFF;
-    color: #6E6E6E;
+    background: var(--color-white);
+    color: var(--color-newsletter);
     font-family: var(--font-content);
     font-style: normal;
     font-weight: 400;
@@ -339,11 +349,11 @@ footer p:last-child {
 }
 
 #newsletter_email:invalid {
-    border: 1.5px solid #F80000;
+    border: 1.5px solid var(--color-invalid);
 }
 
 #newsletter_email:invalid:not(:focus) {
-    color: #F80000;
+    color: var(--color-invalid);
 }
 
 #newsletter_button,
@@ -353,7 +363,7 @@ footer p:last-child {
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
-    color: #FFFFFF;
+    color: var(--color-white);
     text-shadow: 0rem 0rem .125rem rgba(0, 0, 0, 0.5);
 }
 
@@ -365,7 +375,7 @@ footer p:last-child {
 
 #newsletter_button:hover,
 #newsletter_link:hover {
-    background-color: #82BE7E;
+    background-color: var(--color-green-hover);
 }
 
 #newsletter_link {
@@ -378,7 +388,7 @@ a {
 }
 
 a:hover {
-    color: #364826;
+    color: var(--color-green);
     text-decoration: none;
 }
 
@@ -428,7 +438,7 @@ a:hover {
 }
 
 #esp_section_1_gallery {
-    background-color: #EDEDED;
+    background-color: var(--color-img);
     background-image: url("images/esp_01.jpg");
     background-size: cover;
     background-position: center;
@@ -547,13 +557,13 @@ a:hover {
 }
 
 .contact_form_invalid {
-    border: 1px solid #F80000;
+    border: 1px solid var(--color-invalid);
     margin-bottom: 0.5rem;
 }
 
 .contact_form_span_invalid {
     display: block;
-    color: #F80000;
+    color: var(--color-invalid);
     font-family: var(--font-content);
     font-style: normal;
     font-weight: 300;
@@ -569,9 +579,9 @@ input#contact_form_button {
     padding: 0.875rem;
     margin-bottom: 2rem;
     display: inline-block;
-    color: white;
+    color: var(--color-white);
     text-shadow: 0rem 0rem 0.125rem rgb(0 0 0 / 50%);
-    background-color: #1B4F91;
+    background-color: var(--color-blue);
     width: 12.5rem;
     text-align: center;
     font-weight: 400;
@@ -579,7 +589,7 @@ input#contact_form_button {
 }
 
 input#contact_form_button:hover {
-    background-color: #7595BD;
+    background-color: var(--color-blue-hover);
 }
 
 #footer_content_1_content {
@@ -813,7 +823,7 @@ input#contact_form_button:hover {
     .lines {
         width: 2rem;
         height: .25rem;
-        background: white;
+        background-color: var(--color-white);
     }
     #menu_check:checked~label .line1 {
         transform: rotate(45deg) translate(8.5px, 8.5px);
