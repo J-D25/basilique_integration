@@ -74,14 +74,14 @@ header {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-.fixed{
+.fixed {
     position: fixed;
     width: 100%;
     z-index: 1;
     animation: appear 0.5s ease-in-out;
 }
 
-.nofixed{
+.nofixed {
     animation: disappear 0.5s ease-in-out;
 }
 
@@ -785,7 +785,8 @@ input#contact_form_button:hover {
         position: fixed;
         z-index: 1;
     }
-    #menu_check:checked~ul {
+    #menu_check:checked~ul,
+    #menu ul.closing {
         display: block;
         position: absolute;
         top: 6rem;
@@ -843,17 +844,51 @@ input#contact_form_button:hover {
         background-image: url(images/header_mobile.jpg);
     }
 }
-@keyframes appear{
+
+@keyframes appear {
     from {
-        opacity:0;
-    } to {
-        opacity:1;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
-@keyframes disappear{
+
+@keyframes disappear {
     from {
-        opacity:1;
-    } to {
-        opacity:0;
+        opacity: 1;
     }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes menuopened {
+    from {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes menuclosed {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+}
+
+.open {
+    animation: menuopened 1s ease-out;
+}
+
+.close {
+    animation: menuclosed 1s ease-out;
 }
