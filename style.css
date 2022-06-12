@@ -892,3 +892,14 @@ input#contact_form_button:hover {
 .close {
     animation: menuclosed 1s ease-out;
 }
+
+img {
+    transition: transform 400ms ease-in-out, opacity 400ms ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.imagefixed {
+    transform: translateY(0px);
+    opacity: 1;
+}
