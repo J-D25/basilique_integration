@@ -19,11 +19,19 @@ div {
 
 img:hover {
     transform: scale(1.1);
+    transition: transform .3s;
 }
 
 img {
-    transition: transform .3s;
     background-color: var(--color-img);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.imagefixed {
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 body {
@@ -901,15 +909,4 @@ input#contact_form_button:hover {
 
 .close {
     animation: menuclosed 0.7s ease-out;
-}
-
-img {
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-out;
-    opacity: 0;
-    transform: translateY(50px);
-}
-
-.imagefixed {
-    transform: translateY(0px);
-    opacity: 1;
 }
