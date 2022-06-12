@@ -886,15 +886,15 @@ input#contact_form_button:hover {
 }
 
 .open {
-    animation: menuopened 1s ease-out;
+    animation: menuopened 0.7s ease-out;
 }
 
 .close {
-    animation: menuclosed 1s ease-out;
+    animation: menuclosed 0.7s ease-out;
 }
 
 img {
-    transition: transform 400ms ease-in-out, opacity 400ms ease-out;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-out;
     opacity: 0;
     transform: translateY(50px);
 }

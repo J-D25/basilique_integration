@@ -97,7 +97,7 @@ if (window.matchMedia("(max-width: 765px)").matches) {
             document.querySelector("ul").classList.add("close");
             timer = setTimeout(function() {
                 document.querySelector("ul").classList.remove("closing");
-            }, 900);
+            }, 600);
         }
     })
 }
