@@ -9,6 +9,7 @@
     --color-blue-hover: #7595BD;
     --color-footer: #A6ACB8;
     --color-newsletter: #6E6E6E;
+    --color-newsletter-button: #6C7689;
     --color-green: #364826;
     --color-green-hover: #82BE7E;
 }
@@ -366,7 +367,7 @@ footer p:last-child {
 
 #newsletter_button,
 #newsletter_link {
-    background: #6C7689;
+    background: var(--color-newsletter-button);
     font-family: var(--font-content);
     font-style: normal;
     font-weight: 400;
