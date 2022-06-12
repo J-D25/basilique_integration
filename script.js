@@ -61,23 +61,46 @@ form.addEventListener('submit', function(e) {
 })
 
 if (window.matchMedia("(min-width: 765px)").matches) {
-let timer = null;
-window.addEventListener('scroll', function() {
-    let header = document.querySelector("header");
-    let scrollY = this.scrollY;
-    if (timer !== null) {
-        clearTimeout(timer);
-        document.getElementById("menu").classList.add("nofixed");
-        setTimeout(function() {
-            document.getElementById("menu").classList.remove("fixed");
-            document.getElementById("header_title").style.marginTop = null;
-        }, 400);
-    }
-    if (scrollY > header.clientHeight) {
-    timer = setTimeout(function() {
-        document.getElementById("menu").classList.add("fixed");
-        document.getElementById("header_title").style.marginTop = "6rem";
-        document.getElementById("menu").classList.remove("nofixed");
-    }, 1000);}
-}, false);
+    let timer = null;
+    window.addEventListener('scroll', function() {
+        let header = document.querySelector("header");
+        let scrollY = this.scrollY;
+        if (timer !== null) {
+            clearTimeout(timer);
+            document.getElementById("menu").classList.add("nofixed");
+            setTimeout(function() {
+                document.getElementById("menu").classList.remove("fixed");
+                document.getElementById("header_title").style.marginTop = null;
+            }, 400);
+        }
+        if (scrollY > header.clientHeight) {
+            timer = setTimeout(function() {
+                document.getElementById("menu").classList.add("fixed");
+                document.getElementById("header_title").style.marginTop = "6rem";
+                document.getElementById("menu").classList.remove("nofixed");
+            }, 1000);
+        }
+    }, false);
+}
+
+if (window.matchMedia("(max-width: 765px)").matches) {
+    let menu = document.querySelector("label")
+    let i = 0
+    menu.addEventListener('click', function() {
+        i = i + 1
+        if (i % 2 == 1) {
+            console.log("ouvert");
+            document.querySelector("ul").classList.remove("close");
+            document.querySelector("ul").classList.add("open");
+        } else {
+            console.log("fermé");
+
+            document.querySelector("ul").classList.remove("open");
+            document.querySelector("ul").classList.add("closing");
+            document.querySelector("ul").classList.add("close");
+            timer = setTimeout(function() {
+                document.querySelector("ul").classList.remove("closing");
+            }, 900);
+        }
+    })
 }
