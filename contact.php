@@ -22,7 +22,7 @@
     <main>
         <h2>Contactez-nous</h2>
         <p>Vous avez une question concernant notre basilique ? Vous pouvez nous joindre à tout moment via le formulaire de contact ci-dessous. N'hésitez pas à nous contacter, nous serons très heureux de vous répondre !<br>Tous les champs de ce formulaire sont obligatoires.</p>
-        <form id="contact_form" method="post" novalidate>
+        <form id="contact_form" method="post" novalidate onsubmit="return ajaxpost()">
             <div id="contact_form_flexname">
                 <div id="contact_form_flexname_name">
                     <label for="contact_form_name">Nom</label>
@@ -44,27 +44,7 @@
             </div>
         </form>
     </main>
-<?php
-    if (isset($_POST['message'])) {
-        $expéditeur=$_POST['nom'] . ' ' . $_POST['prénom'] . ' <' . $_POST['mail'].'>';
-        $entete  = 'MIME-Version: 1.0' . "\r\n";
-        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-        $entete .= 'From: Basilique Saint-Ferjeux <basilique@promo-159.codeur.online>' . "\r\n";
-        $entete .= 'Reply-to: ' . $expéditeur ;
-        $objet = 'Contact - Basilique Saint-Ferjeux';
-        $message = '<p>Message envoyé depuis la page Contact de la Basilique Saint-Ferjeux</p>
-        <p><b>Nom et prénom : </b>' . $_POST['nom'] . ' ' . $_POST['prénom'] . '<br>
-        <p><b>Email : </b>' . $_POST['mail'] . '<br>
-        <p><b>Objet : </b>' . $_POST['objet'] . '<br>
-        <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
-        $destinataire = 'Basilique Saint-Ferjeux <j.auzanneau@codeur.online>, ' . $expéditeur;
-        $retour = mail($destinataire, $objet, $message, $entete);
-        if($retour)
-        echo '<p>Votre message a bien été envoyé.</p>';
-            header('Location: contact.php'); 
-            exit();
-    }
-    ?>
+
     <footer>
         <?php include("footer.html")?>
     </footer>
