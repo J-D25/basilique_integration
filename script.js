@@ -114,3 +114,51 @@ imgs.forEach((img) => {
         }
     });
 });
+
+
+function ajaxpost() {
+    // (B1) GET FORM DATA
+    let form = document.getElementById("contact_form");
+    if (form.checkValidity()) {
+        var data = new FormData(form);
+        console.log(data)
+
+        // (B2) AJAX POST
+        fetch("mail.php", { method: "POST", body: data })
+            .then(res => res.text())
+            .then((results) => {
+                if (results == "Votre message a bien été envoyé.") {
+                    popup();
+                    form.reset();
+                }
+            });
+        return false;
+    }
+}
+
+function popup() {
+    let forma = document.getElementById("contact_form");
+    let div1 = document.createElement("div");
+    div1.setAttribute("id", "popup_fond");
+    forma.insertAdjacentElement('afterend', div1);
+    let div2 = document.createElement("div");
+    div2.setAttribute("id", "popup_wrapper");
+    div1.append(div2);
+    let div3 = document.createElement("div");
+    div3.setAttribute("id", "popup_center");
+    div2.append(div3);
+    let p1 = document.createElement("p");
+    p1.setAttribute("id", "popup_close");
+    div3.append(p1);
+    p1Content = document.createTextNode("X");
+    p1.append(p1Content);
+    let p2 = document.createElement("p");
+    p2.setAttribute("id", "popup_text");
+    div3.append(p2);
+    p2Content = document.createTextNode("Votre message a bien été envoyé.");
+    p2.append(p2Content);
+
+    document.getElementById("popup_close").addEventListener('click', function() {
+        document.getElementById("popup_fond").remove();
+    })
+}
