@@ -38,4 +38,21 @@ Intégrer et dynamiser votre premier site web et son interface d'administration.
 ### Itération #B.9 : Adapter le site aux différents supports
 - Réaliser le responsive de votre page
 ### Itération #B.10 : Dynamiser les éléments du site
-- À partir du prototypage réaliser les effets d'animation sur les liens, les boutons, les éléments de formulaire si nécessaire via css
+- À partir du prototypage réaliser les effets d'animation sur les liens, les boutons, les éléments de formulaire si nécessaire via CSS
+### Itération #B.11 : Animer, sécuriser et améliorer les performances
+- À partir du prototypage réaliser l'animation de l'entête
+- Animer ou faire apparaître les différentes sections au scroll
+- Sécuriser la saisie du formulaire si nécessaire
+- Améliorer les performances du site
+### Itération #B.12 : Concevoir la base de données du tableau de bord
+- D'après la maquette du tableau de bord, réaliser le MCD, MLD et MPD
+### Itération #B.13 : Intégrer le tableau de bord
+D'après la maquette réaliser l'intégration HTML, CSS et responsive du tableau de bord
+### Itération #B.14 : Gérer l'inscription à la newsletter
+- Réaliser les script JS et PHP permettant de gérer l'inscription à la newsletter.
+### Itération #B.15 : Lister les personnes inscrites à la newsletter
+- Réaliser le script PHP permettant de lister les personnes inscrites à la newsletter.
+### Itération #B.16 : Exporter la liste des inscrits à la newsletter
+- Réaliser le script PHP permettant d'exporter les inscrits à la newsletter au format csv
+### Itération #B.17 : Protéger l'accès au tableau de bord
+- Réaliser le script PHP de la connexion au tableau de bord
