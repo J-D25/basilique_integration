@@ -45,7 +45,7 @@ input {
     width: 100%;
 }
 
-input[type="button"] {
+input[type="submit"] {
     width: 100%;
     display: flex;
     box-sizing: border-box;
@@ -57,13 +57,13 @@ input[type="button"] {
     margin-bottom: 0;
     color: white;
     text-shadow: 0rem 0rem 0.125rem rgb(0 0 0 / 50%);
-    background-color: var(--color-blue);
+    background-color: #1B4F91;
     text-align: center;
     font-weight: 400;
     font-size: 1.125rem;
 }
 
-input[type="button"]:hover {
+input[type="submit"]:hover {
     background-color: #7595BD;
 }
 
