@@ -19,7 +19,7 @@
             <input type="text" name="username">
             <label for="username">Mot de passe</label>
             <input type="password" name="password">
-            <input type="button" value="Valider">
+            <input type="submit" value="Valider">
         </form>
     </main>
 </body>
