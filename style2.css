@@ -4,7 +4,6 @@
 
 body {
     margin: 0;
-    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -17,12 +16,13 @@ body {
 }
 
 main {
-    width: 45vw;
-    height: 45vw;
+    height: 75%;
+    aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
@@ -73,4 +73,17 @@ label {
     font-style: normal;
     font-size: 1.5rem;
     margin-bottom: 11px;
+}
+
+@media (max-width: 765px) {
+    main {
+        height: 90vh;
+        width: 90vw;
+    }
+}
+
+@media (min-width: 765px) and (max-width: 1000px) {
+    main {
+        height:65%;
+    }
 }
