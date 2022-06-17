@@ -357,12 +357,18 @@ footer p:last-child {
     border-radius: 0;
 }
 
-#newsletter_email:invalid {
-    border: 1.5px solid var(--color-invalid);
+#newsletter_email:focus::placeholder {
+    visibility: hidden;
 }
 
 #newsletter_email:invalid:not(:focus) {
+    border: 1.5px solid var(--color-invalid);
     color: var(--color-invalid);
+}
+
+#newsletter_email:focus-visible {
+    outline: solid;
+    border: 2px solid black;
 }
 
 #newsletter_button,
