@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500&family=Glory:wght@400&display=swap" rel="stylesheet">
+    <script src="script2.js" defer></script>
     <title>Basilique Saint-Ferjeux - Administration</title>
 </head>
 
@@ -28,7 +29,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="light">
                     <td>john@doe.fr</td>
                     <td>14/06/2022</td>
                     <td><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +37,7 @@
 </svg>
                     </td>
                 </tr>
-                <tr>
+                <tr class="dark">
                     <td>john@doe.fr</td>
                     <td>14/06/2022</td>
                     <td><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +45,7 @@
 </svg>
                     </td>
                 </tr>
-                <tr>
+                <tr class="light">
                     <td>john@doe.fr</td>
                     <td>14/06/2022</td>
                     <td><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,8 +55,10 @@
                 </tr>
             </tbody>
         </table>
-        <input type="button" value="Charger plus">
-        <input type="button" value="Exporter en csv" id="export">
+        <footer>
+            <input type="button" value="Charger plus" class="button_blue">
+            <input type="button" value="Exporter en csv" class="button_blue" id="export">
+        </footer>
     </main>
 </body>
 
