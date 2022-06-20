@@ -349,7 +349,6 @@ footer p:last-child {
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
-    border: none;
     display: flex;
     box-sizing: border-box;
     width: 100%;
@@ -357,12 +356,16 @@ footer p:last-child {
     border-radius: 0;
 }
 
+#newsletter_email:not(:focus) {
+    border: none;
+}
+
 #newsletter_email:focus::placeholder {
     visibility: hidden;
 }
 
 #newsletter_email.newsletter_invalid {
-    border: 1.5px solid var(--color-invalid);
+    border: 2px solid var(--color-invalid);
     color: var(--color-invalid);
 }
 
