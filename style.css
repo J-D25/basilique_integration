@@ -361,14 +361,9 @@ footer p:last-child {
     visibility: hidden;
 }
 
-#newsletter_email:invalid:not(:focus) {
+#newsletter_email.newsletter_invalid {
     border: 1.5px solid var(--color-invalid);
     color: var(--color-invalid);
-}
-
-#newsletter_email:focus-visible {
-    outline: solid;
-    border: 2px solid black;
 }
 
 #newsletter_button,
