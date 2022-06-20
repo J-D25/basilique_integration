@@ -46,6 +46,7 @@ Intégrer et dynamiser votre premier site web et son interface d'administration.
 - Améliorer les performances du site
 ### Itération #B.12 : Concevoir la base de données du tableau de bord
 - D'après la maquette du tableau de bord, réaliser le MCD, MLD et MPD
+* ![](MPD.svg)
 ### Itération #B.13 : Intégrer le tableau de bord
 D'après la maquette réaliser l'intégration HTML, CSS et responsive du tableau de bord
 ### Itération #B.14 : Gérer l'inscription à la newsletter
