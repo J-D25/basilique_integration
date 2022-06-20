@@ -162,3 +162,30 @@ function popup() {
         document.getElementById("popup_fond").remove();
     })
 }
+
+const formNewsletter = document.querySelector('#newsletter');
+const inputNewsletter = document.querySelector('#newsletter_email');
+const btnSubmitNewsletter = document.querySelector('#newsletter_button');
+
+btnSubmitNewsletter.addEventListener('click', function(e) {
+    if (!formNewsletter.checkValidity()) {
+        e.preventDefault()
+    }
+    checkNewsletter();
+});
+
+inputNewsletter.addEventListener('focusin', function() {
+    inputNewsletter.classList.remove("newsletter_invalid");
+})
+
+inputNewsletter.addEventListener('focusout', function() {
+    checkNewsletter();
+});
+
+function checkNewsletter() {
+    if (inputNewsletter.validity.valueMissing || inputNewsletter.validity.typeMismatch) {
+        inputNewsletter.classList.add("newsletter_invalid");
+    } else {
+        inputNewsletter.classList.remove("newsletter_invalid");
+    }
+}
