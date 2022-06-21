@@ -117,17 +117,15 @@ imgs.forEach((img) => {
 
 
 function ajaxpost() {
-    // (B1) GET FORM DATA
-    let form = document.getElementById("contact_form");
+    const form = document.getElementById("contact_form");
     if (form.checkValidity()) {
-        var data = new FormData(form);
-        console.log(data)
+        const data = new FormData(form);
 
-        // (B2) AJAX POST
         fetch("mail.php", { method: "POST", body: data })
             .then(res => res.text())
             .then((results) => {
-                if (results == "Votre message a bien été envoyé.") {
+                let resultsJSON = JSON.parse(results)
+                if (resultsJSON.response == true) {
                     popup();
                     form.reset();
                 }
