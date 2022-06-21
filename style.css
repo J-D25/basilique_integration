@@ -585,23 +585,33 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-input#contact_form_button {
+input#contact_form_button,
+input#popup_thanks {
     border: 0;
     -webkit-appearance: none;
     border-radius: 0;
     padding: 0.875rem;
-    margin-bottom: 2rem;
     display: inline-block;
     color: var(--color-white);
     text-shadow: 0rem 0rem 0.125rem rgb(0 0 0 / 50%);
     background-color: var(--color-blue);
-    width: 12.5rem;
     text-align: center;
     font-weight: 400;
     font-size: 1.125rem;
 }
 
-input#contact_form_button:hover {
+input#contact_form_button {
+    margin-bottom: 2rem;
+    width: 12.5rem;
+}
+
+input#popup_thanks {
+    width: 6rem;
+    cursor: pointer;
+}
+
+input#contact_form_button:hover,
+input#popup_thanks:hover {
     background-color: var(--color-blue-hover);
 }
 
@@ -950,6 +960,7 @@ input#contact_form_button:hover {
     right: 50%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
