@@ -14,9 +14,9 @@
         $destinataire = 'Basilique Saint-Ferjeux <j.auzanneau@codeur.online>, ' . $expéditeur;
         if(!empty($_POST['nom']) && !empty($_POST['prénom']) && !empty($_POST['mail']) && !empty($_POST['objet']) && !empty($_POST['message'])){
             $retour = mail($destinataire, $objet, $message, $entete);
-            echo "Votre message a bien été envoyé.";
+            echo json_encode(["response"=>true]);
         } else {
-            echo "Une erreur est survenue.";
+            echo json_encode(["response"=>false]);
         }
     }
 ?>
