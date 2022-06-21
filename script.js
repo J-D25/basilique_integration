@@ -126,7 +126,7 @@ function ajaxpost() {
             .then((results) => {
                 let resultsJSON = JSON.parse(results)
                 if (resultsJSON.response == true) {
-                    popup();
+                    showPopUp();
                     form.reset();
                 }
             });
@@ -134,7 +134,7 @@ function ajaxpost() {
     }
 }
 
-function popup() {
+function showPopUp() {
     let forma = document.getElementById("contact_form");
     let div1 = document.createElement("div");
     div1.setAttribute("id", "popup_fond");
@@ -156,8 +156,21 @@ function popup() {
     p2Content = document.createTextNode("Votre message a bien été envoyé.");
     p2.append(p2Content);
 
+    let div4 = document.createElement("div");
+    div4.setAttribute("class", "button");
+    div3.append(div4);
+    let inpt = document.createElement("input");
+    inpt.setAttribute("type", "button");
+    inpt.setAttribute("value", "Merci");
+    inpt.setAttribute("id", "popup_thanks");
+    div4.append(inpt);
+
+    let popUp = document.getElementById("popup_fond")
     document.getElementById("popup_close").addEventListener('click', function() {
-        document.getElementById("popup_fond").remove();
+        popUp.remove();
+    })
+    document.getElementById("popup_thanks").addEventListener('click', function() {
+        popUp.remove();
     })
 }
 
