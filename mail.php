@@ -1,5 +1,5 @@
 <?php
-    if (isset($_POST['message'])) {
+    if (isset($_POST['nom']) && isset($_POST['prénom']) && isset($_POST['mail']) && isset($_POST['objet']) && isset($_POST['message'])) {
         if(!empty($_POST['nom']) && !empty($_POST['prénom']) && !empty($_POST['mail']) && filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) && !empty($_POST['objet']) && !empty($_POST['message'])) {
             $expéditeur=$_POST['nom'] . ' ' . $_POST['prénom'] . ' <' . $_POST['mail'].'>';
             $entete  = 'MIME-Version: 1.0' . "\r\n";
