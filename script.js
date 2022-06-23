@@ -177,6 +177,7 @@ function showPopUp() {
 const formNewsletter = document.querySelector('#newsletter');
 const inputNewsletter = document.querySelector('#newsletter_email');
 const btnSubmitNewsletter = document.querySelector('#newsletter_button');
+const pNewsResult = document.querySelector('#newsletter_result');
 
 btnSubmitNewsletter.addEventListener('click', function(e) {
     if (!formNewsletter.checkValidity()) {
@@ -188,6 +189,8 @@ btnSubmitNewsletter.addEventListener('click', function(e) {
 
 inputNewsletter.addEventListener('focusin', function() {
     inputNewsletter.classList.remove("newsletter_invalid");
+    pNewsResult.removeAttribute('class');
+    pNewsResult.textContent = "";
 })
 
 inputNewsletter.addEventListener('focusout', function() {
@@ -197,8 +200,16 @@ inputNewsletter.addEventListener('focusout', function() {
 function checkNewsletter() {
     if (inputNewsletter.validity.valueMissing || inputNewsletter.validity.typeMismatch) {
         inputNewsletter.classList.add("newsletter_invalid");
+        pNewsResult.classList.add("newsletter_p_invalid");
+        if (inputNewsletter.validity.valueMissing) {
+            pNewsResult.textContent = "Le champ est vide.";
+        } else if (inputNewsletter.validity.typeMismatch) {
+            pNewsResult.textContent = inputNewsletter.value + " n'est pas une adresse email valide.";
+        }
     } else {
         inputNewsletter.classList.remove("newsletter_invalid");
+        pNewsResult.removeAttribute('class');
+        pNewsResult.textContent = "";
     }
 }
 
@@ -212,6 +223,16 @@ function ajaxpost2() {
                 let resultsJSON = JSON.parse(results)
                 if (resultsJSON.responseServer === true && resultsJSON.responseDB === true) {
                     formNewsletter.reset();
+                    pNewsResult.textContent = "Votre adresse email a été enregistrée.";
+                    pNewsResult.classList.add("newsletter_p_valid");
+                } else if (resultsJSON.responseServer === true && resultsJSON.responseDB === "23000") {
+                    inputNewsletter.classList.add("newsletter_invalid");
+                    pNewsResult.classList.add("newsletter_p_invalid");
+                    pNewsResult.textContent = "Cette adresse email est déjà enregistrée.";
+                } else {
+                    inputNewsletter.classList.add("newsletter_invalid");
+                    pNewsResult.classList.add("newsletter_p_invalid");
+                    pNewsResult.textContent = "Une erreur s'est produite.";
                 }
             });
         return false;
