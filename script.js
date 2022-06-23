@@ -125,7 +125,7 @@ function ajaxpost() {
             .then(res => res.text())
             .then((results) => {
                 let resultsJSON = JSON.parse(results)
-                if (resultsJSON.response == true) {
+                if (resultsJSON.response === true) {
                     showPopUp();
                     form.reset();
                 }
@@ -183,6 +183,7 @@ btnSubmitNewsletter.addEventListener('click', function(e) {
         e.preventDefault()
     }
     checkNewsletter();
+    ajaxpost2()
 });
 
 inputNewsletter.addEventListener('focusin', function() {
@@ -198,5 +199,21 @@ function checkNewsletter() {
         inputNewsletter.classList.add("newsletter_invalid");
     } else {
         inputNewsletter.classList.remove("newsletter_invalid");
+    }
+}
+
+function ajaxpost2() {
+    if (formNewsletter.checkValidity()) {
+        const data = new FormData(formNewsletter);
+
+        fetch("news.php", { method: "POST", body: data })
+            .then(res => res.text())
+            .then((results) => {
+                let resultsJSON = JSON.parse(results)
+                if (resultsJSON.responseServer === true && resultsJSON.responseDB === true) {
+                    formNewsletter.reset();
+                }
+            });
+        return false;
     }
 }
