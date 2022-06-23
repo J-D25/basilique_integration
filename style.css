@@ -4,6 +4,7 @@
     --color-white: #FFFFFF;
     --color-actu: #F2F5F8;
     --color-invalid: #F80000;
+    --color-valid: #004B0F;
     --color-img: #EDEDED;
     --color-blue: #1B4F91;
     --color-blue-hover: #7595BD;
@@ -389,6 +390,14 @@ footer p:last-child {
 #newsletter_button:hover,
 #newsletter_link:hover {
     background-color: var(--color-green-hover);
+}
+
+.newsletter_p_invalid {
+    color: var(--color-invalid);
+}
+
+.newsletter_p_valid {
+    color: var(--color-valid);
 }
 
 #newsletter_link {
