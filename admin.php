@@ -34,21 +34,8 @@
         $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
-        /*Sélectionne toutes les valeurs dans la table users*/
         $sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` ORDER BY `email`");
         $sth->execute();
-        
-        /*Retourne un tableau associatif pour chaque entrée de notre table
-         *avec le nom des colonnes sélectionnées en clefs*/
-        // $resultat = $sth->fetchAll(PDO::FETCH_ASSOC);
-        
-        /*print_r permet un affichage lisible des résultats,
-         *<pre> rend le tout un peu plus lisible*/
-        // echo '<pre>';
-        // print_r($resultat[0]['email']);?>
-
-<?php
-        // echo '</pre>';
     }
     catch(PDOException $e){
         $errorCode = $e->getCode();
@@ -69,9 +56,9 @@
                     foreach ($sth->fetchAll(PDO::FETCH_ASSOC) as $res) {
                     $i = $i + 1;
                     if ($i % 2==1){echo "<tr class=light>";}else{echo "<tr class=dark>";}?>
-                        <td><?php echo $res['email']; ?></td>
-                        <td><?php echo $res['date']; ?></td>
-                        <td><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.64458 1.16667H11.5261V2.33333H0V1.16667H2.88153L3.84633 0H7.67981L8.64458 1.16667ZM2.68944 14C1.8441 14 1.15261 13.3017 1.15261 12.4479V3.5H10.3735V12.4479C10.3735 13.3017 9.682 14 8.8367 14H2.68944Z" fill="#ED6368"/></svg></td>
+                        <td class="admin_email"><?php echo $res['email']; ?></td>
+                        <td class="admin_date"><?php echo $res['date']; ?></td>
+                        <td class="admin_bin"><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.64458 1.16667H11.5261V2.33333H0V1.16667H2.88153L3.84633 0H7.67981L8.64458 1.16667ZM2.68944 14C1.8441 14 1.15261 13.3017 1.15261 12.4479V3.5H10.3735V12.4479C10.3735 13.3017 9.682 14 8.8367 14H2.68944Z" fill="#ED6368"/></svg></td>
                     </tr>
                     <?php
                         }
