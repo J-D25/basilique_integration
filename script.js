@@ -190,7 +190,7 @@ btnSubmitNewsletter.addEventListener('click', function(e) {
 inputNewsletter.addEventListener('focusin', function() {
     inputNewsletter.classList.remove("newsletter_invalid");
     pNewsResult.removeAttribute('class');
-    pNewsResult.textContent = "";
+    pNewsResult.textContent = " ";
 })
 
 inputNewsletter.addEventListener('focusout', function() {
@@ -209,7 +209,7 @@ function checkNewsletter() {
     } else {
         inputNewsletter.classList.remove("newsletter_invalid");
         pNewsResult.removeAttribute('class');
-        pNewsResult.textContent = "";
+        pNewsResult.textContent = " ";
     }
 }
 
