@@ -8,7 +8,7 @@ define('DATABASE', $_ENV['DATABASE']);
 define('USERNAME', $_ENV['USERNAME']);
 define('PASSWORD', $_ENV['PASSWORD']);
 
-if (isset($_POST['newsletter_email']) && !empty($_POST['newsletter_email'])) {
+if (isset($_POST['newsletter_email']) && !empty($_POST['newsletter_email'] && filter_var($_POST['newsletter_email'], FILTER_VALIDATE_EMAIL))) {
 
     $errorCode = true;
     try{
