@@ -3,8 +3,6 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 function listingMail() {
-    // const tBody = document.querySelector("TBODY");
-    // tBody.remove();
     const template = document.querySelector("#templatemail");
 
     fetch("list.php")
@@ -12,7 +10,6 @@ function listingMail() {
         .then((results) => {
             const resultsJSON = JSON.parse(results);
             const tableNewsletter = resultsJSON['data'];
-            let i = 0;
             tableNewsletter.forEach((element, index) => {
                 const tbody = document.querySelector("tbody");
                 const clone = document.importNode(template.content, true);
@@ -42,4 +39,43 @@ function listingMail() {
                 tbody.appendChild(clone);
             });
         });
+}
+
+const searchBar = document.getElementById('search');
+searchBar.addEventListener('input', function() {
+    if (searchBar.value) {
+        fetch("search.php", {
+                method: "POST",
+                body: JSON.stringify(searchBar.value),
+                contentType: 'application/json'
+            })
+            .then(res => res.text())
+            .then((results) => {
+                const resultsJSON = JSON.parse(results);
+                const tableNewsletter = resultsJSON['data'];
+                const template = document.querySelector("#templatemail");
+                if (resultsJSON.responseServer === true && resultsJSON.responseDB === true) {
+                    removeList();
+                    tableNewsletter.forEach((element, index) => {
+                        const tbody = document.querySelector("tbody");
+                        const clone = document.importNode(template.content, true);
+                        const tr = clone.querySelectorAll("tr");
+                        const td = clone.querySelectorAll("td");
+                        td[0].textContent = tableNewsletter[index]['email'];
+                        td[1].textContent = tableNewsletter[index]['date'];
+                        tbody.appendChild(clone);
+                    });
+                }
+            });
+    } else {
+        removeList();
+        listingMail();
+    }
+})
+
+function removeList() {
+    const tBody = document.querySelector("tbody");
+    while (tBody.firstChild) {
+        tBody.removeChild(tBody.firstChild);
+    };
 }
