@@ -14,13 +14,17 @@
     <title>Basilique Saint-Ferjeux - Administration</title>
 </head>
 
-<body>
-    <header>
-        <input type="text" placeholder="Rechercher" id="search">
-        <input type="button" value="Déconnexion" id="logout">
+<body><header>
+        <a href="" title="Déconnexion" id="logout">
+            <svg xmlns:svg="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 891 980"><g transform="translate(-54.5,-10)"><path d="m 143.6,544.5 c 0,-131.9 71.7,-247.1 178.2,-308.7 V 136 C 164.5,204.8 54.5,361.9 54.5,544.5 54.5,790.6 254,990 500,990 746,990 945.5,790.6 945.5,544.5 945.5,361.8 835.5,204.7 678.2,136 v 99.8 C 784.7,297.4 856.4,412.6 856.4,544.5 856.4,741.3 696.9,900.9 500,900.9 303.1,900.9 143.6,741.4 143.6,544.5 Z M 500,10 c -49.2,0 -89.1,39.9 -89.1,89.1 v 356.4 c 0,49.2 39.9,89.1 89.1,89.1 49.2,0 89.1,-39.9 89.1,-89.1 V 99.1 C 589.1,49.9 549.2,10 500,10 Z" style="fill:#ffffff"/></g></svg>
+        </a>
     </header>
 
     <main>
+        <div id="main_bar">
+            <input type="text" placeholder="Rechercher" id="search">
+            <input type="button" value="Exporter en csv" class="button_blue" id="export">
+        </div>
         <table>
             <thead>
                 <tr class="head">
@@ -37,7 +41,6 @@
 
     <footer>
         <input type="button" value="Charger plus" class="button_blue">
-        <input type="button" value="Exporter en csv" class="button_blue" id="export">
     </footer>
 
     <template id="templatemail">
