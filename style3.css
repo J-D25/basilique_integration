@@ -1,10 +1,16 @@
+html,
+main {
+    height: 100%;
+}
+
 body {
+    min-height: 100%;
     margin: 0;
-    height: 100vh;
     background-color: #FAFAFA;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 header,
@@ -12,11 +18,18 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 2rem 0;
 }
 
 header,
 table {
     margin-bottom: 2rem;
+}
+
+header,
+table,
+footer {
+    width: 80vw;
 }
 
 #search {
@@ -31,8 +44,9 @@ table {
     font-style: normal;
     font-weight: 300;
     font-size: 1rem;
-    padding: 0.875rem;
     padding-left: 2rem;
+    height: 2.8125rem;
+    width: 15rem;
 }
 
 #search:focus::placeholder {
@@ -56,7 +70,6 @@ tr:nth-child(odd) {
     -webkit-appearance: none;
     border-radius: 0;
     padding: 0.875rem;
-    margin-bottom: 2rem;
     display: inline-block;
     color: white;
     text-shadow: 0rem 0rem 0.125rem rgb(0 0 0 / 50%);
@@ -91,7 +104,6 @@ tr:nth-child(odd) {
 }
 
 table {
-    width: 80vw;
     border-radius: 5px;
     border-spacing: 0;
 }
