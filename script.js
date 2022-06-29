@@ -13,9 +13,7 @@ const form = document.querySelector('form');
 const btnSubmit = document.querySelector('#contact_form_button');
 
 form.addEventListener('submit', function(e) {
-    if (!form.checkValidity()) {
-        e.preventDefault()
-    }
+    e.preventDefault();
 
     const inputs = document.querySelectorAll('.contact_form_input');
     inputs.forEach((input) => {
@@ -179,12 +177,10 @@ const inputNewsletter = document.querySelector('#newsletter_email');
 const btnSubmitNewsletter = document.querySelector('#newsletter_button');
 const pNewsResult = document.querySelector('#newsletter_result');
 
-btnSubmitNewsletter.addEventListener('click', function(e) {
-    if (!formNewsletter.checkValidity()) {
-        e.preventDefault()
-    }
+formNewsletter.addEventListener('submit', function(e) {
+    e.preventDefault();
     checkNewsletter();
-    ajaxpost2()
+    ajaxpost2();
 });
 
 inputNewsletter.addEventListener('focusin', function() {
