@@ -119,7 +119,7 @@ function ajaxpost() {
     if (form.checkValidity()) {
         const data = new FormData(form);
 
-        fetch("mail.php", { method: "POST", body: data })
+        fetch("php/mail.php", { method: "POST", body: data })
             .then(res => res.text())
             .then((results) => {
                 let resultsJSON = JSON.parse(results)
@@ -213,7 +213,7 @@ function ajaxpost2() {
     if (formNewsletter.checkValidity()) {
         const data = new FormData(formNewsletter);
 
-        fetch("news.php", { method: "POST", body: data })
+        fetch("php/news.php", { method: "POST", body: data })
             .then(res => res.text())
             .then((results) => {
                 let resultsJSON = JSON.parse(results)

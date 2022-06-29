@@ -23,7 +23,7 @@
     <main>
         <div id="main_bar">
             <input type="text" placeholder="Rechercher" id="search">
-            <a href="export.php" class="button_blue" id="export">Exporter en CSV</a>
+            <a href="php/export.php" class="button_blue" id="export">Exporter en CSV</a>
         </div>
         <table>
             <thead>

@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 function listingMail() {
     const template = document.querySelector("#templatemail");
 
-    fetch("list.php")
+    fetch("php/list.php")
         .then(res => res.text())
         .then((results) => {
             const resultsJSON = JSON.parse(results);
@@ -21,7 +21,7 @@ function listingMail() {
                     const data = td[0].textContent;
                     const dialog = confirm("Voulez-vous supprimer " + data + " ?");
                     if (dialog) {
-                        fetch("delete.php", {
+                        fetch("php/delete.php", {
                                 method: "POST",
                                 body: JSON.stringify(data),
                                 contentType: 'application/json'
@@ -44,7 +44,7 @@ function listingMail() {
 const searchBar = document.getElementById('search');
 searchBar.addEventListener('input', function() {
     if (searchBar.value) {
-        fetch("search.php", {
+        fetch("php/search.php", {
                 method: "POST",
                 body: JSON.stringify(searchBar.value),
                 contentType: 'application/json'
