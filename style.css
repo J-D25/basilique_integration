@@ -43,7 +43,7 @@ body {
 header {
     height: 100vh;
     background-color: var(--color-blue);
-    background-image: url(images/header.jpg);
+    background-image: url(assets/images/header.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -461,7 +461,7 @@ a:hover {
 
 #esp_section_1_gallery {
     background-color: var(--color-img);
-    background-image: url("images/esp_01.jpg");
+    background-image: url("assets/images/esp_01.jpg");
     background-size: cover;
     background-position: center;
     animation: fondu 25s cubic-bezier(0.75, 0, 0.75, 0) infinite both;
@@ -473,22 +473,22 @@ a:hover {
 
 @keyframes fondu {
     0% {
-        background-image: url("images/esp_01.jpg");
+        background-image: url("assets/images/esp_01.jpg");
     }
     20% {
-        background-image: url("images/esp_s_01.jpg");
+        background-image: url("assets/images/esp_s_01.jpg");
     }
     40% {
-        background-image: url("images/esp_s_02.jpg");
+        background-image: url("assets/images/esp_s_02.jpg");
     }
     60% {
-        background-image: url("images/esp_s_03.jpg");
+        background-image: url("assets/images/esp_s_03.jpg");
     }
     80% {
-        background-image: url("images/esp_s_04.jpg");
+        background-image: url("assets/images/esp_s_04.jpg");
     }
     100% {
-        background-image: url("images/esp_01.jpg");
+        background-image: url("assets/images/esp_01.jpg");
     }
 }
 
@@ -738,26 +738,26 @@ input#popup_thanks:hover {
     #esp_section_1_gallery {
         margin: 0 -7vw;
         width: calc(100% + 14vw);
-        background-image: url("images/esp_01_mobile.jpg");
+        background-image: url("assets/images/esp_01_mobile.jpg");
     }
     @keyframes fondu {
         0% {
-            background-image: url("images/esp_01_mobile.jpg");
+            background-image: url("assets/images/esp_01_mobile.jpg");
         }
         20% {
-            background-image: url("images/esp_s_01_mobile.jpg");
+            background-image: url("assets/images/esp_s_01_mobile.jpg");
         }
         40% {
-            background-image: url("images/esp_s_02_mobile.jpg");
+            background-image: url("assets/images/esp_s_02_mobile.jpg");
         }
         60% {
-            background-image: url("images/esp_s_03_mobile.jpg");
+            background-image: url("assets/images/esp_s_03_mobile.jpg");
         }
         80% {
-            background-image: url("images/esp_s_04_mobile.jpg");
+            background-image: url("assets/images/esp_s_04_mobile.jpg");
         }
         100% {
-            background-image: url("images/esp_01_mobile.jpg");
+            background-image: url("assets/images/esp_01_mobile.jpg");
         }
     }
     #esp_section_1,
@@ -883,7 +883,7 @@ input#popup_thanks:hover {
         line-height: 5rem;
     }
     header {
-        background-image: url(images/header_mobile.jpg);
+        background-image: url(assets/images/header_mobile.jpg);
     }
 }
 

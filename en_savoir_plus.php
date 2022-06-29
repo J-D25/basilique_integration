@@ -12,14 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500&family=Domine:wght@700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <noscript><style>img {transform: translateY(0px); opacity: 1;}</style></noscript>
-    <link rel="preload" as="image" href="images/esp_s_01.jpg" media="(min-width: 766px)" />
-    <link rel="preload" as="image" href="images/esp_s_02.jpg" media="(min-width: 766px)" />
-    <link rel="preload" as="image" href="images/esp_s_03.jpg" media="(min-width: 766px)" />
-    <link rel="preload" as="image" href="images/esp_s_04.jpg" media="(min-width: 766px)" />
-    <link rel="preload" as="image" href="images/esp_s_01_mobile.jpg" media="(max-width: 765px)" />
-    <link rel="preload" as="image" href="images/esp_s_02_mobile.jpg" media="(max-width: 765px)" />
-    <link rel="preload" as="image" href="images/esp_s_03_mobile.jpg" media="(max-width: 765px)" />
-    <link rel="preload" as="image" href="images/esp_s_04_mobile.jpg" media="(max-width: 765px)" />
+    <link rel="preload" as="image" href="assets/images/esp_s_01.jpg" media="(min-width: 766px)" />
+    <link rel="preload" as="image" href="assets/images/esp_s_02.jpg" media="(min-width: 766px)" />
+    <link rel="preload" as="image" href="assets/images/esp_s_03.jpg" media="(min-width: 766px)" />
+    <link rel="preload" as="image" href="assets/images/esp_s_04.jpg" media="(min-width: 766px)" />
+    <link rel="preload" as="image" href="assets/images/esp_s_01_mobile.jpg" media="(max-width: 765px)" />
+    <link rel="preload" as="image" href="assets/images/esp_s_02_mobile.jpg" media="(max-width: 765px)" />
+    <link rel="preload" as="image" href="assets/images/esp_s_03_mobile.jpg" media="(max-width: 765px)" />
+    <link rel="preload" as="image" href="assets/images/esp_s_04_mobile.jpg" media="(max-width: 765px)" />
     <title>Basilique Saint-Ferjeux - En savoir plus</title>
 </head>
 
@@ -42,10 +42,10 @@
                 c'est le projet d'Alfred Ducat qui sera finalement retenu.</p>
         </div>
         <div id="esp_section_4">
-            <img src="images/esp_02.jpg" width="738" height="425" alt="Photo de la basilique datant du vingtième siècle en noir et blanc. Il est écrit un résumé de l'historique de la basilique. Elle a été créée par l'architecte M. Ducat à la fin du dix-neuvième siècle dédié aux Saints Ferreol et Ferjeux, décapités en 212 à Besançon où ils étaient venus prêcher le christianisme.">
+            <img src="assets/images/esp_02.jpg" width="738" height="425" alt="Photo de la basilique datant du vingtième siècle en noir et blanc. Il est écrit un résumé de l'historique de la basilique. Elle a été créée par l'architecte M. Ducat à la fin du dix-neuvième siècle dédié aux Saints Ferreol et Ferjeux, décapités en 212 à Besançon où ils étaient venus prêcher le christianisme.">
         </div>
         <div id="esp_section_5">
-            <img src="images/esp_03.jpg" width="328" height="425" alt="Photo de la façade principale de la basilique datant du vingtième siècle en noir et blanc. On peut voir les deux tours qui ont respectivement à gauche un baromètre et à droite une horloge.">
+            <img src="assets/images/esp_03.jpg" width="328" height="425" alt="Photo de la façade principale de la basilique datant du vingtième siècle en noir et blanc. On peut voir les deux tours qui ont respectivement à gauche un baromètre et à droite une horloge.">
         </div>
         <div id="esp_section_6">
             <p>Celui-ci reste dans l'esprit des constructions de l'époque : Notre-Dame-de-Fourvière à Lyon, le Sacré-Cœur de Montmartre à Paris ou encore la cathédrale de Marseille. Les premiers travaux commencent cette même année, et une première messe
@@ -57,8 +57,8 @@
         </div>
         <div id="esp_section_8">
             <picture>
-                <source srcset="images/esp_04_mobile.jpg" media="(max-width: 765px)">
-                <img class="panorama" src="images/esp_04.jpg" width="2048" height="873" alt="Photo de la basilique moderne vue de loin. On distingue l'intégralité du monument mais aussi le grand cimetière de Saint-Ferjeux situé juste devant.">
+                <source srcset="assets/images/esp_04_mobile.jpg" media="(max-width: 765px)">
+                <img class="panorama" src="assets/images/esp_04.jpg" width="2048" height="873" alt="Photo de la basilique moderne vue de loin. On distingue l'intégralité du monument mais aussi le grand cimetière de Saint-Ferjeux situé juste devant.">
             </picture>
         </div>
     </main>
