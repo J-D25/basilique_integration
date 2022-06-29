@@ -81,8 +81,10 @@ tr:nth-child(odd) {
     background-color: #1B4F91;
     width: 12.5rem;
     text-align: center;
+    font-family: Arial;
     font-weight: 400;
     font-size: 1.125rem;
+    text-decoration: none;
 }
 
 .button_blue:hover {
