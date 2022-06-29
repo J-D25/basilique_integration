@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500&family=Domine:wght@700&display=swap" rel="stylesheet">
-    <script src="js/script.js" defer></script>
+    <script src="js/main.js" defer></script>
     <noscript><style>img {transform: translateY(0px); opacity: 1;}</style></noscript>
     <link rel="preload" as="image" href="assets/images/esp_s_01.jpg" media="(min-width: 766px)" />
     <link rel="preload" as="image" href="assets/images/esp_s_02.jpg" media="(min-width: 766px)" />
