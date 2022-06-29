@@ -38,7 +38,7 @@ footer {
 }
 
 #search {
-    background-image: url(assets/images/magnifier.svg);
+    background-image: url("../images/magnifier.svg");
     background-repeat: no-repeat;
     background-position: center left 10px;
     display: flex;
