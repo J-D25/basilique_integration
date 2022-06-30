@@ -1,11 +1,22 @@
 window.addEventListener("DOMContentLoaded", () => {
-    listingMail();
+    listingMail("php/list.php", 0);
 })
 
-function listingMail() {
+more = document.querySelector("#more");
+let click = 0;
+more.addEventListener("click", () => {
+    click++;
+    listingMail("php/more.php", click);
+})
+
+function listingMail(file, count) {
     const template = document.querySelector("#templatemail");
 
-    fetch("php/list.php")
+    fetch(file, {
+            method: "POST",
+            body: JSON.stringify(count),
+            contentType: 'application/json'
+        })
         .then(res => res.text())
         .then((results) => {
             const resultsJSON = JSON.parse(results);
