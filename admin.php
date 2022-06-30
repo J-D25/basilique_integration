@@ -40,7 +40,7 @@
     </main>
 
     <footer>
-        <input type="button" value="Charger plus" class="button_blue">
+        <input type="button" value="Charger plus" class="button_blue" id="more">
     </footer>
 
     <template id="templatemail">
