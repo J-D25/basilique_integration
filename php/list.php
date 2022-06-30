@@ -5,7 +5,7 @@ try{
     $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` ORDER BY `email`");
+    $sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` ORDER BY `email` LIMIT 5");
     $sth->execute();
     $res=$sth->fetchAll(PDO::FETCH_ASSOC);
 }
