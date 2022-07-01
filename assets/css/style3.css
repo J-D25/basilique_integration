@@ -92,6 +92,11 @@ tr:nth-child(odd) {
     background-color: #7595BD;
 }
 
+#more:disabled {
+    cursor: not-allowed;
+    background-color: #4e4e4e;
+}
+
 #logout {
     margin-right: 1.25rem;
     height: 2.5rem;
