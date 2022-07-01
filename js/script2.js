@@ -23,8 +23,10 @@ function listingMail(file, count) {
             let recordNumberSpan = document.querySelector("#record");
             if (Number(recordTotalNumber.totalNumberEmail) <= Number(recordSelectNumber)) {
                 recordNumberSpan.textContent = "Affichage de tous les enregistrements (" + recordTotalNumber.totalNumberEmail + ").";
+                more.setAttribute("disabled", "");
             } else {
                 recordNumberSpan.textContent = "Affichage de " + recordSelectNumber + " enregistrements sur " + recordTotalNumber.totalNumberEmail + ".";
+                more.removeAttribute("disabled");
             }
             return response.text();
         })
@@ -74,6 +76,7 @@ searchBar.addEventListener('input', function() {
                 let recordTotalNumber = JSON.parse(response.headers.get('Record-number'));
                 let recordSelectNumber = JSON.parse(response.headers.get('Select-number'));
                 let recordNumberSpan = document.querySelector("#record");
+                more.setAttribute("disabled", "");
                 if (Number(recordTotalNumber.totalNumberEmail) <= Number(recordSelectNumber.selectNumberEmail)) {
                     recordNumberSpan.textContent = "Affichage de tous les enregistrements (" + recordTotalNumber.totalNumberEmail + ").";
                 } else {
@@ -100,6 +103,7 @@ searchBar.addEventListener('input', function() {
             });
     } else {
         removeList();
+        more.removeAttribute("disabled");
         click = 0;
         listingMail("php/list.php", 0);
     }
