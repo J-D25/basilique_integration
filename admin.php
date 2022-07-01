@@ -37,6 +37,7 @@
 
             </tbody>
         </table>
+        <p id="record">Affichage de X enregistrements sur X.</p>
     </main>
 
     <footer>
