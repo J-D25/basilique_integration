@@ -1,13 +1,14 @@
 <?php
 include('head.php');
-$errorCode = true;
 $_POST = json_decode(file_get_contents('php://input'), true);
-$a=5*$_POST;
+$limit = 5;
+$offset=$limit*$_POST;
+$errorCode = true;
 try{
     $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` ORDER BY `email` LIMIT 5 OFFSET ".$a);
+    $sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` ORDER BY `email` LIMIT ".$limit." OFFSET ".$offset);
     $sth->execute();
     $res=$sth->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -16,4 +17,19 @@ catch(PDOException $e){
 }
 $conn = null;
 echo json_encode(["data"=>$res]);
+
+try{
+    $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    $sth = $conn->prepare("SELECT COUNT(`email`) as `totalNumberEmail` FROM `newsletter`");
+    $sth->execute();
+    $res=$sth->fetchAll(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    $errorCode = $e->getCode();
+}
+$record=json_encode($res[0]);
+header('Record-number: '.$record);
+header('Select-number: '.($offset+$limit));
 ?>
