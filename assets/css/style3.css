@@ -123,9 +123,13 @@ tr.head {
     background-color: #D9D9D9;
 }
 
+p,
 td {
     font-family: 'Akshar';
     font-style: normal;
+}
+
+td {
     font-weight: 300;
     font-size: 1.125rem;
     text-align: center;
