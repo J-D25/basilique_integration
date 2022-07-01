@@ -17,7 +17,17 @@ function listingMail(file, count) {
             body: JSON.stringify(count),
             contentType: 'application/json'
         })
-        .then(res => res.text())
+        .then(function(response) {
+            let recordTotalNumber = JSON.parse(response.headers.get('Record-number'));
+            let recordSelectNumber = response.headers.get('Select-number');
+            let recordNumberSpan = document.querySelector("#record");
+            if (Number(recordTotalNumber.totalNumberEmail) <= Number(recordSelectNumber)) {
+                recordNumberSpan.textContent = "Affichage de tous les enregistrements (" + recordTotalNumber.totalNumberEmail + ").";
+            } else {
+                recordNumberSpan.textContent = "Affichage de " + recordSelectNumber + " enregistrements sur " + recordTotalNumber.totalNumberEmail + ".";
+            }
+            return response.text();
+        })
         .then((results) => {
             const resultsJSON = JSON.parse(results);
             const tableNewsletter = resultsJSON['data'];
@@ -60,7 +70,17 @@ searchBar.addEventListener('input', function() {
                 body: JSON.stringify(searchBar.value),
                 contentType: 'application/json'
             })
-            .then(res => res.text())
+            .then(function(response) {
+                let recordTotalNumber = JSON.parse(response.headers.get('Record-number'));
+                let recordSelectNumber = JSON.parse(response.headers.get('Select-number'));
+                let recordNumberSpan = document.querySelector("#record");
+                if (Number(recordTotalNumber.totalNumberEmail) <= Number(recordSelectNumber.selectNumberEmail)) {
+                    recordNumberSpan.textContent = "Affichage de tous les enregistrements (" + recordTotalNumber.totalNumberEmail + ").";
+                } else {
+                    recordNumberSpan.textContent = "Affichage de " + recordSelectNumber.selectNumberEmail + " enregistrements sur " + recordTotalNumber.totalNumberEmail + ".";
+                }
+                return response.text();
+            })
             .then((results) => {
                 const resultsJSON = JSON.parse(results);
                 const tableNewsletter = resultsJSON['data'];
@@ -80,7 +100,8 @@ searchBar.addEventListener('input', function() {
             });
     } else {
         removeList();
-        listingMail();
+        click = 0;
+        listingMail("php/list.php", 0);
     }
 })
 
