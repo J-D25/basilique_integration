@@ -20,12 +20,15 @@ function listingMail(file, count) {
         .then(function(response) {
             let recordTotalNumber = JSON.parse(response.headers.get('Record-number'));
             let recordSelectNumber = response.headers.get('Select-number');
-            let recordNumberSpan = document.querySelector("#record");
+            let recordTotalNumberSpan = document.querySelector("#record_total");
+            let recordSelectNumberSpan = document.querySelector("#record_select");
             if (Number(recordTotalNumber.totalNumberEmail) <= Number(recordSelectNumber)) {
-                recordNumberSpan.textContent = "Affichage de tous les enregistrements (" + recordTotalNumber.totalNumberEmail + ").";
+                recordTotalNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
+                recordSelectNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
                 more.setAttribute("disabled", "");
             } else {
-                recordNumberSpan.textContent = "Affichage de " + recordSelectNumber + " enregistrements sur " + recordTotalNumber.totalNumberEmail + ".";
+                recordTotalNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
+                recordSelectNumberSpan.textContent = recordSelectNumber;
                 more.removeAttribute("disabled");
             }
             return response.text();
@@ -55,6 +58,10 @@ function listingMail(file, count) {
                                 if (resultsJSON.responseServer === true && resultsJSON.responseDB === true) {
                                     alert("Suppression effectuée.");
                                     tr[0].remove();
+                                    let recordTotalNumberSpan = document.querySelector("#record_total");
+                                    let recordSelectNumberSpan = document.querySelector("#record_select");
+                                    recordTotalNumberSpan.textContent = Number(recordTotalNumberSpan.textContent) - 1;
+                                    recordSelectNumberSpan.textContent = Number(recordSelectNumberSpan.textContent) - 1;
                                 }
                             });
                     }
@@ -75,12 +82,15 @@ searchBar.addEventListener('input', function() {
             .then(function(response) {
                 let recordTotalNumber = JSON.parse(response.headers.get('Record-number'));
                 let recordSelectNumber = JSON.parse(response.headers.get('Select-number'));
-                let recordNumberSpan = document.querySelector("#record");
+                let recordTotalNumberSpan = document.querySelector("#record_total");
+                let recordSelectNumberSpan = document.querySelector("#record_select");
                 more.setAttribute("disabled", "");
                 if (Number(recordTotalNumber.totalNumberEmail) <= Number(recordSelectNumber.selectNumberEmail)) {
-                    recordNumberSpan.textContent = "Affichage de tous les enregistrements (" + recordTotalNumber.totalNumberEmail + ").";
+                    recordTotalNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
+                    recordSelectNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
                 } else {
-                    recordNumberSpan.textContent = "Affichage de " + recordSelectNumber.selectNumberEmail + " enregistrements sur " + recordTotalNumber.totalNumberEmail + ".";
+                    recordTotalNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
+                    recordSelectNumberSpan.textContent = recordSelectNumber.selectNumberEmail;
                 }
                 return response.text();
             })
