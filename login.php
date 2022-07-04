@@ -10,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500&family=Glory&display=swap" rel="stylesheet">
+    <script src="js/login.js" defer></script>
     <title>Basilique Saint-Ferjeux - Connexion</title>
 </head>
 <body>
     <main>
-        <form>
+        <form id="login_form">
             <label for="username">Nom d'utilisateur</label>
             <input type="text" name="username">
             <label for="username">Mot de passe</label>
