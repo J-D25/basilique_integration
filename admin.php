@@ -19,7 +19,7 @@ if($_SESSION['user']!="admin"){
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500&family=Glory:wght@400&display=swap" rel="stylesheet">
-    <script src="js/script2.js" defer></script>
+    <script src="js/admin.js" defer></script>
     <title>Basilique Saint-Ferjeux - Administration</title>
 </head>
 
