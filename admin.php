@@ -46,7 +46,7 @@ if($_SESSION['user']!="admin"){
 
             </tbody>
         </table>
-        <p id="record">Affichage de X enregistrements sur X.</p>
+        <p id="record">Affichage de <span id="record_select">X</span> enregistrements sur <span id="record_total">X</span>.</p>
     </main>
 
     <footer>
