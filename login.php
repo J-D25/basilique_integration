@@ -18,7 +18,7 @@
         <form id="login_form">
             <label for="username">Nom d'utilisateur</label>
             <input type="text" name="username">
-            <label for="username">Mot de passe</label>
+            <label for="password">Mot de passe</label>
             <input type="password" name="password">
             <input type="submit" value="Se connecter">
         </form>
