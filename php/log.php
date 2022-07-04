@@ -15,8 +15,10 @@ if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pas
         $errorCode = $e->getCode();
     }
     $conn = null;
-    if (password_verify($_POST['password'], $res['password'])){
+    if (isset($res['password']) && password_verify($_POST['password'], $res['password'])){
         echo json_encode(["responseServer"=>true, "responseDB"=>$errorCode, "connection"=>true]);
+        session_start();
+        $_SESSION['user'] = $_POST['username'];
     } else {
         echo json_encode(["responseServer"=>true, "responseDB"=>$errorCode, "connection"=>false]);
     }
