@@ -37,9 +37,9 @@ if($_SESSION['user']!="admin"){
         <table>
             <thead>
                 <tr class="head">
-                    <th width="50%">Email</th>
-                    <th width="40%">Date</th>
-                    <th width="10%"></th>
+                    <th width="50%" id="head_mail">Email</th>
+                    <th width="40%" id="head_date">Date</th>
+                    <th width="10%" id="head_bin"></th>
                 </tr>
             </thead>
             <tbody>
