@@ -31,8 +31,7 @@ form {
     width: 75%;
 }
 
-input {
-    display: flex;
+.login_input {
     border: 1px solid #AAAAAA;
     border-radius: 5px;
     font-family: 'Akshar', sans-serif;
@@ -46,7 +45,7 @@ input {
     width: 100%;
 }
 
-input[type="submit"] {
+#login_button {
     width: 100%;
     display: flex;
     box-sizing: border-box;
@@ -64,7 +63,7 @@ input[type="submit"] {
     font-size: 1.125rem;
 }
 
-input[type="submit"]:hover {
+#login_button:hover {
     background-color: #7595BD;
 }
 
