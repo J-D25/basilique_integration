@@ -12,5 +12,5 @@
                 <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
-        <p id="header_title">Basilique<br>Saint-Ferjeux</p>
+        <p id="header_title"><?php echo $headerTitle ?></p>
         <p id="header_hook"><?php echo date("Y")-1884 ?> ans d'histoire...</p>
