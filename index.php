@@ -21,7 +21,7 @@
     </header>
     <main>
         <div id="home_section_1">
-            <h2>D'église à basilique...</h2>
+            <h2>La construction de la basilique</h2>
             <div id="home_section_1_content">
                 <img id="home_section_1_content_img" src="assets/images/main_01.png" width="372" height="290" alt="Vue aérienne de la basilique Saint-Ferjeux en noir et blanc du vingtième siècle.">
                 <div>
@@ -33,13 +33,13 @@
             </div>
         </div>
         <div id="home_section_2">
-        <picture>
-            <source srcset="assets/images/main_02_mobile.jpg" media="(max-width: 765px)">
-            <img class="home_panorama" src="assets/images/main_02.jpg" width="2048" height="873" alt="Basilique Saint-Ferjeux vue de côté du style romano-byzantin. Elle est composée de deux immenses tours situé à l'avant, suivie de la grande salle rectangulaire surplombée d'une coupole. Fini ensuite par une abside. On peut voir au premier plan le cimetière de Saint-Ferjeux.">
-        </picture>
+            <picture>
+                <source srcset="assets/images/main_02_mobile.jpg" media="(max-width: 765px)">
+                <img class="home_panorama" src="assets/images/main_02.jpg" width="2048" height="873" alt="Basilique Saint-Ferjeux vue de côté du style romano-byzantin composée de deux immenses tours situées à l'avant. On peut voir au premier plan le cimetière de Saint-Ferjeux.">
+            </picture>
         </div>
         <div id="home_section_3">
-            <h3 class="bottomline">Agenda</h3>
+            <h2>Agenda</h2>
             <div id="home_section_3_content">
                 <div class="home_section_3_content_actu">
                     <img src="assets/images/actu_01.png" width="340" height="226" alt="Quatre personnes debout prient dans un lieu de culte chrétien. Un prêtre les regarde. Une lumière blanche les illumine par un vitrail en forme de rosace.">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div class="home_section_3_content_actu">
-                    <img src="assets/images/actu_03.png" width="340" height="226" alt="Cinq personnes sont dans un lieu de culte chrétien. Il y a deux hommes et une femme assis sur des bancs. La femme lit la bible. Un prêtre montre un texte de la bible à une autre femme.">
+                    <img src="assets/images/actu_03.png" width="340" height="226" alt="Cinq personnes sont dans un lieu de culte chrétien. Il y a deux hommes et une femme assis sur des bancs. Un prêtre montre un texte de la bible à une autre femme.">
                     <div class="home_section_3_content_actu_text">
                         <h4>1<sup>er</sup> mai, fête du travail</h4>
                         <p>Instituée initialement en mémoire de la grève générale du 1<sup>er</sup> mai 1886 à Chicago, la fête du travail a été adoptée progressivement au cours du XX<sup>e</sup> siècle.</p>
@@ -65,8 +65,11 @@
             </div>
         </div>
         <div id="home_section_4">
-            <div id="home_section_4_1"><img src="assets/images/main_03.jpg" width="375" height="500" alt="Photo de la basilique vue de face. On voit les deux immenses tours, ainsi que sa façade antérieure. Il y a cinq statues d'apôtres incrustées dans celle-ci."></div>
-            <div id="home_section_4_2"><img src="assets/images/main_04.jpg" width="800" height="518" alt="Photo de la basilique en noir et blanc datant du vingtième siècle."></div>
+            <h2>Retour en images</h2>
+            <div id="home_section_4_content">
+                <p id="home_section_4_content_1"><img src="assets/images/main_03.jpg" width="375" height="500" alt="Photo de la basilique vue de face. On voit les deux immenses tours, ainsi que sa façade antérieure. Il y a cinq statues d'apôtres incrustées dans celle-ci."></p>
+                <p id="home_section_4_content_2"><img src="assets/images/main_04.jpg" width="800" height="518" alt="Photo de la basilique en noir et blanc datant du vingtième siècle."></p>
+            </div>
         </div>
     </main>
     <footer>
