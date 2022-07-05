@@ -156,5 +156,10 @@ td {
     }
     #main_bar {
         gap: 0.5rem;
+        flex-direction: column;
+    }
+    #head_date,
+    .admin_date {
+        display: none;
     }
 }
