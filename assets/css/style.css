@@ -693,8 +693,7 @@ input#popup_thanks:hover {
         display: none;
     }
     h2,
-    h3,
-    .footer_title {
+    h3 {
         margin: 7vw 0;
         text-align: center;
     }
