@@ -11,6 +11,7 @@
     --color-footer: #A6ACB8;
     --color-newsletter: #6E6E6E;
     --color-newsletter-button: #6C7689;
+    --color-newsletter-invalid:#880000;
     --color-green: #364826;
     --color-green-hover: #82BE7E;
 }
@@ -384,8 +385,8 @@ footer address {
 }
 
 #newsletter_email.newsletter_invalid {
-    border: 2px solid var(--color-invalid);
-    color: var(--color-invalid);
+    border: 2px solid var(--color-newsletter-invalid);
+    color: var(--color-newsletter-invalid);
 }
 
 #newsletter_button,
@@ -411,7 +412,7 @@ footer address {
 }
 
 .newsletter_p_invalid {
-    color: var(--color-invalid);
+    color: var(--color-newsletter-invalid);
 }
 
 .newsletter_p_valid {
