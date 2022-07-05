@@ -1,5 +1,7 @@
 :root {
     --color-blue: #1B4F91;
+    --font-content: 'Akshar', sans-serif;
+    --color-invalid: #F80000;
 }
 
 body {
@@ -17,7 +19,7 @@ body {
 
 main {
     height: 75%;
-    min-height: 365px;
+    min-height: 385px;
     aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
@@ -73,6 +75,22 @@ label {
     font-style: normal;
     font-size: 1.5rem;
     margin-bottom: 11px;
+}
+
+.login_form_invalid {
+    border: 1px solid var(--color-invalid);
+    margin-bottom: 0.5rem;
+}
+
+.login_form_span_invalid {
+    display: block;
+    color: var(--color-invalid);
+    font-family: var(--font-content);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.125rem;
+    text-align: justify;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 765px) {
