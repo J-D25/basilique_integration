@@ -12,7 +12,7 @@ header {
     height: 2.5rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: #6C7689;
 }
 
@@ -35,6 +35,29 @@ footer {
 table,
 footer {
     width: 80vw;
+}
+
+#header_title {
+    margin: 0 0 0 1.25rem;
+    color: white;
+    text-shadow: 0.0625rem 0.0625rem 0.0625rem rgb(0 0 0 / 50%);
+    font-family: 'Glory', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+#logout {
+    margin-right: 1.25rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logout:hover {
+    cursor: pointer;
+    background-color: #82BE7E;
 }
 
 #search {
@@ -97,20 +120,6 @@ tr:nth-child(odd) {
     background-color: #4e4e4e;
 }
 
-#logout {
-    margin-right: 1.25rem;
-    height: 2.5rem;
-    width: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#logout:hover {
-    cursor: pointer;
-    background-color: #82BE7E;
-}
-
 table {
     border-radius: 5px;
     border-spacing: 0;
@@ -155,8 +164,11 @@ td {
         width: 90vw;
     }
     #main_bar {
-        gap: 0.5rem;
+        gap: 1.5rem;
         flex-direction: column;
+    }
+    #search {
+        width: 100%;
     }
     #head_date,
     .admin_date {
