@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Auteur:J-D25, Projet ACS 2022">
+    <meta name="author" content="J-D25">
+    <meta name="description" content="Bienvenue sur le site internet de la Basilique Saint-Ferjeux, édifice de style romano-byzantin ayant 138 ans d'histoire !">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
                 <div class="home_section_3_content_actu">
                     <img src="assets/images/actu_01.png" width="340" height="226" alt="Quatre personnes debout prient dans un lieu de culte chrétien. Un prêtre les regarde. Une lumière blanche les illumine par un vitrail en forme de rosace.">
                     <div class="home_section_3_content_actu_text">
-                        <h4>Concert du 26 juin 2022</h4>
+                        <h4>Concert du 26 juin 2022</h4>
                         <p>L'Association Musique Sacrée, sa maîtrise et ses solistes, proposent des pièces musicales de Mozart, Bach, Mendelson, Monteverdi…</p>
                     </div>
                 </div>
@@ -52,14 +52,14 @@
                     <img src="assets/images/actu_02.png" width="340" height="226" alt="Gros plan sur les mains d'une personne de foi. Elle prie. Ses doigts sont croisés.">
                     <div class="home_section_3_content_actu_text">
                         <h4>Messe de l'Ascension</h4>
-                        <p>La messe de l'Ascension se tiendra le jeudi 26 mai à partir de 10 h 30. L'archevêque de Besançon, Monseigneur Jean-Luc Bouilleret, présidera la messe.</p>
+                        <p>La messe de l'Ascension se tiendra le jeudi 26 mai à partir de 10 h 30. L'archevêque de Besançon, Monseigneur Jean-Luc Bouilleret, présidera la messe.</p>
                     </div>
                 </div>
                 <div class="home_section_3_content_actu">
                     <img src="assets/images/actu_03.png" width="340" height="226" alt="Cinq personnes sont dans un lieu de culte chrétien. Il y a deux hommes et une femme assis sur des bancs. La femme lit la bible. Un prêtre montre un texte de la bible à une autre femme.">
                     <div class="home_section_3_content_actu_text">
-                        <h4>1<sup>er</sup> mai, fête du travail</h4>
-                        <p>Instituée initialement en mémoire de la grève générale du 1<sup>er</sup> mai 1886 à Chicago, la fête du travail a été adoptée progressivement au cours du XX<sup>e</sup> siècle.</p>
+                        <h4>1<sup>er</sup> mai, fête du travail</h4>
+                        <p>Instituée initialement en mémoire de la grève générale du 1<sup>er</sup> mai 1886 à Chicago, la fête du travail a été adoptée progressivement au cours du XX<sup>e</sup> siècle.</p>
                     </div>
                 </div>
             </div>
