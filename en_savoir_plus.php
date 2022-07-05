@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Auteur:J-D25, Projet ACS 2022">
+    <meta name="author" content="J-D25">
+    <meta name="description" content="Une église préexistait sur l'emplacement de l'actuelle Basilique Saint-Ferjeux, édifiée il y a 138 ans !">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
