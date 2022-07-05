@@ -15,12 +15,12 @@
 </head>
 <body>
     <main>
-        <form id="login_form">
+        <form id="login_form" novalidate>
             <label for="username">Nom d'utilisateur</label>
-            <input type="text" name="username">
+            <input type="text" id="login_name" class="login_input" name="username" required>
             <label for="password">Mot de passe</label>
-            <input type="password" name="password">
-            <input type="submit" value="Se connecter">
+            <input type="password" id="login_pass" class="login_input" name="password" required>
+            <input type="submit" id="login_button" value="Se connecter">
         </form>
     </main>
 </body>
