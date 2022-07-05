@@ -698,6 +698,10 @@ input#popup_thanks:hover {
         margin: 7vw 0;
         text-align: center;
     }
+    #home_section_1,
+    #home_section_4 {
+        margin-bottom: 0;
+    }
     #home_section_1_content {
         flex-direction: column;
     }
@@ -707,6 +711,9 @@ input#popup_thanks:hover {
     }
     #home_section_2 {
         margin: 0 -7vw;
+    }
+    #home_section_3 {
+        margin-bottom: 2.25rem;
     }
     #home_section_3_content {
         flex-wrap: wrap;
