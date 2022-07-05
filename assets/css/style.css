@@ -819,7 +819,7 @@ input#popup_thanks:hover {
     #esp_section_8 {
         grid-area: 7 / 1 / 8 / 2;
     }
-    #esp_section_7 {
+    p#esp_section_7 {
         grid-area: 8 / 1 / 9 / 2;
         margin-bottom: 2rem;
     }
