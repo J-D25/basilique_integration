@@ -18,7 +18,10 @@
 
 <body>
     <header id="header_short">
-        <?php include("header.html")?>
+        <?php 
+            $headerTitle = "Avez-vous <br>une question ?";
+            include("header.php");
+        ?>
     </header>
     <main>
         <h2>Contactez-nous</h2>

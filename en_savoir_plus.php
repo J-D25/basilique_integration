@@ -25,7 +25,10 @@
 
 <body>
     <header id="header_short">
-        <?php include("header.html")?>
+        <?php 
+            $headerTitle = "L'histoire de<br>Saint-Ferjeux...";
+            include("header.php");
+        ?>
     </header>
     <main id="esp">
         <div id="esp_section_1">

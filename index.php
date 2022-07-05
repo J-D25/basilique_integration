@@ -17,7 +17,10 @@
 
 <body>
     <header>
-        <?php include("header.html")?>
+        <?php 
+            $headerTitle = "D'église à<br>basilique...";
+            include("header.php");
+        ?>
     </header>
     <main>
         <div id="home_section_1">
