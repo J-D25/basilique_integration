@@ -312,8 +312,16 @@ footer p {
     font-weight: 400;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
+p.underline {
+    margin: 0;
+}
+
 footer p:last-child {
-    margin: 0
+    margin: 0;
 }
 
 #newsletter {
