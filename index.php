@@ -47,21 +47,21 @@
                 <div class="home_section_3_content_actu img_container">
                     <img src="assets/images/actu_01.png" width="340" height="226" alt="Quatre personnes debout prient dans un lieu de culte chrétien. Un prêtre les regarde. Une lumière blanche les illumine par un vitrail en forme de rosace.">
                     <div class="home_section_3_content_actu_text">
-                        <h4>Concert du 26 juin 2022</h4>
+                        <h3>Concert du 26 juin 2022</h3>
                         <p>L'Association Musique Sacrée, sa maîtrise et ses solistes, proposent des pièces musicales de Mozart, Bach, Mendelson, Monteverdi…</p>
                     </div>
                 </div>
                 <div class="home_section_3_content_actu img_container">
                     <img src="assets/images/actu_02.png" width="340" height="226" alt="Gros plan sur les mains d'une personne de foi. Elle prie. Ses doigts sont croisés.">
                     <div class="home_section_3_content_actu_text">
-                        <h4>Messe de l'Ascension</h4>
+                        <h3>Messe de l'Ascension</h3>
                         <p>La messe de l'Ascension se tiendra le jeudi 26 mai à partir de 10 h 30. L'archevêque de Besançon, Monseigneur Jean-Luc Bouilleret, présidera la messe.</p>
                     </div>
                 </div>
                 <div class="home_section_3_content_actu img_container">
                     <img src="assets/images/actu_03.png" width="340" height="226" alt="Cinq personnes sont dans un lieu de culte chrétien. Il y a deux hommes et une femme assis sur des bancs. Un prêtre montre un texte de la bible à une autre femme.">
                     <div class="home_section_3_content_actu_text">
-                        <h4>1<sup>er</sup> mai, fête du travail</h4>
+                        <h3>1<sup>er</sup> mai, fête du travail</h3>
                         <p>Instituée initialement en mémoire de la grève générale du 1<sup>er</sup> mai 1886 à Chicago, la fête du travail a été adoptée progressivement au cours du XX<sup>e</sup> siècle.</p>
                     </div>
                 </div>
