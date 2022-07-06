@@ -1,12 +1,11 @@
 <?php
-include('head.php');
-
+include('head.php'); //Appel des variables globales
 if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['password']) && !empty($_POST['password'])) {
     $errorCode = true;
     try{
         $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sth = $conn->prepare("SELECT `username`, `password` FROM `users` WHERE `username`=(:username)");
+        $sth = $conn->prepare("SELECT `username`, `password` FROM `users` WHERE `username`=:username");
         $sth->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
         $sth->execute();
         $res = $sth->fetch(PDO::FETCH_ASSOC);
