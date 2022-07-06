@@ -27,7 +27,7 @@ if (window.matchMedia("(max-width: 765px)").matches) {
     // Retrait #header_hook à l'ouverture du menu burger
     const checkbox = document.getElementById("menu_check");
     checkbox.addEventListener('click', event => {
-        const hook = document.getElementById("header_hook");
+        const hook = document.getElementById("header_title");
 
         if (document.getElementById('menu_check').checked) {
             hook.style.display = "none";
