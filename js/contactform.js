@@ -65,7 +65,7 @@ function ajaxFormContact() {
         fetch("php/mail.php", { method: "POST", body: data })
             .then(response => response.json())
             .then((results) => {
-                if (results.response === true) {
+                if (results.responseServer === true && results.responseMailer === true) {
                     showPopUp();
                     formContact.reset();
                 }
