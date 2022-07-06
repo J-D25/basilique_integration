@@ -1,3 +1,4 @@
+//Chargement de la liste à l'ouverture de la page
 window.addEventListener("DOMContentLoaded", () => {
     listingMail("php/list.php", 0);
 })
@@ -9,6 +10,7 @@ more.addEventListener("click", () => {
     listingMail("php/more.php", click);
 })
 
+//file : nom du fichier php, count : nombre de clics.
 function listingMail(file, count) {
     const template = document.querySelector("#templatemail");
 
@@ -31,11 +33,10 @@ function listingMail(file, count) {
                 recordSelectNumberSpan.textContent = recordSelectNumber;
                 more.removeAttribute("disabled");
             }
-            return response.text();
+            return response.json();
         })
         .then((results) => {
-            const resultsJSON = JSON.parse(results);
-            const tableNewsletter = resultsJSON['data'];
+            const tableNewsletter = results['data'];
             tableNewsletter.forEach((element, index) => {
                 const tbody = document.querySelector("tbody");
                 const clone = document.importNode(template.content, true);
@@ -47,15 +48,15 @@ function listingMail(file, count) {
                     const data = td[0].textContent;
                     const dialog = confirm("Voulez-vous supprimer " + data + " ?");
                     if (dialog) {
+                        //Appel script suppression
                         fetch("php/delete.php", {
                                 method: "POST",
                                 body: JSON.stringify(data),
                                 contentType: 'application/json'
                             })
-                            .then(res => res.text())
+                            .then(response => response.json())
                             .then((results) => {
-                                let resultsJSON = JSON.parse(results)
-                                if (resultsJSON.responseServer === true && resultsJSON.responseDB === true) {
+                                if (results.responseServer === true && results.responseDB === true) {
                                     alert("Suppression effectuée.");
                                     tr[0].remove();
                                     let recordTotalNumberSpan = document.querySelector("#record_total");
@@ -71,6 +72,7 @@ function listingMail(file, count) {
         });
 }
 
+//Recherche de mails
 const searchBar = document.getElementById('search');
 searchBar.addEventListener('input', function() {
     if (searchBar.value) {
@@ -92,18 +94,16 @@ searchBar.addEventListener('input', function() {
                     recordTotalNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
                     recordSelectNumberSpan.textContent = recordSelectNumber.selectNumberEmail;
                 }
-                return response.text();
+                return response.json();
             })
             .then((results) => {
-                const resultsJSON = JSON.parse(results);
-                const tableNewsletter = resultsJSON['data'];
+                const tableNewsletter = results['data'];
                 const template = document.querySelector("#templatemail");
-                if (resultsJSON.responseServer === true && resultsJSON.responseDB === true) {
+                if (results.responseServer === true && results.responseDB === true) {
                     removeList();
                     tableNewsletter.forEach((element, index) => {
                         const tbody = document.querySelector("tbody");
                         const clone = document.importNode(template.content, true);
-                        const tr = clone.querySelectorAll("tr");
                         const td = clone.querySelectorAll("td");
                         td[0].textContent = tableNewsletter[index]['email'];
                         td[1].textContent = tableNewsletter[index]['date'];
@@ -119,6 +119,7 @@ searchBar.addEventListener('input', function() {
     }
 })
 
+//Suppression de la liste
 function removeList() {
     const tBody = document.querySelector("tbody");
     while (tBody.firstChild) {
