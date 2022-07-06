@@ -236,6 +236,10 @@ h3,
     font-size: 1.75rem;
 }
 
+#home_section_3 {
+    padding-bottom: .9375rem;
+}
+
 #home_section_3_content {
     display: flex;
     gap: 2.125rem;
@@ -795,6 +799,7 @@ input#popup_thanks:hover {
     }
     #home_section_3 {
         margin-bottom: 2.25rem;
+        padding-bottom: 0;
     }
     #home_section_3_content {
         flex-wrap: wrap;
