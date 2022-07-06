@@ -1,33 +1,21 @@
 <?php
-include('head.php');
+include('head.php'); //Appel des variables globales 
+include('conn.php'); //Démarrage connexion
 $limit = 5;
 $errorCode = true;
-try{
-    $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    $sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` ORDER BY `email` LIMIT ".$limit);
-    $sth->execute();
-    $res=$sth->fetchAll(PDO::FETCH_ASSOC);
-}
-catch(PDOException $e){
-    $errorCode = $e->getCode();
-}
+
+$sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` ORDER BY `email` LIMIT :limit;");
+$sth->bindParam(':limit', $limit, PDO::PARAM_INT);
+$sth->execute();
+$res=$sth->fetchAll(PDO::FETCH_ASSOC);
+$sth2 = $conn->prepare("SELECT COUNT(`email`) as `totalNumberEmail` FROM `newsletter`");
+$sth2->execute();
+$res2=$sth2->fetchAll(PDO::FETCH_ASSOC);
+
 $conn = null;
 echo json_encode(["data"=>$res]);
 
-try{
-    $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    $sth = $conn->prepare("SELECT COUNT(`email`) as `totalNumberEmail` FROM `newsletter`");
-    $sth->execute();
-    $res=$sth->fetchAll(PDO::FETCH_ASSOC);
-}
-catch(PDOException $e){
-    $errorCode = $e->getCode();
-}
-$record=json_encode($res[0]);
+$record=json_encode($res2[0]);
 header('Record-number: '.$record);
 header('Select-number: '.$limit);
 ?>
