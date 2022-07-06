@@ -1,7 +1,8 @@
+// Apparition de la navbar 1 sec après l'arrêt du scroll
 if (window.matchMedia("(min-width: 765px)").matches) {
     let timer = null;
     window.addEventListener('scroll', function() {
-        let header = document.querySelector("header");
+        const header = document.querySelector("header");
         let scrollY = this.scrollY;
         if (timer !== null) {
             clearTimeout(timer);
@@ -21,10 +22,12 @@ if (window.matchMedia("(min-width: 765px)").matches) {
     }, false);
 }
 
+// Responsive téléphone
 if (window.matchMedia("(max-width: 765px)").matches) {
-    let checkbox = document.getElementById("menu_check");
+    // Retrait #header_hook à l'ouverture du menu burger
+    const checkbox = document.getElementById("menu_check");
     checkbox.addEventListener('click', event => {
-        var hook = document.getElementById("header_hook");
+        const hook = document.getElementById("header_hook");
 
         if (document.getElementById('menu_check').checked) {
             hook.style.display = "none";
@@ -33,24 +36,27 @@ if (window.matchMedia("(max-width: 765px)").matches) {
         }
     })
 
-    let menu = document.querySelector("label")
-    let i = 0
+    // Menu burger
+    const menu = document.querySelector("LABEL");
+    let i = 0;
     menu.addEventListener('click', function() {
+        const menuUl = document.querySelector("UL");
         i = i + 1
         if (i % 2 == 1) {
-            document.querySelector("ul").classList.remove("close");
-            document.querySelector("ul").classList.add("open");
+            menuUl.classList.remove("close");
+            menuUl.classList.add("open");
         } else {
-            document.querySelector("ul").classList.remove("open");
-            document.querySelector("ul").classList.add("closing");
-            document.querySelector("ul").classList.add("close");
+            menuUl.classList.remove("open");
+            menuUl.classList.add("closing");
+            menuUl.classList.add("close");
             timer = setTimeout(function() {
-                document.querySelector("ul").classList.remove("closing");
+                menuUl.classList.remove("closing");
             }, 600);
         }
     })
 }
 
+// Apparition des images au scroll
 let imgs = document.querySelectorAll("img");
 imgs.forEach((img) => {
     let rect = img.getBoundingClientRect()
@@ -64,15 +70,14 @@ imgs.forEach((img) => {
     });
 });
 
+// Newsletter
 const formNewsletter = document.querySelector('#newsletter');
 const inputNewsletter = document.querySelector('#newsletter_email');
-const btnSubmitNewsletter = document.querySelector('#newsletter_button');
 const pNewsResult = document.querySelector('#newsletter_result');
 
 formNewsletter.addEventListener('submit', function(e) {
     e.preventDefault();
-    checkNewsletter();
-    ajaxpost2();
+    ajaxNewsletter();
 });
 
 inputNewsletter.addEventListener('focusin', function() {
@@ -98,22 +103,22 @@ function checkNewsletter() {
         inputNewsletter.classList.remove("newsletter_invalid");
         pNewsResult.removeAttribute('class');
         pNewsResult.textContent = " ";
+        return true;
     }
 }
 
-function ajaxpost2() {
-    if (formNewsletter.checkValidity()) {
+function ajaxNewsletter() {
+    if (checkNewsletter()) {
         const data = new FormData(formNewsletter);
 
         fetch("php/news.php", { method: "POST", body: data })
-            .then(res => res.text())
-            .then((results) => {
-                let resultsJSON = JSON.parse(results)
-                if (resultsJSON.responseServer === true && resultsJSON.responseDB === true) {
+            .then(response => response.json())
+            .then((result) => {
+                if (result.responseServer === true && result.responseDB === true) {
                     formNewsletter.reset();
                     pNewsResult.textContent = "Votre adresse email a été enregistrée.";
                     pNewsResult.classList.add("newsletter_p_valid");
-                } else if (resultsJSON.responseServer === true && resultsJSON.responseDB === "23000") {
+                } else if (result.responseServer === true && result.responseDB === "23000") {
                     inputNewsletter.classList.add("newsletter_invalid");
                     pNewsResult.classList.add("newsletter_p_invalid");
                     pNewsResult.textContent = "Cette adresse email est déjà enregistrée.";
