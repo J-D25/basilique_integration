@@ -13,4 +13,4 @@
             </ul>
         </nav>
         <p id="header_title"><?php echo $headerTitle ?></p>
-        <p id="header_hook"><?php echo date("Y")-1884 ?> ans d'histoire...</p>
+        <p id="header_hook"><?php echo date("Y")-1884 ?> ans d'histoire !</p>
