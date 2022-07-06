@@ -1,5 +1,5 @@
 <?php
-include('head.php');
+include('head.php'); //Appel des variables globales
 
 if (isset($_POST['newsletter_email']) && !empty($_POST['newsletter_email']) && filter_var($_POST['newsletter_email'], FILTER_VALIDATE_EMAIL)) {
 
@@ -7,7 +7,7 @@ if (isset($_POST['newsletter_email']) && !empty($_POST['newsletter_email']) && f
     try{
         $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = $conn->prepare("INSERT INTO newsletter (email) VALUES (:email);");
+        $sql = $conn->prepare("INSERT INTO newsletter (email) VALUES ( :email )");
         $sql->bindParam(':email', $_POST['newsletter_email'], PDO::PARAM_STR);
         $sql->execute();
     }
