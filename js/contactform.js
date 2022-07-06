@@ -1,10 +1,14 @@
+//Formulaire de contact
 const formContact = document.querySelector('#contact_form');
-const btnSubmit = document.querySelector('#contact_form_button');
 
 formContact.addEventListener('submit', function(e) {
     e.preventDefault();
+    ajaxFormContact();
+})
 
+function checkFormContact() {
     const inputs = document.querySelectorAll('.contact_form_input');
+    let errorCount = 0; //initialisation du compteur d'erreurs
     inputs.forEach((input) => {
         const input_span = document.createElement("SPAN");
         const cannot = "Ce champ ne peut être vide";
@@ -14,6 +18,7 @@ formContact.addEventListener('submit', function(e) {
         input_span.setAttribute("class", "contact_form_span_invalid");
         input_span.setAttribute("id", input.id + "_invalid");
         if (input.validity.valueMissing) {
+            errorCount++;
             input.classList.add("contact_form_invalid");
             if (!input_spanInvalid) {
                 input.insertAdjacentElement('afterend', input_span);
@@ -26,11 +31,11 @@ formContact.addEventListener('submit', function(e) {
                 input_spanInvalid.remove();
             }
         }
-
     })
 
     let email = document.getElementById("contact_form_email");
     if (email.validity.typeMismatch) {
+        errorCount++;
         const email_span = document.createElement("SPAN");
         const email_span_text = document.createTextNode(email.value + " n'est pas une adresse email valide");
         email_span.appendChild(email_span_text);
@@ -45,18 +50,22 @@ formContact.addEventListener('submit', function(e) {
             email_spanInvalid.remove();
         }
     }
-})
 
-function ajaxpost() {
-    const formContact = document.getElementById("contact_form");
-    if (formContact.checkValidity()) {
+    if (errorCount === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function ajaxFormContact() {
+    if (checkFormContact()) { //Lancement de checkFormContact() + lancement requête si pas d'erreur.
         const data = new FormData(formContact);
 
         fetch("php/mail.php", { method: "POST", body: data })
-            .then(res => res.text())
+            .then(response => response.json())
             .then((results) => {
-                let resultsJSON = JSON.parse(results)
-                if (resultsJSON.response === true) {
+                if (results.response === true) {
                     showPopUp();
                     formContact.reset();
                 }
