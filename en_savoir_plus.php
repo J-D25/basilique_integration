@@ -26,7 +26,7 @@
 <body>
     <header id="header_short">
         <?php 
-            $headerTitle = "L'histoire de<br>Saint-Ferjeux...";
+            $headerTitle = "L'histoire de<br>Saint-Ferjeux";
             include("header.php");
         ?>
     </header>
