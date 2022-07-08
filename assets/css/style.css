@@ -1,7 +1,8 @@
 :root {
     --font-title: 'Domine', serif;
     --font-content: 'Akshar', sans-serif;
-    --color-white: #FFFFFF;
+    --color-white: #FCFCFC;
+    --color-black: #050505;
     --color-actu: #F2F5F8;
     --color-invalid: #F80000;
     --color-valid: #004B0F;
@@ -40,6 +41,7 @@ img {
 
 body {
     margin: 0;
+    color: var(--color-black);
 }
 
 header {
@@ -153,7 +155,7 @@ header p {
     justify-content: center;
     font-size: 3.75rem;
     text-align: center;
-    text-shadow: .3125rem .3125rem 1.5625rem #000000;
+    text-shadow: .3125rem .3125rem 1.5625rem var(--color-black);
     animation-duration: 2s;
     animation-name: zoom;
 }
@@ -337,7 +339,7 @@ footer address {
 }
 
 #newsletter {
-    margin: 0 0 0.8125rem 0;
+    margin: 0 0 .8125rem 0;
     align-items: center;
 }
 
@@ -403,8 +405,12 @@ footer address {
 
 #newsletter_button {
     width: 7.5rem;
-    height: 2.8125rem;
     border: none;
+}
+
+#newsletter_email,
+#newsletter_button {
+    height: 2.8125rem;
 }
 
 #newsletter_button:hover,
@@ -422,11 +428,11 @@ footer address {
 
 #newsletter_link {
     text-decoration: none;
-    padding: 0.5rem;
+    padding: .5rem;
 }
 
 a {
-    color: #000000;
+    color: var(--color-black);
 }
 
 a:hover {
@@ -455,7 +461,7 @@ a:hover {
 }
 
 #header_short #header_title {
-    text-shadow: 5px 5px 15px #000000;
+    text-shadow: 5px 5px 15px var(--color-black);
 }
 
 #header_short #header_hook {
@@ -568,7 +574,7 @@ a:hover {
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
 }
 
 .contact_form_input {
@@ -578,7 +584,7 @@ a:hover {
     font-style: normal;
     font-weight: 300;
     font-size: 1rem;
-    padding: 0.875rem;
+    padding: .875rem;
     margin-bottom: 2rem;
 }
 
@@ -594,7 +600,7 @@ a:hover {
 
 .contact_form_invalid {
     border: 1px solid var(--color-invalid);
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
 }
 
 .contact_form_span_invalid {
@@ -613,10 +619,10 @@ input#popup_thanks {
     border: 0;
     -webkit-appearance: none;
     border-radius: 0;
-    padding: 0.875rem;
+    padding: .875rem;
     display: inline-block;
     color: var(--color-white);
-    text-shadow: 0rem 0rem 0.125rem rgb(0 0 0 / 50%);
+    text-shadow: 0rem 0rem .125rem rgb(0 0 0 / 50%);
     background-color: var(--color-blue);
     text-align: center;
     font-weight: 400;
@@ -756,7 +762,7 @@ input#popup_thanks:hover {
         padding: unset;
     }
     #header_title {
-        margin: 6rem 0.75rem 0 0.75rem;
+        margin: 6rem .75rem 0 .75rem;
         font-size: 12.5vw;
         line-height: 160%;
         height: 100%;
@@ -764,7 +770,7 @@ input#popup_thanks:hover {
         align-items: center;
         justify-content: center;
         text-align: center;
-        text-shadow: 0.3125rem 0.3125rem 1.5625rem #000000;
+        text-shadow: .3125rem .3125rem 1.5625rem var(--color-black);
         padding: 0;
         animation-duration: 2s;
         animation-name: zoom;
@@ -903,11 +909,11 @@ input#popup_thanks:hover {
         margin-bottom: 2rem;
     }
     .contact_form_input {
-        padding: 0.675rem;
+        padding: .675rem;
         margin-bottom: 1.5rem;
     }
     .contact_form_invalid {
-        margin-bottom: 0.5rem;
+        margin-bottom: .5rem;
     }
     .contact_form_span_invalid {
         margin-bottom: 1.5rem;
