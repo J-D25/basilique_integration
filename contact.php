@@ -20,7 +20,8 @@
     <header id="header_short">
         <?php 
             $headerTitle = "Avez-vous <br>une question ?";
-            include("header.php");
+            include("header.php");//insertion header
+            include("popup.html");//insertion template popup
         ?>
     </header>
     <main>
