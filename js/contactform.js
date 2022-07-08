@@ -75,35 +75,10 @@ function ajaxFormContact() {
 }
 
 function showPopUp() {
-    let forma = document.getElementById("contact_form");
-    let div1 = document.createElement("div");
-    div1.setAttribute("id", "popup_fond");
-    forma.insertAdjacentElement('afterend', div1);
-    let div2 = document.createElement("div");
-    div2.setAttribute("id", "popup_wrapper");
-    div1.append(div2);
-    let div3 = document.createElement("div");
-    div3.setAttribute("id", "popup_center");
-    div2.append(div3);
-    let p1 = document.createElement("p");
-    p1.setAttribute("id", "popup_close");
-    div3.append(p1);
-    p1Content = document.createTextNode("X");
-    p1.append(p1Content);
-    let p2 = document.createElement("p");
-    p2.setAttribute("id", "popup_text");
-    div3.append(p2);
-    p2Content = document.createTextNode("Votre message a bien été envoyé.");
-    p2.append(p2Content);
-
-    let div4 = document.createElement("div");
-    div4.setAttribute("class", "button");
-    div3.append(div4);
-    let inpt = document.createElement("input");
-    inpt.setAttribute("type", "button");
-    inpt.setAttribute("value", "Merci");
-    inpt.setAttribute("id", "popup_thanks");
-    div4.append(inpt);
+    const template = document.querySelector("#template_contact");
+    const header = document.querySelector("HEADER");
+    const clone = document.importNode(template.content, true);
+    header.appendChild(clone);
 
     let popUp = document.getElementById("popup_fond")
     document.getElementById("popup_close").addEventListener('click', function() {
