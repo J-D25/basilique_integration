@@ -46,26 +46,7 @@ function listingMail(file, count) {
                 td[1].textContent = tableNewsletter[index]['date'];
                 td[2].addEventListener("click", function() {
                     const data = td[0].textContent;
-                    const dialog = confirm("Voulez-vous supprimer " + data + " ?");
-                    if (dialog) {
-                        //Appel script suppression
-                        fetch("php/delete.php", {
-                                method: "POST",
-                                body: JSON.stringify(data),
-                                contentType: 'application/json'
-                            })
-                            .then(response => response.json())
-                            .then((results) => {
-                                if (results.responseServer === true && results.responseDB === true) {
-                                    alert("Suppression effectuée.");
-                                    tr[0].remove();
-                                    let recordTotalNumberSpan = document.querySelector("#record_total");
-                                    let recordSelectNumberSpan = document.querySelector("#record_select");
-                                    recordTotalNumberSpan.textContent = Number(recordTotalNumberSpan.textContent) - 1;
-                                    recordSelectNumberSpan.textContent = Number(recordSelectNumberSpan.textContent) - 1;
-                                }
-                            });
-                    }
+                    showPopUp(data, tr[0]); //appel de la popUp
                 });
                 tbody.appendChild(clone);
             });
@@ -125,4 +106,60 @@ function removeList() {
     while (tBody.firstChild) {
         tBody.removeChild(tBody.firstChild);
     };
+}
+
+//mail : adresse mail à supprimer, num : numéro de la ligne à supprimer
+function showPopUp(mail, num) {
+    const template = document.querySelector("#template_contact");
+    const header = document.querySelector("HEADER");
+    const clone = document.importNode(template.content, true);
+    const popUpTitle = clone.querySelector("#popup_title");
+    const popUpContent = clone.querySelector("#popup_text");
+    popUpTitle.textContent = "Suppression demandée";
+    popUpContent.textContent = "Êtes-vous sûr de vouloir supprimer " + mail + " ?";
+    let popUpNoInput = document.createElement("INPUT");
+    popUpNoInput.setAttribute("type", "button");
+    popUpNoInput.setAttribute("value", "Non");
+    popUpNoInput.setAttribute("id", "popup_thanks_no");
+    const popUpDiv = clone.querySelector(".button");
+    popUpDiv.appendChild(popUpNoInput);
+
+    header.appendChild(clone);
+
+    const popUp = document.getElementById("popup_fond");
+    const popUpClose = document.getElementById("popup_close");
+    const popUpThx = document.getElementById("popup_thanks");
+    const popUpNo = document.getElementById("popup_thanks_no");
+
+    popUpClose.addEventListener('click', function() {
+        popUp.remove();
+    });
+    popUpThx.addEventListener('click', function() {
+        ajaxDeletion(mail, num);
+        popUp.remove();
+    });
+    popUpNo.addEventListener('click', function() {
+        popUp.remove();
+    });
+}
+
+//mail : adresse mail à supprimer, num : numéro de la ligne à supprimer
+function ajaxDeletion(mail, num) {
+    //Appel script suppression
+    fetch("php/delete.php", {
+            method: "POST",
+            body: JSON.stringify(mail),
+            contentType: 'application/json'
+        })
+        .then(response => response.json())
+        .then((results) => {
+            if (results.responseServer === true && results.responseDB === true) {
+                alert("Suppression effectuée.");
+                num.remove();
+                let recordTotalNumberSpan = document.querySelector("#record_total");
+                let recordSelectNumberSpan = document.querySelector("#record_select");
+                recordTotalNumberSpan.textContent = Number(recordTotalNumberSpan.textContent) - 1;
+                recordSelectNumberSpan.textContent = Number(recordSelectNumberSpan.textContent) - 1;
+            }
+        });
 }
