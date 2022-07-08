@@ -1,0 +1,123 @@
+:root {
+    --font-title: 'Domine', serif;
+    --font-content: 'Akshar', sans-serif;
+    --color-white: #FCFCFC;
+    --color-black: #050505;
+    --color-actu: #F2F5F8;
+    --color-invalid: #F80000;
+    --color-valid: #004B0F;
+    --color-img: #EDEDED;
+    --color-blue: #1B4F91;
+    --color-blue-hover: #7595BD;
+    --color-footer: #A6ACB8;
+    --color-newsletter: #6E6E6E;
+    --color-newsletter-button: #6C7689;
+    --color-newsletter-invalid: #880000;
+    --color-green: #364826;
+    --color-green-hover: #82BE7E;
+}
+
+#popup_fond {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+#popup_center {
+    background-color: var(--color-white);
+    width: 50%;
+    height: 75%;
+    max-width: 492px;
+    max-height: 340px;
+    color: var(--color-black);
+}
+
+#popup_close {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 8px 0 0;
+}
+
+#popup_close_icon {
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#popup_close_icon:hover {
+    background-color: rgb(0 0 0/0.06);
+}
+
+#popup_mail {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#popup_mail_icon {
+    width: 5.9375rem;
+}
+
+#popup_text,
+#popup_text_title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-content);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0;
+    margin: 0;
+}
+
+#popup_text {
+    padding: 16px 0 40px;
+}
+
+#popup_text_title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 40px;
+}
+
+input#popup_thanks,
+input#popup_thanks_no {
+    border: 0;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: .875rem;
+    display: inline-block;
+    color: var(--color-white);
+    text-shadow: 0rem 0rem .125rem rgb(0 0 0 / 50%);
+    background-color: var(--color-blue);
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+input#popup_thanks,
+input#popup_thanks_no {
+    width: 6rem;
+    cursor: pointer;
+}
+
+input#contact_form_button:hover,
+input#popup_thanks:hover,
+input#popup_thanks_no:hover {
+    background-color: var(--color-blue-hover);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}

@@ -614,8 +614,7 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-input#contact_form_button,
-input#popup_thanks {
+input#contact_form_button {
     border: 0;
     -webkit-appearance: none;
     border-radius: 0;
@@ -634,13 +633,7 @@ input#contact_form_button {
     width: 12.5rem;
 }
 
-input#popup_thanks {
-    width: 6rem;
-    cursor: pointer;
-}
-
-input#contact_form_button:hover,
-input#popup_thanks:hover {
+input#contact_form_button:hover {
     background-color: var(--color-blue-hover);
 }
 
@@ -970,78 +963,4 @@ input#popup_thanks:hover {
 
 .close {
     animation: menuclosed 0.7s ease-out;
-}
-
-#popup_fond {
-    height: 100%;
-    width: 100%;
-}
-
-#popup_fond {
-    background-color: rgba(0, 0, 0, 0.75);
-    position: fixed;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-#popup_center {
-    background-color: var(--color-white);
-    width: 50%;
-    height: 75%;
-    max-width: 492px;
-    max-height: 340px;
-    color: var(--color-black);
-}
-
-#popup_close {
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-end;
-    margin: 8px 8px 0 0;
-}
-
-#popup_close_icon {
-    border-radius: 50%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#popup_close_icon:hover {
-    background-color: rgb(0 0 0/0.06);
-}
-
-#popup_mail {
-    display: flex;
-    justify-content: center;
-}
-
-#popup_mail_icon {
-    width: 5.9375rem;
-}
-
-#popup_text,
-#popup_text_title {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-family: var(--font-content);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 0;
-}
-
-#popup_text {
-    padding: 16px 0 40px;
-}
-
-#popup_text_title {
-    font-weight: 500;
-    font-size: 1.5rem;
-    padding: 40px;
 }
