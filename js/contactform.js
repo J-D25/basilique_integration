@@ -78,13 +78,17 @@ function showPopUp() {
     const template = document.querySelector("#template_contact");
     const header = document.querySelector("HEADER");
     const clone = document.importNode(template.content, true);
+    const popUpTitle = clone.querySelector("#popup_title");
+    const popUpContent = clone.querySelector("#popup_text");
+    popUpTitle.textContent = "Merci !";
+    popUpContent.textContent = "Votre message a bien été envoyé.";
     header.appendChild(clone);
 
-    let popUp = document.getElementById("popup_fond")
+    let popUp = document.getElementById("popup_fond");
     document.getElementById("popup_close").addEventListener('click', function() {
         popUp.remove();
-    })
+    });
     document.getElementById("popup_thanks").addEventListener('click', function() {
         popUp.remove();
-    })
+    });
 }
