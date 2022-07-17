@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="J-D25">
-    <meta name="description" content="Une église préexistait sur l'emplacement de l'actuelle Basilique Saint-Ferjeux, édifiée il y a 138 ans !">
+    <meta name="description" content="Une église préexistait sur l'emplacement de l'actuelle Basilique Saint-Ferjeux, édifiée il y a <?php echo date("Y")-1884 ?> ans !">
+    <meta property="og:url" content="https://jessya.promo-159.codeur.online/basilique/en_savoir_plus.php/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Basilique Saint-Ferjeux - En savoir plus">
+    <meta property="og:description" content="Une église préexistait sur l'emplacement de l'actuelle Basilique Saint-Ferjeux, édifiée il y a <?php echo date("Y")-1884 ?> ans !">
+    <meta property="og:image" content="https://jessya.promo-159.codeur.online/basilique/assets/images/esp_01.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

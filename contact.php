@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="J-D25">
     <meta name="description" content="Vous avez une question concernant la Basilique Saint-Ferjeux ? N'hésitez pas à nous contacter.">
+    <meta property="og:url" content="https://jessya.promo-159.codeur.online/basilique/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Basilique Saint-Ferjeux - Nous contacter">
+    <meta property="og:description" content="Vous avez une question concernant la Basilique ? N'hésitez pas à nous contacter.">
+    <meta property="og:image" content="https://jessya.promo-159.codeur.online/basilique/assets/images/header_rs.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/stylepopup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">

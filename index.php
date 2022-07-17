@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="J-D25">
-    <meta name="description" content="Bienvenue sur le site internet de la Basilique Saint-Ferjeux, édifice de style romano-byzantin ayant 138 ans d'histoire !">
+    <meta name="description" content="Bienvenue sur le site internet de la Basilique Saint-Ferjeux de Besançon, un édifice de style romano-byzantin ayant <?php echo date("Y")-1884 ?> ans d'histoire !">
+    <meta property="og:url" content="https://jessya.promo-159.codeur.online/basilique/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Basilique Saint-Ferjeux - <?php echo date("Y")-1884 ?> ans d'histoire">
+    <meta property="og:description" content="La Basilique Saint-Ferjeux, un édifice de style romano-byzantin ayant <?php echo date("Y")-1884 ?> ans d'histoire !">
+    <meta property="og:image" content="https://jessya.promo-159.codeur.online/basilique/assets/images/header_rs.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +67,7 @@
                     <img src="assets/images/actu_03.png" width="340" height="226" alt="Cinq personnes sont dans un lieu de culte chrétien. Il y a deux hommes et une femme assis sur des bancs. Un prêtre montre un texte de la bible à une autre femme.">
                     <div class="home_section_3_content_actu_text">
                         <h3>1<sup>er</sup> mai, fête du travail</h3>
-                        <p>Instituée initialement en mémoire de la grève générale du 1<sup>er</sup> mai 1886 à Chicago, la fête du travail a été adoptée progressivement au cours du XX<sup>e</sup> siècle.</p>
+                        <p>Instituée initialement en mémoire de la grève générale du 1<sup>er</sup> mai 1886 à Chicago, la fête du travail a été adoptée au cours du XX<sup>e</sup> siècle.</p>
                     </div>
                 </div>
             </div>
