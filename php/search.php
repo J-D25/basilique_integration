@@ -1,14 +1,12 @@
 <?php
-include('head.php');
-
-$_POST = json_decode(file_get_contents('php://input'), true);
+include('head.php'); //Appel des variables globales 
+include('conn.php'); //Démarrage connexion
+$_POST = json_decode(file_get_contents('php://input'), true);//Email à rechercher dans la base
 
 if (isset($_POST) && !empty($_POST)) {
     $errorCode = true;
     try{
-        $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` WHERE `email` LIKE (:email) ORDER BY `email`");
+        $sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` WHERE `email` LIKE :email ORDER BY `email`");
         $sth->bindValue(':email', '%'.$_POST.'%', PDO::PARAM_STR);
         $sth->execute();
         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -16,37 +14,23 @@ if (isset($_POST) && !empty($_POST)) {
     catch(PDOException $e){
         $errorCode = $e->getCode();
     }
-    $conn = null;
     echo json_encode(["responseServer"=>true, "responseDB"=>$errorCode, "data"=>$res]);
 } else {
     echo json_encode(["responseServer"=>false]);
 }
 
 try{
-    $conn1 = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
-    $conn1->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sth1 = $conn1->prepare("SELECT COUNT(`email`)  as `selectNumberEmail` FROM `newsletter` WHERE `email` LIKE (:email) ORDER BY `email`");
-    $sth1->bindValue(':email', '%'.$_POST.'%', PDO::PARAM_STR);
-    $sth1->execute();
-    $research = $sth1->fetchAll(PDO::FETCH_ASSOC);
-}
-catch(PDOException $e1){
-    $errorCode = $e1->getCode();
-}
-
-try{
-    $conn2 = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
-    $conn2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    $sth2 = $conn2->prepare("SELECT COUNT(`email`) as `totalNumberEmail` FROM `newsletter`");
+    $sth2 = $conn->prepare("SELECT COUNT(`email`) FROM `newsletter`");
     $sth2->execute();
-    $res2=$sth2->fetchAll(PDO::FETCH_ASSOC);
+    $res2=$sth2->fetchAll(PDO::FETCH_COLUMN);
 }
 catch(PDOException $e2){
     $errorCode = $e2->getCode();
 }
-$record=json_encode($res2[0]);
-$select=json_encode($research[0]);
+$conn = null; //Arrêt connexion
+$record=$res2[0];//Nombre d'enregistrements total dans la table
+settype($record, "integer");//Conversion string en integer
+$resNum=$sth->rowCount();//Nombre d'enregistrements retournés par la requête
 header('Record-number: '.$record);
-header('Select-number: '.$select);
+header('Select-number: '.$resNum);
 ?>
