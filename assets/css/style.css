@@ -192,6 +192,7 @@ p {
     width: 40%;
     height: auto;
     object-fit: cover;
+    margin:0;
 }
 
 .button {
@@ -645,7 +646,11 @@ input#contact_form_button:hover {
     column-gap: 1.625rem;
     justify-content: space-between;
 }
-
+@media (max-width: 1600px) {
+    header {
+        background-image: url("../images/header_1600.jpg");
+    }
+}
 @media (min-width: 765px) and (max-width: 1000px) {
     #menu {
         padding: 0 2.5vw;
