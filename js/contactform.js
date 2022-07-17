@@ -80,6 +80,8 @@ function showPopUp() {
     const clone = document.importNode(template.content, true);
     const popUpTitle = clone.querySelector("#popup_title");
     const popUpContent = clone.querySelector("#popup_text");
+    const popUpMailDeleteIcon = clone.querySelector("#popup_maildelete_icon");
+    popUpMailDeleteIcon.remove();
     popUpTitle.textContent = "Merci !";
     popUpContent.textContent = "Votre message a bien été envoyé.";
     header.appendChild(clone);
