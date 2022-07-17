@@ -23,12 +23,12 @@ function listingMail(count) {
             let recordSelectNumber = response.headers.get('Select-number');
             let recordTotalNumberSpan = document.querySelector("#record_total");
             let recordSelectNumberSpan = document.querySelector("#record_select");
-            if (Number(recordTotalNumber.totalNumberEmail) <= Number(recordSelectNumber)) {
-                recordTotalNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
-                recordSelectNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
+            if (Number(recordTotalNumber) <= Number(recordSelectNumber)) {
+                recordTotalNumberSpan.textContent = recordTotalNumber;
+                recordSelectNumberSpan.textContent = recordTotalNumber;
                 more.setAttribute("disabled", "");
             } else {
-                recordTotalNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
+                recordTotalNumberSpan.textContent = recordTotalNumber;
                 recordSelectNumberSpan.textContent = recordSelectNumber;
                 more.removeAttribute("disabled");
             }
