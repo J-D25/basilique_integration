@@ -19,7 +19,7 @@ function listingMail(count) {
             contentType: 'application/json'
         })
         .then(function(response) {
-            let recordTotalNumber = JSON.parse(response.headers.get('Record-number'));
+            let recordTotalNumber = response.headers.get('Record-number');
             let recordSelectNumber = response.headers.get('Select-number');
             let recordTotalNumberSpan = document.querySelector("#record_total");
             let recordSelectNumberSpan = document.querySelector("#record_select");
@@ -62,17 +62,17 @@ searchBar.addEventListener('input', function() {
                 contentType: 'application/json'
             })
             .then(function(response) {
-                let recordTotalNumber = JSON.parse(response.headers.get('Record-number'));
-                let recordSelectNumber = JSON.parse(response.headers.get('Select-number'));
+                let recordTotalNumber = response.headers.get('Record-number');
+                let recordSelectNumber = response.headers.get('Select-number');
                 let recordTotalNumberSpan = document.querySelector("#record_total");
                 let recordSelectNumberSpan = document.querySelector("#record_select");
                 more.setAttribute("disabled", "");
-                if (Number(recordTotalNumber.totalNumberEmail) <= Number(recordSelectNumber.selectNumberEmail)) {
-                    recordTotalNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
-                    recordSelectNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
+                if (Number(recordTotalNumber) <= Number(recordSelectNumber)) {
+                    recordTotalNumberSpan.textContent = recordTotalNumber;
+                    recordSelectNumberSpan.textContent = recordTotalNumber;
                 } else {
-                    recordTotalNumberSpan.textContent = recordTotalNumber.totalNumberEmail;
-                    recordSelectNumberSpan.textContent = recordSelectNumber.selectNumberEmail;
+                    recordTotalNumberSpan.textContent = recordTotalNumber;
+                    recordSelectNumberSpan.textContent = recordSelectNumber;
                 }
                 return response.json();
             })
@@ -84,9 +84,14 @@ searchBar.addEventListener('input', function() {
                     tableNewsletter.forEach((element, index) => {
                         const tbody = document.querySelector("tbody");
                         const clone = document.importNode(template.content, true);
+                        const tr = clone.querySelectorAll("tr");
                         const td = clone.querySelectorAll("td");
                         td[0].textContent = tableNewsletter[index]['email'];
                         td[1].textContent = tableNewsletter[index]['date'];
+                        td[2].addEventListener("click", function() {
+                            const data = td[0].textContent;
+                            showPopUp(data, tr[0]); //appel de la popUp
+                        });
                         tbody.appendChild(clone);
                     });
                 }
