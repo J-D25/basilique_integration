@@ -100,7 +100,7 @@ searchBar.addEventListener('input', function() {
 
 //Suppression de la liste
 function removeList() {
-    const tBody = document.querySelector("tbody");
+    const tBody = document.querySelector("TBODY");
     while (tBody.firstChild) {
         tBody.removeChild(tBody.firstChild);
     };
@@ -114,6 +114,8 @@ function showPopUp(mail, num) {
     const popUpTitle = clone.querySelector("#popup_title");
     const popUpContent = clone.querySelector("#popup_text");
     const popUpYesInput = clone.querySelector("#popup_thanks");
+    const popUpMailIcon = clone.querySelector("#popup_mail_icon");
+    popUpMailIcon.remove();
     popUpTitle.textContent = "Suppression demandée";
     popUpContent.textContent = "Êtes-vous sûr de vouloir supprimer " + mail + " ?";
     popUpYesInput.value = "Oui";
@@ -125,6 +127,7 @@ function showPopUp(mail, num) {
     popUpDiv.appendChild(popUpNoInput);
 
     header.appendChild(clone);
+    
 
     const popUp = document.getElementById("popup_fond");
     const popUpClose = document.getElementById("popup_close");
@@ -135,8 +138,8 @@ function showPopUp(mail, num) {
         popUp.remove();
     });
     popUpThx.addEventListener('click', function() {
-        ajaxDeletion(mail, num);
         popUp.remove();
+        ajaxDeletion(mail, num);
     });
     popUpNo.addEventListener('click', function() {
         popUp.remove();
@@ -154,7 +157,7 @@ function ajaxDeletion(mail, num) {
         .then(response => response.json())
         .then((results) => {
             if (results.responseServer === true && results.responseDB === true) {
-                alert("Suppression effectuée.");
+                deletePopUp(mail);
                 num.remove();
                 let recordTotalNumberSpan = document.querySelector("#record_total");
                 let recordSelectNumberSpan = document.querySelector("#record_select");
@@ -162,4 +165,25 @@ function ajaxDeletion(mail, num) {
                 recordSelectNumberSpan.textContent = Number(recordSelectNumberSpan.textContent) - 1;
             }
         });
+}
+
+function deletePopUp(mail) {
+    const template = document.querySelector("#template_contact");
+    const header = document.querySelector("HEADER");
+    const clone = document.importNode(template.content, true);
+    const popUpTitle = clone.querySelector("#popup_title");
+    const popUpContent = clone.querySelector("#popup_text");
+    const popUpMailIcon = clone.querySelector("#popup_mail_icon");
+    popUpMailIcon.remove();
+    popUpTitle.textContent = "Suppression effectuée";
+    popUpContent.textContent = mail + " a bien été supprimé.";
+    header.appendChild(clone);
+
+    let popUp = document.getElementById("popup_fond");
+    document.getElementById("popup_close").addEventListener('click', function() {
+        popUp.remove();
+    });
+    document.getElementById("popup_thanks").addEventListener('click', function() {
+        popUp.remove();
+    });
 }
