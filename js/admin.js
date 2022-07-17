@@ -115,8 +115,10 @@ function showPopUp(mail, num) {
     const clone = document.importNode(template.content, true);
     const popUpTitle = clone.querySelector("#popup_title");
     const popUpContent = clone.querySelector("#popup_text");
+    const popUpYesInput = clone.querySelector("#popup_thanks");
     popUpTitle.textContent = "Suppression demandée";
     popUpContent.textContent = "Êtes-vous sûr de vouloir supprimer " + mail + " ?";
+    popUpYesInput.value = "Oui";
     let popUpNoInput = document.createElement("INPUT");
     popUpNoInput.setAttribute("type", "button");
     popUpNoInput.setAttribute("value", "Non");
