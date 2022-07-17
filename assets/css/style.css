@@ -180,11 +180,12 @@ p {
     font-size: 1.125rem;
     line-height: 2.25rem;
     text-align: justify;
-    margin: 2.25rem;
+    margin: 2.25rem 0;
 }
 
 #home_section_1_content {
     display: flex;
+    column-gap: 2.25rem;
 }
 
 #home_section_1_content_img {
@@ -690,10 +691,6 @@ input#contact_form_button:hover {
 @media (max-width: 765px) {
     main {
         margin: 0 7vw;
-    }
-    p {
-        margin-left: 0;
-        margin-right: 0;
     }
     header {
         background-image: url("../images/header_mobile.jpg");
