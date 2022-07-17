@@ -31,7 +31,12 @@
         <div id="home_section_1">
             <h2>La construction de la basilique</h2>
             <div id="home_section_1_content" class="img_container">
-                <img id="home_section_1_content_img" src="assets/images/main_01.png" width="372" height="290" alt="Vue aérienne de la basilique Saint-Ferjeux en noir et blanc du vingtième siècle.">
+                <p id="home_section_1_content_img">
+                    <picture>
+                        <source srcset="assets/images/main_01.webp" type="image/webp">
+                        <img src="assets/images/main_01.png" width="372" height="290" alt="Vue aérienne de la basilique Saint-Ferjeux en noir et blanc du vingtième siècle.">
+                    </picture>
+                </p>
                 <div>
                     <p>L'église qui a précédé la basilique actuelle a été maintes fois remaniée et reconstruite (1520-1526, 1636, 1730). L'édifice fut démoli au XIX<sup>e</sup> siècle pour permettre la construction d'une vaste basilique. Les plans de cette dernière veillèrent néanmoins à préserver l'emplacement de la « grotte » initiale, aujourd'hui comprise dans la crypte de l'édifice de style romano-byzantin.</p>
                     <p class="button left">
@@ -42,6 +47,8 @@
         </div>
         <p id="home_section_2" class="img_container">
             <picture>
+                <source srcset="assets/images/main_02.webp" type="image/webp">
+                <source srcset="assets/images/main_02_mobile.webp" media="(max-width: 765px)" type="image/webp">
                 <source srcset="assets/images/main_02_mobile.jpg" media="(max-width: 765px)">
                 <img class="home_panorama" src="assets/images/main_02.jpg" width="2048" height="873" alt="Basilique Saint-Ferjeux vue de côté du style romano-byzantin composée de deux immenses tours situées à l'avant. On peut voir au premier plan le cimetière de Saint-Ferjeux.">
             </picture>
@@ -50,21 +57,30 @@
             <h2>Agenda</h2>
             <div id="home_section_3_content">
                 <div class="home_section_3_content_actu img_container">
-                    <img src="assets/images/actu_01.png" width="340" height="226" alt="Quatre personnes debout prient dans un lieu de culte chrétien. Un prêtre les regarde. Une lumière blanche les illumine par un vitrail en forme de rosace.">
+                    <picture>
+                        <source srcset="assets/images/actu_01.webp" type="image/webp">
+                        <img src="assets/images/actu_01.png" width="340" height="226" alt="Quatre personnes debout prient dans un lieu de culte chrétien. Un prêtre les regarde. Une lumière blanche les illumine par un vitrail en forme de rosace.">
+                    </picture>
                     <div class="home_section_3_content_actu_text">
                         <h3>Concert du 26 juin 2022</h3>
                         <p>L'Association Musique Sacrée, sa maîtrise et ses solistes, proposent des pièces musicales de Mozart, Bach, Mendelson, Monteverdi…</p>
                     </div>
                 </div>
                 <div class="home_section_3_content_actu img_container">
-                    <img src="assets/images/actu_02.png" width="340" height="226" alt="Gros plan sur les mains d'une personne de foi. Elle prie. Ses doigts sont croisés.">
+                    <picture>
+                        <source srcset="assets/images/actu_02.webp" type="image/webp">
+                        <img src="assets/images/actu_02.png" width="340" height="226" alt="Gros plan sur les mains d'une personne de foi. Elle prie. Ses doigts sont croisés.">
+                    </picture>
                     <div class="home_section_3_content_actu_text">
                         <h3>Messe de l'Ascension</h3>
                         <p>La messe de l'Ascension se tiendra le jeudi 26 mai à partir de 10 h 30. L'archevêque de Besançon, Monseigneur Jean-Luc Bouilleret, présidera la messe.</p>
                     </div>
                 </div>
                 <div class="home_section_3_content_actu img_container">
-                    <img src="assets/images/actu_03.png" width="340" height="226" alt="Cinq personnes sont dans un lieu de culte chrétien. Il y a deux hommes et une femme assis sur des bancs. Un prêtre montre un texte de la bible à une autre femme.">
+                    <picture>
+                        <source srcset="assets/images/actu_03.webp" type="image/webp">
+                        <img src="assets/images/actu_03.png" width="340" height="226" alt="Cinq personnes sont dans un lieu de culte chrétien. Il y a deux hommes et une femme assis sur des bancs. Un prêtre montre un texte de la bible à une autre femme.">
+                    </picture>
                     <div class="home_section_3_content_actu_text">
                         <h3>1<sup>er</sup> mai, fête du travail</h3>
                         <p>Instituée initialement en mémoire de la grève générale du 1<sup>er</sup> mai 1886 à Chicago, la fête du travail a été adoptée au cours du XX<sup>e</sup> siècle.</p>
@@ -75,8 +91,18 @@
         <div id="home_section_4">
             <h2>Retour en images</h2>
             <div id="home_section_4_content">
-                <p class="img_container" id="home_section_4_content_1"><img src="assets/images/main_03.jpg" width="375" height="500" alt="Photo de la basilique vue de face. On voit les deux immenses tours, ainsi que sa façade antérieure. Il y a cinq statues d'apôtres incrustées dans celle-ci."></p>
-                <p class="img_container" id="home_section_4_content_2"><img src="assets/images/main_04.jpg" width="800" height="518" alt="Photo de la basilique en noir et blanc datant du vingtième siècle."></p>
+                <p class="img_container" id="home_section_4_content_1">
+                    <picture>
+                        <source srcset="assets/images/main_03.webp" type="image/webp">    
+                        <img src="assets/images/main_03.jpg" width="375" height="500" alt="Photo de la basilique vue de face. On voit les deux immenses tours, ainsi que sa façade antérieure. Il y a cinq statues d'apôtres incrustées dans celle-ci.">
+                    </picture>
+                </p>
+                <p class="img_container" id="home_section_4_content_2">
+                    <picture>
+                        <source srcset="assets/images/main_04.webp" type="image/webp">    
+                        <img src="assets/images/main_04.jpg" width="800" height="518" alt="Photo de la basilique en noir et blanc datant du vingtième siècle.">
+                    </picture>
+                </p>
             </div>
         </div>
     </main>
