@@ -188,9 +188,14 @@ p {
     column-gap: 2.25rem;
 }
 
-#home_section_1_content_img {
-    width: 40%;
-    height: auto;
+#home_section_1_content_p {
+    margin:0;
+    width:100%;
+}
+
+#home_section_1_content_p_img {
+    width: 100%;
+    min-height: 100%;
     object-fit: cover;
     margin:0;
 }

@@ -31,10 +31,10 @@
         <div id="home_section_1">
             <h2>La construction de la basilique</h2>
             <div id="home_section_1_content" class="img_container">
-                <p id="home_section_1_content_img">
+                <p id="home_section_1_content_p">
                     <picture>
                         <source srcset="assets/images/main_01.webp" type="image/webp">
-                        <img src="assets/images/main_01.png" width="372" height="290" alt="Vue aérienne de la basilique Saint-Ferjeux en noir et blanc du vingtième siècle.">
+                        <img id="home_section_1_content_p_img" src="assets/images/main_01.png" width="372" height="290" alt="Vue aérienne de la basilique Saint-Ferjeux en noir et blanc du vingtième siècle.">
                     </picture>
                 </p>
                 <div>
