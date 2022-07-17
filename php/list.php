@@ -17,10 +17,12 @@ try{
 catch(PDOException $e){
     $errorCode = $e->getCode();
 }
-$conn = null;
+$conn = null; //Arrêt connexion
 echo json_encode(["data"=>$res]);
 $resNum=$sth->rowCount();//Nombre d'enregistrements retournés par la requête
-$record=json_encode($res2[0]);//Nombre d'enregistrements total dans la table
+$record=$res2[0];//Nombre d'enregistrements total dans la table
+settype($record, "integer");//Conversion string en integer
+
 header('Record-number: '.$record);//Stockage du nombre d'enregistrements total dans l'en-tête de la réponse
 header('Select-number: '.($offset+$resNum));//Stockage du nombre d'enregistrements affichés dans l'en-tête de la réponse
 ?>
