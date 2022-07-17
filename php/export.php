@@ -1,28 +1,24 @@
 <?php
-include('head.php');
+include('head.php'); //Appel des variables globales 
+include('conn.php'); //Démarrage connexion
 
-$handle = fopen('php://output','w');
+$handle = fopen('php://output','w'); //Ouverture et écriture du fichier
 
-$bdd = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
-$req=$bdd->query('SELECT `email`, `date` FROM `newsletter`');
-$ctr=0;
+$req = $conn->prepare("SELECT `email`, `date` FROM `newsletter`");
+$req->execute();
+$donnees=$req->fetchAll(PDO::FETCH_ASSOC);
 
-while($donnees=$req->fetch(PDO::FETCH_ASSOC))
-{
-    // Head
-    if($ctr===0){
-        $champs=array_keys($donnees);
-        fputcsv($handle,$champs);
-    }
-    // Body
-    fputcsv($handle,$donnees);
-    $ctr++;
+$champs=array("Email", "Date d'inscription"); //En-têtes du tableau
+fputcsv($handle,$champs);
+
+foreach ($donnees as $key => $value) {
+    fputcsv($handle,$donnees[$key]);
 }
 
-$req->closeCursor();
-fclose($handle);
+$conn = null; //Arrêt connexion
+fclose($handle); //Fermeture du fichier
 
 $today = date("d-m-Y"); 
-header('Content-Type: text/csv');
-header('Content-Disposition: attachment;filename=newsletter-'.$today.'.csv');
+header('Content-Type: text/csv'); //Type du fichier
+header('Content-Disposition: attachment;filename=newsletter-'.$today.'.csv'); //Téléchargement du fichier
 ?>
