@@ -1,20 +1,19 @@
 //Chargement de la liste à l'ouverture de la page
 window.addEventListener("DOMContentLoaded", () => {
-    listingMail("php/list.php", 0);
+    listingMail(0);
 })
 
 more = document.querySelector("#more");
-let click = 0;
 more.addEventListener("click", () => {
-    click++;
-    listingMail("php/more.php", click);
+    let recordSelected = document.querySelector("#record_select").textContent;
+    listingMail(recordSelected);
 })
 
-//file : nom du fichier php, count : nombre de clics.
-function listingMail(file, count) {
+//count : nombre d'enregistrements affichés
+function listingMail(count) {
     const template = document.querySelector("#templatemail");
 
-    fetch(file, {
+    fetch("php/list.php", {
             method: "POST",
             body: JSON.stringify(count),
             contentType: 'application/json'
@@ -95,8 +94,7 @@ searchBar.addEventListener('input', function() {
     } else {
         removeList();
         more.removeAttribute("disabled");
-        click = 0;
-        listingMail("php/list.php", 0);
+        listingMail(0);
     }
 })
 
