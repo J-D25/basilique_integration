@@ -35,20 +35,7 @@ function listingMail(count) {
             return response.json();
         })
         .then((results) => {
-            const tableNewsletter = results['data'];
-            tableNewsletter.forEach((element, index) => {
-                const tbody = document.querySelector("tbody");
-                const clone = document.importNode(template.content, true);
-                const tr = clone.querySelectorAll("tr");
-                const td = clone.querySelectorAll("td");
-                td[0].textContent = tableNewsletter[index]['email'];
-                td[1].textContent = tableNewsletter[index]['date'];
-                td[2].addEventListener("click", function() {
-                    const data = td[0].textContent;
-                    showPopUp(data, tr[0]); //appel de la popUp
-                });
-                tbody.appendChild(clone);
-            });
+            createTable(results);//Création de la liste d'emails
         });
 }
 
@@ -77,31 +64,36 @@ searchBar.addEventListener('input', function() {
                 return response.json();
             })
             .then((results) => {
-                const tableNewsletter = results['data'];
-                const template = document.querySelector("#templatemail");
                 if (results.responseServer === true && results.responseDB === true) {
-                    removeList();
-                    tableNewsletter.forEach((element, index) => {
-                        const tbody = document.querySelector("tbody");
-                        const clone = document.importNode(template.content, true);
-                        const tr = clone.querySelectorAll("tr");
-                        const td = clone.querySelectorAll("td");
-                        td[0].textContent = tableNewsletter[index]['email'];
-                        td[1].textContent = tableNewsletter[index]['date'];
-                        td[2].addEventListener("click", function() {
-                            const data = td[0].textContent;
-                            showPopUp(data, tr[0]); //appel de la popUp
-                        });
-                        tbody.appendChild(clone);
-                    });
+                    removeList();//Suppression de la liste d'emails existante
+                    createTable(results);//Création de la liste d'emails
                 }
             });
     } else {
-        removeList();
+        removeList();//Suppression de la liste d'emails existante
         more.removeAttribute("disabled");
         listingMail(0);
     }
 })
+
+//results = liste d'emails issus de la requête
+function createTable(results) {
+    const tableNewsletter = results['data'];
+    const template = document.querySelector("#templatemail");
+    tableNewsletter.forEach((element, index) => {
+        const tbody = document.querySelector("tbody");
+        const clone = document.importNode(template.content, true);
+        const tr = clone.querySelectorAll("tr");
+        const td = clone.querySelectorAll("td");
+        td[0].textContent = tableNewsletter[index]['email'];
+        td[1].textContent = tableNewsletter[index]['date'];
+        td[2].addEventListener("click", function() {
+            const data = td[0].textContent;
+            showPopUp(data, tr[0]); //appel de la popUp
+        });
+        tbody.appendChild(clone);
+    });
+}
 
 //Suppression de la liste
 function removeList() {
@@ -132,7 +124,6 @@ function showPopUp(mail, num) {
     popUpDiv.appendChild(popUpNoInput);
 
     header.appendChild(clone);
-    
 
     const popUp = document.getElementById("popup_fond");
     const popUpClose = document.getElementById("popup_close");
