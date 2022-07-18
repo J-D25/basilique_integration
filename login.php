@@ -14,6 +14,7 @@
 </head>
 <body>
     <main>
+        <h1>Bienvenue sur votre espace administration</h1>
         <form id="login_form" novalidate>
             <label for="username">Nom d'utilisateur</label>
             <input type="text" id="login_name" class="login_input" name="username" required>
