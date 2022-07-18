@@ -19,14 +19,10 @@ if (isset($_POST) && !empty($_POST)) {
     echo json_encode(["responseServer"=>false]);
 }
 
-try{
-    $sth2 = $conn->prepare("SELECT COUNT(`email`) FROM `newsletter`");
-    $sth2->execute();
-    $res2=$sth2->fetchAll(PDO::FETCH_COLUMN);
-}
-catch(PDOException $e2){
-    $errorCode = $e2->getCode();
-}
+$sth2 = $conn->prepare("SELECT COUNT(`email`) FROM `newsletter`");
+$sth2->execute();
+$res2=$sth2->fetchAll(PDO::FETCH_COLUMN);
+
 $conn = null; //Arrêt connexion
 $record=$res2[0];//Nombre d'enregistrements total dans la table
 settype($record, "integer");//Conversion string en integer
