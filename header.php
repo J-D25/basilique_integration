@@ -7,9 +7,9 @@
                 <span class="lines line3"></span>
             </label>
             <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="en_savoir_plus.php">En savoir plus</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="index">Accueil</a></li>
+                <li><a href="en_savoir_plus">En savoir plus</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
         </nav>
         <p id="header_title"><?php echo $headerTitle ?></p>
