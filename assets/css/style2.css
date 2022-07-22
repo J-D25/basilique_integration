@@ -96,7 +96,7 @@ label {
     margin-bottom: 0.5rem;
 }
 
-.login_form_span_invalid {
+.login_form_span_invalid, .login_form_invalid_form {
     display: block;
     color: var(--color-invalid);
     font-family: var(--font-content);
@@ -105,6 +105,11 @@ label {
     font-size: 1.125rem;
     text-align: justify;
     margin-bottom: 1rem;
+}
+
+.login_form_invalid_form {
+    margin-bottom: 1rem;
+    margin-top: -1rem;
 }
 
 @media (max-width: 765px) {
