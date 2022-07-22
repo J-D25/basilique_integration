@@ -6,6 +6,7 @@ formContact.addEventListener('submit', function(e) {
     ajaxFormContact();
 })
 
+//Vérification de la validité du formulaire
 function checkFormContact() {
     const inputs = document.querySelectorAll('.contact_form_input');
     let errorCount = 0; //initialisation du compteur d'erreurs
@@ -74,6 +75,7 @@ function ajaxFormContact() {
     }
 }
 
+//Affichage de la popup
 function showPopUp() {
     const template = document.querySelector("#template_contact");
     const header = document.querySelector("HEADER");
