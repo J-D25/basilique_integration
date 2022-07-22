@@ -110,7 +110,6 @@ input#popup_thanks_no {
     cursor: pointer;
 }
 
-input#contact_form_button:hover,
 input#popup_thanks:hover,
 input#popup_thanks_no:hover {
     background-color: var(--color-blue-hover);
@@ -123,7 +122,7 @@ input#popup_thanks_no:hover {
 }
 
 @media (max-width: 765px) {
-    #popup_center{
+    #popup_center {
         width: 90%;
         height: 90%;
     }
