@@ -11,8 +11,6 @@ more.addEventListener("click", () => {
 
 //count : nombre d'enregistrements affichés
 function listingMail(count) {
-    const template = document.querySelector("#templatemail");
-
     fetch("php/list.php", {
             method: "POST",
             body: JSON.stringify(count),
