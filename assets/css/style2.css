@@ -4,6 +4,12 @@
     --color-invalid: #F80000;
 }
 
+@media (hover:hover) {
+    #login_button:hover {
+        background-color: #7595BD;
+    }
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -17,7 +23,7 @@ body {
     background-color: var(--color-blue);
 }
 
-h1{
+h1 {
     font-family: 'Glory';
     text-align: center;
     margin-top: 0;
@@ -73,7 +79,7 @@ form {
     cursor: pointer;
 }
 
-#login_button:hover {
+#login_button:active {
     background-color: #7595BD;
 }
 
@@ -106,7 +112,7 @@ label {
         height: 95%;
         width: 95%;
     }
-    h1{
+    h1 {
         width: 85%;
     }
 }
