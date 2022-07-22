@@ -26,7 +26,7 @@ if($_SESSION['user']!="admin"){
 <body>
     <header>
         <p id="header_title">Basilique Saint-Ferjeux : Dashboard</p>
-        <a href="php/logout.php" title="Déconnexion" id="logout">
+        <a href="php/logout.php" title="Déconnexion" id="logout" ontouchstart="">
             <svg width="22.729591" height="25" viewBox="0 0 810.08264 980" xmlns="http://www.w3.org/2000/svg">
                 <path d="m 48.641329,534.5 c 0,-131.9 71.700001,-247.1 178.200001,-308.7 V 126 C 69.541329,194.8 -40.458671,351.9 -40.458671,534.5 c 0,246.1 199.500001,445.5 445.500001,445.5 246,0 445.5,-199.4 445.5,-445.5 0,-182.7 -110,-339.8 -267.3,-408.5 v 99.8 c 106.5,61.6 178.2,176.8 178.2,308.7 0,196.8 -159.5,356.4 -356.4,356.4 -196.9,0 -356.400001,-159.5 -356.400001,-356.4 z M 405.02433,0 c -49.2,0 -81.2554,39.9 -81.2554,89.1 v 356.4 c 0,49.2 32.0554,89.1 81.2554,89.1 49.2,0 81.2724,-39.9 81.2724,-89.1 V 89.1 c 0,-49.2 -32.0724,-89.1 -81.2724,-89.1 z" style="fill:#ffffff" />
             </svg>
@@ -39,7 +39,7 @@ if($_SESSION['user']!="admin"){
     <main>
         <div id="main_bar">
             <input type="text" placeholder="Rechercher" id="search">
-            <a href="php/export.php" class="button_blue" id="export">Exporter en CSV</a>
+            <a href="php/export.php" class="button_blue" id="export" ontouchstart="">Exporter en CSV</a>
         </div>
         <table>
             <thead>
@@ -57,7 +57,7 @@ if($_SESSION['user']!="admin"){
     </main>
 
     <footer>
-        <input type="button" value="Charger plus" class="button_blue" id="more">
+        <input type="button" value="Charger plus" class="button_blue" id="more" ontouchstart="">
     </footer>
 
     <template id="templatemail">

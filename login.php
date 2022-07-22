@@ -20,7 +20,7 @@
             <input type="text" id="login_name" class="login_input" name="username" required>
             <label for="password">Mot de passe</label>
             <input type="password" id="login_pass" class="login_input" name="password" required>
-            <input type="submit" id="login_button" value="Se connecter">
+            <input type="submit" id="login_button" value="Se connecter" ontouchstart="">
         </form>
     </main>
 </body>
