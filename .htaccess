@@ -2,3 +2,8 @@
     Order deny,allow
 	Deny from all
 </Files>
+
+RewriteEngine on #only use this once per .htaccess
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php 
