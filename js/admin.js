@@ -39,8 +39,10 @@ function listingMail(count) {
 
 //Recherche de mails
 const searchBar = document.getElementById('search');
+const searchCross = document.getElementById('cross');
 searchBar.addEventListener('input', function() {
     if (searchBar.value) {
+        searchCross.style.display = "block";
         fetch("php/search.php", {
                 method: "POST",
                 body: JSON.stringify(searchBar.value),
@@ -52,6 +54,7 @@ searchBar.addEventListener('input', function() {
                 let recordTotalNumberSpan = document.querySelector("#record_total");
                 let recordSelectNumberSpan = document.querySelector("#record_select");
                 more.setAttribute("disabled", "");
+                more.style.display = "none";
                 if (Number(recordTotalNumber) <= Number(recordSelectNumber)) {
                     recordTotalNumberSpan.textContent = recordTotalNumber;
                     recordSelectNumberSpan.textContent = recordTotalNumber;
@@ -68,11 +71,22 @@ searchBar.addEventListener('input', function() {
                 }
             });
     } else {
-        removeList();//Suppression de la liste d'emails existante
-        more.removeAttribute("disabled");
-        listingMail(0);
+        searchDelete();
     }
 })
+
+searchCross.addEventListener('click', function() {
+    searchDelete();
+    searchBar.value = "";
+})
+
+function searchDelete() {
+    removeList();//Suppression de la liste d'emails existante
+    more.removeAttribute("disabled");
+    more.style.display = "inline-block";
+    searchCross.style.display = "none";
+    listingMail(0);
+}
 
 //results = liste d'emails issus de la requête
 function createTable(results) {
