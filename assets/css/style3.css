@@ -11,6 +11,10 @@ body {
     #logout:hover {
         cursor: pointer;
         background-color: #82BE7E;
+    }   
+    #cross:hover {
+        fill: #BBBBBB;
+        cursor: pointer;
     }
     .button_blue:hover {
         cursor: pointer;
@@ -70,6 +74,12 @@ footer {
     background-color: #82BE7E;
 }
 
+#searching {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 #search {
     background-image: url("../images/magnifier.svg");
     background-repeat: no-repeat;
@@ -89,6 +99,16 @@ footer {
 
 #search:focus::placeholder {
     visibility: hidden;
+}
+
+#cross {
+    display: none;
+    width: 25px;
+    fill: #CCCCCC;
+}
+
+#cross:active {
+    fill: #BBBBBB;
 }
 
 tr {
@@ -180,7 +200,7 @@ td {
         gap: 1.5rem;
         flex-direction: column;
     }
-    #search {
+    #searching, #search {
         width: 100%;
     }
     #head_date,
