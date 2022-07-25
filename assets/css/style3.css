@@ -78,6 +78,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
 }
 
 #search {
@@ -103,8 +104,10 @@ footer {
 
 #cross {
     display: none;
-    width: 25px;
+    width: 20px;
     fill: #CCCCCC;
+    position: absolute;
+    right: 10px;
 }
 
 #cross:active {
