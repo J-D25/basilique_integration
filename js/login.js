@@ -74,7 +74,7 @@ function ajaxLogin() {
             .then(response => response.json())
             .then((result) => {
                 if (result.responseServer === true && result.responseDB === true && result.connection === true) {
-                    document.location.href = "admin.php";
+                    document.location.href = "admin";
                 } else if (result.responseServer === true && result.connection === false) {
                     main.insertBefore(p, h1.nextSibling);
                     p.append(errorMessage);
