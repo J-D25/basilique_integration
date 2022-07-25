@@ -38,7 +38,12 @@ if($_SESSION['user']!="admin"){
 
     <main>
         <div id="main_bar">
-            <input type="text" placeholder="Rechercher" id="search">
+            <div id="searching">
+                <input type="text" placeholder="Rechercher" id="search">
+                <svg viewBox="0 0 6.614583 6.614583" xmlns="http://www.w3.org/2000/svg" id="cross" ontouchstart>
+                    <path d="M 3.307292,0 A 3.3072924,3.3072919 0 0 0 0,3.307292 3.3072924,3.3072919 0 0 0 3.307292,6.614583 3.3072924,3.3072919 0 0 0 6.614583,3.307292 3.3072924,3.3072919 0 0 0 3.307292,0 Z M 2.073775,1.322917 3.307292,2.556433 4.540808,1.322917 5.291667,2.073775 4.05815,3.307292 5.291667,4.540808 4.540808,5.291667 3.307292,4.05815 2.073775,5.291667 1.322917,4.540808 2.556433,3.307292 1.322917,2.073775 Z" />
+                </svg>
+            </div>
             <a href="php/export.php" class="button_blue" id="export" ontouchstart="">Exporter en CSV</a>
         </div>
         <table>
