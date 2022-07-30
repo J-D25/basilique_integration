@@ -388,11 +388,14 @@ footer address {
     text-align: justify;
 }
 
-.underline {
-    text-decoration: underline;
+.footer_content_label {
+    font-family: var(--font-content);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
 }
 
-p.underline {
+p.footer_content_label {
     margin: 0;
 }
 
@@ -404,14 +407,6 @@ footer address {
 #newsletter {
     margin: 0 0 .8125rem 0;
     align-items: center;
-}
-
-#newsletter_email_label {
-    font-family: var(--font-content);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 2.25rem;
 }
 
 #newsletter_inputs {
