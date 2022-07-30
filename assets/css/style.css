@@ -746,7 +746,15 @@ footer address {
         grid-area: 1 / 2 / 2 / 3;
     }
     #newsletter_email_label {
-        display: none;
+        /* replace display:none for ARIA */
+        position: absolute;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        white-space: nowrap;
+        border: 0;
     }
     #footer_content_3 {
         grid-area: 2 / 1 / 3 / 3;
@@ -914,7 +922,15 @@ footer address {
         justify-content: center;
     }
     #newsletter_email_label {
-        display: none;
+        /* replace display:none for ARIA */
+        position: absolute;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        white-space: nowrap;
+        border: 0;
     }
     footer p,
     footer address {
