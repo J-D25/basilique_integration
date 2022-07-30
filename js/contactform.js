@@ -10,9 +10,10 @@ formContact.addEventListener('submit', function(e) {
 function checkFormContact() {
     const inputs = document.querySelectorAll('.contact_form_input');
     let errorCount = 0; //initialisation du compteur d'erreurs
-    inputs.forEach((input) => {
+    const inputLabel = ["votre nom", "votre prénom", "votre adresse email", "un objet", "votre message"]; //personnalisation du message d'erreur
+    inputs.forEach((input, index) => {
         const input_span = document.createElement("SPAN");
-        const cannot = "Ce champ ne peut être vide";
+        const cannot = "Veuillez saisir "+inputLabel[index]+".";
         let input_span_text = document.createTextNode(cannot);
         input_span.appendChild(input_span_text);
         input_spanInvalid = document.getElementById(input.id + "_invalid");
@@ -38,7 +39,7 @@ function checkFormContact() {
     if (email.validity.typeMismatch) {
         errorCount++;
         const email_span = document.createElement("SPAN");
-        const email_span_text = document.createTextNode(email.value + " n'est pas une adresse email valide");
+        const email_span_text = document.createTextNode(email.value + " n'est pas une adresse email valide.");
         email_span.appendChild(email_span_text);
         email.classList.add("contact_form_invalid");
         email.insertAdjacentElement('afterend', email_span);
