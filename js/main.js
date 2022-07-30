@@ -24,34 +24,28 @@ if (window.matchMedia("(min-width: 765px)").matches) {
 
 // Responsive téléphone
 if (window.matchMedia("(max-width: 765px)").matches) {
-    // Retrait #header_hook à l'ouverture du menu burger
-    const checkbox = document.getElementById("menu_check");
-    checkbox.addEventListener('click', event => {
-        const hook = document.getElementById("header_title");
-
-        if (document.getElementById('menu_check').checked) {
-            hook.style.display = "none";
-        } else {
-            hook.style.display = "flex";
-        }
-    })
-
     // Menu burger
-    const menu = document.querySelector("LABEL");
-    let i = 0;
-    menu.addEventListener('click', function() {
-        const menuUl = document.querySelector("UL");
-        i = i + 1
-        if (i % 2 == 1) {
+    const checkbox = document.getElementById("menu_check");
+    const menu = document.querySelector('#menu LABEL[for="menu_check"]');
+    const menuUl = document.querySelector("#menu UL");
+    const hook = document.getElementById("header_title");
+    checkbox.addEventListener('click', function() {
+        if (checkbox.checked) {// Ouverture du menu burger
+            hook.style.display = "none";// Retrait #header_hook
             menuUl.classList.remove("close");
             menuUl.classList.add("open");
-        } else {
+            menu.setAttribute("aria-expanded", true);
+            menu.setAttribute("aria-label", "Fermer le menu");
+        } else {// Fermeture du menu burger
+            hook.style.display = "flex";
             menuUl.classList.remove("open");
             menuUl.classList.add("closing");
             menuUl.classList.add("close");
             timer = setTimeout(function() {
                 menuUl.classList.remove("closing");
             }, 600);
+            menu.setAttribute("aria-expanded", false);
+            menu.setAttribute("aria-label", "Ouvrir le menu");
         }
     })
 }
