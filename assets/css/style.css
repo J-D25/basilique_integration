@@ -909,6 +909,7 @@ footer address {
         grid-template-rows: unset;
         gap: 5vw;
         text-align: center;
+        padding: 7vw;
     }
     #footer_content_1 {
         grid-area: 1 / 1 / 2 / 2;
