@@ -89,7 +89,7 @@ function checkNewsletter() {
         inputNewsletter.classList.add("newsletter_invalid");
         pNewsResult.classList.add("newsletter_p_invalid");
         if (inputNewsletter.validity.valueMissing) {
-            pNewsResult.textContent = "Le champ est vide.";
+            pNewsResult.textContent = "Veuillez saisir votre adresse email.";
         } else if (inputNewsletter.validity.typeMismatch) {
             pNewsResult.textContent = inputNewsletter.value + " n'est pas une adresse email valide.";
         }
