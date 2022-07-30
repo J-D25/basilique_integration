@@ -1,7 +1,7 @@
-        <nav id="menu">
+        <nav id="menu" role="navigation">
             <h1>Basilique<br>Saint-Ferjeux</h1>
             <input type="checkbox" id="menu_check">
-            <label class="hamburger" for="menu_check">
+            <label class="hamburger" for="menu_check" aria-label="Ouvrir le menu" role="button" aria-expanded="false">
                 <span class="lines line1"></span>
                 <span class="lines line2"></span>
                 <span class="lines line3"></span>
