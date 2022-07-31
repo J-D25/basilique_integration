@@ -26,7 +26,7 @@ if($_SESSION['user']!="admin"){
 <body>
     <header>
         <p id="header_title">Basilique Saint-Ferjeux : Dashboard</p>
-        <a href="php/logout.php" title="Déconnexion" id="logout" ontouchstart="">
+        <a href="php/logout.php" title="Déconnexion" id="logout">
             <svg width="22.729591" height="25" viewBox="0 0 810.08264 980" xmlns="http://www.w3.org/2000/svg">
                 <path d="m 48.641329,534.5 c 0,-131.9 71.700001,-247.1 178.200001,-308.7 V 126 C 69.541329,194.8 -40.458671,351.9 -40.458671,534.5 c 0,246.1 199.500001,445.5 445.500001,445.5 246,0 445.5,-199.4 445.5,-445.5 0,-182.7 -110,-339.8 -267.3,-408.5 v 99.8 c 106.5,61.6 178.2,176.8 178.2,308.7 0,196.8 -159.5,356.4 -356.4,356.4 -196.9,0 -356.400001,-159.5 -356.400001,-356.4 z M 405.02433,0 c -49.2,0 -81.2554,39.9 -81.2554,89.1 v 356.4 c 0,49.2 32.0554,89.1 81.2554,89.1 49.2,0 81.2724,-39.9 81.2724,-89.1 V 89.1 c 0,-49.2 -32.0724,-89.1 -81.2724,-89.1 z" style="fill:#ffffff" />
             </svg>
@@ -41,12 +41,12 @@ if($_SESSION['user']!="admin"){
             <div id="searching">
                 <input type="search" placeholder="Rechercher" id="search">
                 <button id="cross_button" aria-label="Effacer la recherche">
-                    <svg viewBox="0 0 6.614583 6.614583" xmlns="http://www.w3.org/2000/svg" id="cross_button_icon" ontouchstart>
+                    <svg viewBox="0 0 6.614583 6.614583" xmlns="http://www.w3.org/2000/svg" id="cross_button_icon">
                         <path d="M 3.307292,0 A 3.3072924,3.3072919 0 0 0 0,3.307292 3.3072924,3.3072919 0 0 0 3.307292,6.614583 3.3072924,3.3072919 0 0 0 6.614583,3.307292 3.3072924,3.3072919 0 0 0 3.307292,0 Z M 2.073775,1.322917 3.307292,2.556433 4.540808,1.322917 5.291667,2.073775 4.05815,3.307292 5.291667,4.540808 4.540808,5.291667 3.307292,4.05815 2.073775,5.291667 1.322917,4.540808 2.556433,3.307292 1.322917,2.073775 Z" />
                     </svg>
                 </button>
             </div>
-            <a href="php/export.php" class="button_blue" id="export" ontouchstart="">Exporter en CSV</a>
+            <a href="php/export.php" class="button_blue" id="export">Exporter en CSV</a>
         </div>
         <table>
             <thead>
@@ -64,7 +64,7 @@ if($_SESSION['user']!="admin"){
     </main>
 
     <footer>
-        <input type="button" value="Charger plus" class="button_blue" id="more" ontouchstart="">
+        <input type="button" value="Charger plus" class="button_blue" id="more">
     </footer>
 
     <template id="templatemail">

@@ -51,7 +51,7 @@
             <label for="contact_form_message">Message</label>
             <textarea name="message" id="contact_form_message" rows="8" class="contact_form_input" required></textarea>
             <div class="button">
-                <input type="submit" value="Valider" id="contact_form_button" ontouchstart="">
+                <input type="submit" value="Valider" id="contact_form_button">
             </div>
         </form>
     </main>

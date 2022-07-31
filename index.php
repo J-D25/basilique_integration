@@ -40,7 +40,7 @@
                 <div>
                     <p>L'église qui a précédé la basilique actuelle a été maintes fois remaniée et reconstruite (1520-1526, 1636, 1730). L'édifice fut démoli au XIX<sup>e</sup> siècle pour permettre la construction d'une vaste basilique. Les plans de cette dernière veillèrent néanmoins à préserver l'emplacement de la « grotte » initiale, aujourd'hui comprise dans la crypte de l'édifice de style romano-byzantin.</p>
                     <p class="button left">
-                        <a href="en_savoir_plus" ontouchstart="">En savoir plus</a>
+                        <a href="en_savoir_plus">En savoir plus</a>
                     </p>
                 </div>
             </div>
