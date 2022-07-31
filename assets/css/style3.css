@@ -11,8 +11,8 @@ body {
     #logout:hover {
         cursor: pointer;
         background-color: #82BE7E;
-    }   
-    #cross:hover {
+    }
+    #cross_button_icon:hover {
         fill: #BBBBBB;
         cursor: pointer;
     }
@@ -103,20 +103,26 @@ footer {
     visibility: hidden;
 }
 
-#search::-webkit-search-cancel-button{
+#search::-webkit-search-cancel-button {
     display: none;
 }
 
-#cross {
+#cross_button {
     display: none;
-    width: 20px;
-    fill: #CCCCCC;
     position: absolute;
     right: 10px;
+    border: 0;
+    background: none;
+    padding: 0;
 }
 
-#cross:active {
+#cross_button_icon:active {
     fill: #BBBBBB;
+}
+
+#cross_button_icon {
+    width: 20px;
+    fill: #CCCCCC;
 }
 
 tr {
@@ -194,7 +200,7 @@ td {
     text-align: center;
 }
 
-.admin_bin{
+.admin_bin {
     cursor: pointer;
 }
 
@@ -220,7 +226,8 @@ td {
         gap: 1.5rem;
         flex-direction: column;
     }
-    #searching, #search {
+    #searching,
+    #search {
         width: 100%;
     }
     #head_date,
