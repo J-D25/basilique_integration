@@ -61,7 +61,7 @@
         <p id="esp_section_8" class="img_container">
             <picture>
                 <source srcset="assets/images/esp_04_1200.webp" width="1200" type="image/webp">
-                <source srcset="assets/images/esp_04_1200.webp" width="1200">
+                <source srcset="assets/images/esp_04_1200.webp" width="1200" type="image/webp">
                 <source srcset="assets/images/esp_04.webp" type="image/webp">
                 <source srcset="assets/images/esp_04_mobile.webp" type="image/webp" media="(max-width: 765px)">
                 <source srcset="assets/images/esp_04_mobile.jpg" media="(max-width: 765px)">
