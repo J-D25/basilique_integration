@@ -3,6 +3,8 @@ window.addEventListener("DOMContentLoaded", () => {
     listingMail(0);
 })
 
+window.addEventListener("touchstart", {})// Désactive le hover sur téléphone
+
 more = document.querySelector("#more");
 more.addEventListener("click", () => {
     let recordSelected = document.querySelector("#record_select").textContent;

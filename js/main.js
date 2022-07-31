@@ -1,3 +1,5 @@
+window.addEventListener("touchstart", {})// Désactive le hover sur téléphone
+
 // Apparition de la navbar 1 sec après l'arrêt du scroll
 if (window.matchMedia("(min-width: 765px)").matches) {
     let timer = null;

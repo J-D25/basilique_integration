@@ -1,3 +1,5 @@
+window.addEventListener("touchstart", {})// Désactive le hover sur téléphone
+
 //Formulaire de connexion
 const formLogin = document.querySelector("#login_form");
 const inputLogin = document.querySelectorAll('.login_input');
