@@ -39,10 +39,10 @@ function listingMail(count) {
 
 //Recherche de mails
 const searchBar = document.getElementById('search');
-const searchCross = document.getElementById('cross');
+const searchCross = document.getElementById('cross_button');
 searchBar.addEventListener('input', function() {
     if (searchBar.value) {
-        searchCross.style.display = "block";
+        searchCross.style.display = "flex";
         fetch("php/search.php", {
                 method: "POST",
                 body: JSON.stringify(searchBar.value),
