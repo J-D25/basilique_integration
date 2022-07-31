@@ -96,6 +96,7 @@ footer {
     padding: 0 2rem;
     height: 2.8125rem;
     width: 15rem;
+    -webkit-appearance: none;
 }
 
 #search:focus::placeholder {
@@ -191,6 +192,18 @@ td {
     font-weight: 300;
     font-size: 1.125rem;
     text-align: center;
+}
+
+.admin_bin{
+    cursor: pointer;
+}
+
+.admin_bin_button {
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
 }
 
 @media (max-width: 765px) {
