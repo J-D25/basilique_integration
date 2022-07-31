@@ -1,4 +1,4 @@
-        <nav id="menu" role="navigation">
+        <nav id="menu">
             <h1>Basilique<br>Saint-Ferjeux</h1>
             <input type="checkbox" id="menu_check">
             <label class="hamburger" for="menu_check" aria-label="Ouvrir le menu" role="button" aria-expanded="false">
