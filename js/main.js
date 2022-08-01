@@ -27,15 +27,17 @@ if (window.matchMedia("(min-width: 765px)").matches) {
 // Responsive téléphone
 if (window.matchMedia("(max-width: 765px)").matches) {
     // Menu burger
-    const checkbox = document.getElementById("menu_check");
-    const menu = document.querySelector('#menu LABEL[for="menu_check"]');
+    const menu = document.getElementById("menu_check");
     const menuUl = document.querySelector("#menu UL");
     const hook = document.getElementById("header_title");
-    checkbox.addEventListener('click', function() {
-        if (checkbox.checked) {// Ouverture du menu burger
+    let clickCount = 0;
+    menu.addEventListener('click', function() {
+        clickCount = clickCount + 1;
+        if (clickCount % 2 == 1) {// Ouverture du menu burger
             hook.style.display = "none";// Retrait #header_hook
             menuUl.classList.remove("close");
             menuUl.classList.add("open");
+            menu.classList.add("menu-click");
             menu.setAttribute("aria-expanded", true);
             menu.setAttribute("aria-label", "Fermer le menu");
         } else {// Fermeture du menu burger
@@ -43,6 +45,7 @@ if (window.matchMedia("(max-width: 765px)").matches) {
             menuUl.classList.remove("open");
             menuUl.classList.add("closing");
             menuUl.classList.add("close");
+            menu.classList.remove("menu-click");
             timer = setTimeout(function() {
                 menuUl.classList.remove("closing");
             }, 600);
