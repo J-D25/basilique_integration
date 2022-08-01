@@ -135,10 +135,6 @@ header {
     text-shadow: .0625rem .0625rem .0625rem rgba(0, 0, 0, 0.5);
 }
 
-#menu_check {
-    display: none;
-}
-
 #menu ul {
     display: flex;
     justify-content: space-evenly;
@@ -815,7 +811,7 @@ footer address {
     .close {
         animation: menuclosed 0.7s ease-out;
     }
-    #menu_check:checked~ul,
+    #menu ul.open,
     #menu ul.closing {
         display: block;
         position: absolute;
@@ -839,19 +835,21 @@ footer address {
         gap: .5rem;
         flex-direction: column;
         box-sizing: border-box;
+        background: none;
+        border: none;
     }
     .lines {
         width: 2rem;
         height: .25rem;
         background-color: var(--color-white);
     }
-    #menu_check:checked~label .line1 {
+    .menu-click > .line1 {
         transform: rotate(45deg) translate(8.5px, 8.5px);
     }
-    #menu_check:checked~label .line2 {
+    .menu-click > .line2 {
         visibility: hidden;
     }
-    #menu_check:checked~label .line3 {
+    .menu-click > .line3 {
         transform: rotate(-45deg) translate(8.5px, -8.5px);
     }
     #menu ul li a {
