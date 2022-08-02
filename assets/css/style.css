@@ -135,6 +135,10 @@ header {
     text-shadow: .0625rem .0625rem .0625rem rgba(0, 0, 0, 0.5);
 }
 
+#menu_check {
+    display: none;
+}
+
 #menu ul {
     display: flex;
     justify-content: space-evenly;
@@ -775,7 +779,7 @@ footer address {
     header {
         background-image: url("../images/header_mobile.jpg");
     }
-    .hamburger {
+    #menu_check {
         display: unset;
     }
     #menu {
@@ -826,7 +830,7 @@ footer address {
     #menu ul li {
         padding: 2.15rem;
     }
-    .hamburger {
+    #menu_check {
         width: 2rem;
         height: 2rem;
         display: flex;
