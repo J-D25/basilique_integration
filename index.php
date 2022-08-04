@@ -11,6 +11,7 @@
     <meta property="og:title" content="Basilique Saint-Ferjeux - <?php echo date("Y")-1884 ?> ans d'histoire">
     <meta property="og:description" content="La Basilique Saint-Ferjeux, un édifice de style romano-byzantin ayant <?php echo date("Y")-1884 ?> ans d'histoire !">
     <meta property="og:image" content="https://jessya.promo-159.codeur.online/basilique/assets/images/header_rs.jpg">
+    <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

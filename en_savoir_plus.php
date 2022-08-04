@@ -11,6 +11,7 @@
     <meta property="og:title" content="Basilique Saint-Ferjeux - En savoir plus">
     <meta property="og:description" content="Une église préexistait sur l'emplacement de l'actuelle Basilique Saint-Ferjeux, édifiée il y a <?php echo date("Y")-1884 ?> ans !">
     <meta property="og:image" content="https://jessya.promo-159.codeur.online/basilique/assets/images/esp_01.jpg">
+    <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

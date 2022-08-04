@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Auteur:J-D25, Projet ACS 2022">
+    <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="stylesheet" href="assets/css/style2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

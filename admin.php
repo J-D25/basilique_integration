@@ -14,6 +14,7 @@ if($_SESSION['user']!="admin"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Auteur:J-D25, Projet ACS 2022">
+    <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="stylesheet" href="assets/css/style3.css">
     <link rel="stylesheet" href="assets/css/stylepopup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
