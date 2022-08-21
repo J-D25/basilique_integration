@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("touchstart", {})// Désactive le hover sur téléphone
 
 more = document.querySelector("#more");
+exportCSV = document.querySelector("#export");
 more.addEventListener("click", () => {
     let recordSelected = document.querySelector("#record_select").textContent;
     listingMail(recordSelected);
@@ -55,6 +56,7 @@ searchBar.addEventListener('input', function() {
                 let recordSelectNumber = response.headers.get('Select-number');
                 let recordTotalNumberSpan = document.querySelector("#record_total");
                 let recordSelectNumberSpan = document.querySelector("#record_select");
+                exportCSV.style.display = "none";
                 more.setAttribute("disabled", "");
                 more.style.display = "none";
                 if (Number(recordTotalNumber) <= Number(recordSelectNumber)) {
@@ -84,6 +86,7 @@ searchCross.addEventListener('click', function() {
 
 function searchDelete() {
     removeList();//Suppression de la liste d'emails existante
+    exportCSV.style.display = "inline-block";
     more.removeAttribute("disabled");
     more.style.display = "inline-block";
     searchCross.style.display = "none";
