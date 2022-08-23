@@ -5,7 +5,7 @@
             $firstName = htmlspecialchars($_POST['fname']);
             $lastName = htmlspecialchars($_POST['lname']);
             $objectContent = htmlspecialchars($_POST['object']);
-            $mailContent = filter_input(INPUT_GET, $_POST['mail'], FILTER_SANITIZE_EMAIL);
+            $mailContent = filter_var($_POST['mail'], FILTER_SANITIZE_EMAIL);
             $messageContent = htmlspecialchars($_POST['message']);
             
             //Contenu mail
