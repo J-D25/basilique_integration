@@ -2,7 +2,7 @@
 include('head.php'); //Appel des variables globales
 
 if (isset($_POST['newsletter_email']) && !empty($_POST['newsletter_email']) && filter_var($_POST['newsletter_email'], FILTER_VALIDATE_EMAIL)) {
-    $email = filter_input(INPUT_GET, $_POST['newsletter_email'], FILTER_SANITIZE_EMAIL);
+    $email = filter_var($_POST['newsletter_email'], FILTER_SANITIZE_EMAIL);
     $errorCode = true;
     try{
         $conn = new PDO("mysql:host=".SERVER.";dbname=".DATABASE."", USERNAME, PASSWORD);
