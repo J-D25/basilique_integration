@@ -93,9 +93,9 @@ footer {
     font-style: normal;
     font-weight: 300;
     font-size: 1rem;
-    padding: 0 2rem;
-    height: 2.8125rem;
-    width: 15rem;
+    padding: 0 2.25rem;
+    height: 3.125rem;
+    width: 20rem;
     -webkit-appearance: none;
 }
 
@@ -161,6 +161,10 @@ tr:nth-child(odd) {
 #more:disabled {
     cursor: not-allowed;
     background-color: #4e4e4e;
+}
+
+#main_list {
+    min-height: 324px;
 }
 
 table {
