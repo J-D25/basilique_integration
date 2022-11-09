@@ -8,19 +8,19 @@ const h1 = document.querySelector("H1");
 let p = document.createElement("P");
 let errorMessage = document.createTextNode("Identifiants incorrects.")
 
-formLogin.addEventListener('submit', function(e) {
+formLogin.addEventListener('submit', function (e) {
     e.preventDefault();
     ajaxLogin();
 })
 
 inputLogin.forEach(input => {
-    input.addEventListener('focusin', function() {
+    input.addEventListener('focusin', function () {
         const loginFormInvalid = document.querySelector("#login_form_invalid");
         if (loginFormInvalid) {
             loginFormInvalid.remove();
         }
     })
-    input.addEventListener('focusout', function() {
+    input.addEventListener('focusout', function () {
         verifLogin(input, 0);
     });
 })
@@ -40,8 +40,14 @@ function checkLogin() {
 
 function verifLogin(input, errorCount) {
     const input_span = document.createElement("SPAN");
-    const cannot = "Ce champ ne peut être vide";
-    let input_span_text = document.createTextNode(cannot);
+    const cannot = " ne peut être vide";
+    let input_span_text = document.createTextNode("Ce champ ne peut être vide");
+    if (input.name === "username") {
+        input_span_text = document.createTextNode("Le nom d'utilisateur" + cannot);
+    }
+    if (input.name === "password") {
+        input_span_text = document.createTextNode("Le mot de passe" + cannot);
+    }
     input_span.appendChild(input_span_text);
     input_spanInvalid = document.getElementById(input.id + "_invalid");
     input_span.setAttribute("class", "login_form_span_invalid");
@@ -70,9 +76,9 @@ function ajaxLogin() {
     if (checkLogin()) { //Lancement de checkLogin() + lancement requête si pas d'erreur.
         const formData = new FormData(formLogin);
         fetch("php/log.php", {
-                method: "POST",
-                body: formData
-            })
+            method: "POST",
+            body: formData
+        })
             .then(response => response.json())
             .then((result) => {
                 if (result.responseServer === true && result.responseDB === true && result.connection === true) {
