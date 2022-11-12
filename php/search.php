@@ -21,10 +21,9 @@ if (isset($search) && !empty($search)) {
 
 $sth2 = $conn->prepare("SELECT COUNT(`email`) FROM `newsletter`");
 $sth2->execute();
-$res2=$sth2->fetch(PDO::FETCH_COLUMN);
+$record=$sth2->fetch(PDO::FETCH_COLUMN);//Nombre d'enregistrements total dans la table
 
 $conn = null; //Arrêt connexion
-$record=$res2[0];//Nombre d'enregistrements total dans la table
 settype($record, "integer");//Conversion string en integer
 $resNum=$sth->rowCount();//Nombre d'enregistrements retournés par la requête
 header('Record-number: '.$record);
