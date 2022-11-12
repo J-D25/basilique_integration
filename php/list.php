@@ -14,7 +14,7 @@ $res=$sth->fetchAll(PDO::FETCH_ASSOC);
 //Récupération du nombre d'enregistrements dans la table
 $sth2 = $conn->prepare("SELECT COUNT(`email`) as `totalNumberEmail` FROM `newsletter`");
 $sth2->execute();
-$res2=$sth2->fetchAll(PDO::FETCH_COLUMN);
+$res2=$sth2->fetch(PDO::FETCH_COLUMN);
 
 $conn = null; //Arrêt connexion
 echo json_encode(["data"=>$res]);

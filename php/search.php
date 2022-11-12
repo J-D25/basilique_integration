@@ -21,7 +21,7 @@ if (isset($search) && !empty($search)) {
 
 $sth2 = $conn->prepare("SELECT COUNT(`email`) FROM `newsletter`");
 $sth2->execute();
-$res2=$sth2->fetchAll(PDO::FETCH_COLUMN);
+$res2=$sth2->fetch(PDO::FETCH_COLUMN);
 
 $conn = null; //Arrêt connexion
 $record=$res2[0];//Nombre d'enregistrements total dans la table
