@@ -6,7 +6,7 @@ $search = json_decode(file_get_contents('php://input'), true);//Email à recherc
 if (isset($search) && !empty($search)) {
     $errorCode = true;
     try{
-        $sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` WHERE `email` LIKE :email ORDER BY `email`");
+        $sth = $conn->prepare("SELECT `email`, `date_created` AS `date` FROM `newsletter` WHERE `email` LIKE :email ORDER BY `email`");
         $sth->bindValue(':email', '%'.$search.'%', PDO::PARAM_STR);
         $sth->execute();
         $res = $sth->fetchAll(PDO::FETCH_ASSOC);

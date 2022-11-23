@@ -4,7 +4,7 @@ include('conn.php'); //Démarrage connexion
 
 $handle = fopen('php://output','w'); //Ouverture et écriture du fichier
 
-$req = $conn->prepare("SELECT `email`, `date` FROM `newsletter`");
+$req = $conn->prepare("SELECT `email`, `date_created` FROM `newsletter`");
 $req->execute();
 $donnees=$req->fetchAll(PDO::FETCH_ASSOC);
 

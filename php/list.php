@@ -5,9 +5,9 @@ $limit = 5;//Limite le nombre d'enregistrements à retourner
 $offset = json_decode(file_get_contents('php://input'), true);//Nombre d'enregistrements actuellement affichés
 
 //Récupération des enregistrements
-$sth = $conn->prepare("SELECT `email`, `date` FROM `newsletter` ORDER BY `email` LIMIT :limit OFFSET :offset");
-$sth->bindParam(':limit', $limit, PDO::PARAM_INT);
-$sth->bindParam(':offset', $offset, PDO::PARAM_INT);
+$sth = $conn->prepare("SELECT `email`, `date_created` AS `date` FROM `newsletter` ORDER BY `email` LIMIT :limits OFFSET :offsets");
+$sth->bindParam(':limits', $limit, PDO::PARAM_INT);
+$sth->bindParam(':offsets', $offset, PDO::PARAM_INT);
 $sth->execute();
 $res=$sth->fetchAll(PDO::FETCH_ASSOC);
 
