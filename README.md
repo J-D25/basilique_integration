@@ -1,5 +1,5 @@
 # Projet 1 : Intégration du [projet Basilique Saint-Ferjeux](https://github.com/J-D25/basilique_reflexion)
-[Voir le site intégré](https://jessya.promo-159.codeur.online/basilique/).
+[Voir le site intégré](https://basilique.jd25.fr/).
 
 ## Objectif #1
 Intégrer et dynamiser votre premier site web et son interface d'administration.
