@@ -17,10 +17,10 @@ $sth2->execute();
 $record=$sth2->fetch(PDO::FETCH_COLUMN);//Nombre d'enregistrements total dans la table
 
 $conn = null; //Arrêt connexion
-echo json_encode(["data"=>$res]);
 $resNum=$sth->rowCount();//Nombre d'enregistrements retournés par la requête
 settype($record, "integer");//Conversion string en integer
 
 header('Record-number: '.$record);//Stockage du nombre d'enregistrements total dans l'en-tête de la réponse
 header('Select-number: '.($offset+$resNum));//Stockage du nombre d'enregistrements affichés dans l'en-tête de la réponse
+echo json_encode(["data"=>$res]);
 ?>
